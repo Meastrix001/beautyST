@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "world-of-gamers-d663f"
+  },
+  "targets": {
+    "world-of-gamers-d663f": {
+      "hosting": {
+        "wog": [
+          "world-of-gamers-d663f"
+        ]
+      }
+    }
+  }
+}

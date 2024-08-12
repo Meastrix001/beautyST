@@ -1,0 +1,21 @@
+:root {
+    /* Colors */
+    --clr-primary: rgba(243, 250, 242, 1);
+    --clr-secondary: rgba(176, 209, 172, 1);
+
+    // --clr-success: rgba(64, 174, 95, 1);
+    // --clr-pending: rgba(224, 167, 82, 1);
+    --clr-error: rgba(250, 242, 243, 1);
+
+    /* Borders */
+    --border-clr-primary: rgba(221, 221, 222, 1);
+
+    /* Background Colors */
+    --bg-body-primary: rgba(255, 255, 255, 1);
+
+    // Items could be a card, sidemenu, etc.
+    --bg-item-primary: rgba(255, 255, 255, 1);
+
+    // Input
+    --bg-input-primary: rgba(255, 255, 255, 1);
+}

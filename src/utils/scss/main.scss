@@ -1,0 +1,15 @@
+// Utils (SCSS Variables has to be defined before the rest)
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/animations";
+
+// Base
+@import "base/global";
+@import "base/reset";
+@import "base/typography";
+@import "base/colors";
+
+// Layout
+@import "layout/main";
+
+@import "../../pages/index.scss";
