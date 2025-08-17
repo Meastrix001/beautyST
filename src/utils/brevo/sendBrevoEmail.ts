@@ -5,7 +5,7 @@ const apiInstance = new Brevo.TransactionalEmailsApi();
 // Set your API key
 apiInstance.setApiKey(
   Brevo.TransactionalEmailsApiApiKeys.apiKey,
-  process.env.BREVO_API_KEY! // Ensure it's loaded from .env
+  process.env.REACT_APP_BREVO_API_KEY! // Ensure it's loaded from .env
 );
 
 export const sendBrevoEmail = async (
