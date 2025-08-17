@@ -1,16 +1,22 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { i18n_en } from "./English";
+import { i18n_est } from "./Englishest";
 
 const supportedLanguages = {
   en: "en",
+  est: "est",
 };
 
-const language = supportedLanguages[localStorage.getItem("i18nextLng")] || "en";
+const language =
+  supportedLanguages[localStorage.getItem("beautyst_lang_last")] || "en";
 
 const resources = {
   en: {
     translation: i18n_en,
+  },
+  est: {
+    translation: i18n_est,
   },
 };
 
