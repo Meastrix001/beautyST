@@ -18,7 +18,7 @@ export const About = () => {
               About Me
             </Heading>
             <Text size="4" className="about__subtitle">
-              Passion for waxing, and helping people feel confident.
+              Passion for waxing, and helping people feel confident..
             </Text>
           </Box>
 
