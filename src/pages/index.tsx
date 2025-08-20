@@ -7,7 +7,7 @@ import { Box } from "@radix-ui/themes";
 
 export const RouteWrapper = () => {
   useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem("beautyst_lang_last"));
+    i18n.changeLanguage(localStorage.getItem("beautyst_lang_last") || "est");
   }, []);
 
   return (

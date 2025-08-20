@@ -2,8 +2,30 @@ import { Container } from "@/components/container/container";
 import { Box, Flex, Text, Card, Heading, Separator } from "@radix-ui/themes";
 
 import pictureMe from "../../assets/about/IMG_0229.jpeg";
+import pictureSarah from "../../assets/about/sarah.jpg";
+import pictureGin from "../../assets/about/gin.jpg";
+import pictureBambi from "../../assets/about/bambi_2.png";
+
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
+  const { t } = useTranslation();
+
+  const picturesArr = [
+    {
+      picture: pictureSarah,
+      desc: "Saara ~ 15 Years old",
+    },
+    {
+      picture: pictureGin,
+      desc: "Gin ~ 2.5 Years old",
+    },
+    {
+      picture: pictureBambi,
+      desc: "Bambi ~ 7.5 Years old",
+    },
+  ];
+
   return (
     <Box className="about" width="100%">
       <Container>
@@ -15,10 +37,10 @@ export const About = () => {
         >
           <Box className="about__hero">
             <Heading size="8" weight="bold" mb="3">
-              About Me
+              {t("about.headerAbout")}
             </Heading>
             <Text size="4" className="about__subtitle">
-              Passion for waxing, and helping people feel confident..
+              {t("about.subHeader")}{" "}
             </Text>
           </Box>
 
@@ -30,60 +52,68 @@ export const About = () => {
             align="start"
           >
             <Card className="about__card" size="3">
-              <div className="about__image">
-                <div className="image">
-                  <div className="image__content">
+              <Box className="about__image">
+                <Box className="image">
+                  <Box className="image__content">
                     <img src={pictureMe} />
-                  </div>
-                </div>
-              </div>
+                  </Box>
+                </Box>
+              </Box>
 
               <Flex direction="column" gap="3" mt="3">
-                <Heading size="5">Hi, My name is Stiina Roofthooft</Heading>
-                <Text size="3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Asperiores officia in, aut ex non
-                </Text>
+                <Heading size="5">{t("about.bio")}</Heading>
               </Flex>
             </Card>
 
-            {/* Right */}
             <Flex direction="column" gap="4" className="about__details">
               <Card size="3">
-                <Heading size="4">About me</Heading>
-                <Text size="3">I am 24 Years old,</Text>
+                <Heading size="4">{t("about.headerAbout")}</Heading>
+                <Flex direction="column" gap="3">
+                  {Array.from(new Array(8), (_, index) => (
+                    <Text size="3" weight="medium" as="p">
+                      {t(`about.aboutme${index + 1}`)}
+                    </Text>
+                  ))}
+                </Flex>
               </Card>
 
               <Card size="3">
                 <Heading size="4" mb="2">
-                  My Philosophy
+                  {t("about.headerPhilo")}
                 </Heading>
-                <Text size="3">
-                  Beauty is more than appearance it’s confidence, relaxation,
-                  and self-care. I believe in using techniques that enhance
-                  natural features while prioritizing skin health and
-                  well-being.
+                <Text size="3" weight="medium">
+                  {t("about.philo")}
                 </Text>
               </Card>
 
-              <Card size="3" mb="9">
-                <Heading size="4" mb="2">
-                  Specializations
-                </Heading>
-                <ul className="about__list">
-                  <li>
-                    <Text size="3">Facials & skin treatments</Text>
-                  </li>
-                  <li>
-                    <Text size="3">Makeup & styling</Text>
-                  </li>
-                  <li>
-                    <Text size="3">Relaxation therapies</Text>
-                  </li>
-                  <li>
-                    <Text size="3">Custom beauty care plans</Text>
-                  </li>
-                </ul>
+              <Card mb="9">
+                <Box px="3">
+                  <Heading size="4">{t("about.petsHeader")}</Heading>
+                </Box>
+                <Flex direction="row" justify="between" px="3" mb="2">
+                  {picturesArr.map((obj) => {
+                    return (
+                      <Card className="pets">
+                        <Box className="pets__image">
+                          <Box className="image">
+                            <Box className="image__content">
+                              <img src={obj.picture} />
+                            </Box>
+                          </Box>
+                        </Box>
+                        <Text
+                          mt="2"
+                          as="p"
+                          size="4"
+                          weight="medium"
+                          align="center"
+                        >
+                          {obj.desc}
+                        </Text>
+                      </Card>
+                    );
+                  })}
+                </Flex>
               </Card>
             </Flex>
           </Flex>

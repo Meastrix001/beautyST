@@ -1,81 +1,28 @@
 export const pricesDataWomen = [
   {
-    name: "Depilation: Lower legs",
+    nameKey: "prices.women.lowerLegsOrThighs",
     price: "20€",
+    duration: "30min",
   },
-  {
-    name: "Waxing: Legs",
-    price: "30€",
-  },
-  {
-    name: "Depilation: Thighs",
-    price: "20€",
-  },
-  {
-    name: "Depilation: Arms",
-    price: "15€",
-  },
-  {
-    name: "Depilation: Abdomen",
-    price: "5€",
-  },
-  {
-    name: "Waxing: Bikini",
-    price: "15€",
-  },
-  {
-    name: "Waxing: Armpits",
-    price: "10€",
-  },
-  {
-    name: "Facial hair removal: Chin",
-    price: "7€",
-  },
-  {
-    name: "Facial hair removal: Upper lip",
-    price: "7€",
-  },
-  {
-    name: "Waxing: Brazilian",
-    price: "30€",
-  },
-  {
-    name: "Depilation: Buttocks",
-    price: "15€",
-  },
+  { nameKey: "prices.women.brazilian", price: "30€", duration: "60min" },
+  { nameKey: "prices.women.deepBikini", price: "20€", duration: "30min" },
+  { nameKey: "prices.women.bikiniLine", price: "15€", duration: "20min" },
+  { nameKey: "prices.women.armpits", price: "10€", duration: "20min" },
+  { nameKey: "prices.women.legsFull", price: "30€", duration: "60min" },
+  { nameKey: "prices.women.buttocks", price: "15€", duration: "20min" },
+  { nameKey: "prices.women.upperLip", price: "7€", duration: "15min" },
+  { nameKey: "prices.women.chin", price: "7€", duration: "15min" },
+  { nameKey: "prices.women.arms", price: "15€", duration: "25min" },
+  { nameKey: "prices.women.abdomen", price: "5€", duration: "10min" },
 ];
 
 export const pricesDataMen = [
-  {
-    name: "Depilation: Back",
-    price: "30€",
-  },
-  {
-    name: "Depilation: Chest",
-    price: "25€",
-  },
-  {
-    name: "Depilation: Back and chest",
-    price: "50€",
-  },
-  {
-    name: "Depilation: Armpits",
-    price: "15€",
-  },
-  {
-    name: "Depilation: Legs and thighs",
-    price: "45€",
-  },
-  {
-    name: "Depilation: Legs",
-    price: "25€",
-  },
-  {
-    name: "Depilation: Thighs",
-    price: "25€",
-  },
-  {
-    name: "Depilation: Arms",
-    price: "20€",
-  },
+  { nameKey: "prices.men.back", price: "30€", duration: "60min" },
+  { nameKey: "prices.men.chest", price: "25€", duration: "35min" },
+  { nameKey: "prices.men.backAndChest", price: "50€", duration: "70min" },
+  { nameKey: "prices.men.armpits", price: "15€", duration: "25min" },
+  { nameKey: "prices.men.legsFull", price: "45€", duration: "80min" },
+  { nameKey: "prices.men.lowerLegs", price: "25€", duration: "35min" },
+  { nameKey: "prices.men.thighs", price: "25€", duration: "35min" },
+  { nameKey: "prices.men.arms", price: "20€", duration: "30min" },
 ];

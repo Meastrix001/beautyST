@@ -1,21 +1,24 @@
 import { Button, Flex, Link, Text } from "@radix-ui/themes";
+import { useTranslation } from "react-i18next";
 
 export const BookingButton = () => {
   const BookingLink =
     "https://broneerimine.timma.ee/ilustuudiomarielltallinnehitajatetee114";
 
+  const { t } = useTranslation();
+
   return (
     <Flex direction="column" className="bookingButton">
+      <Text size="6" mt="5" mb="5" align="center">
+        {t("bookingbtn.reminder")}{" "}
+      </Text>
       <Link
         className="hover"
         href={BookingLink}
         target="_blank"
         style={{ color: "black" }}
       >
-        <Flex direction="column" mb="4">
-          <Text size="6" mt="4" mb="2" align="center">
-            Please book your appointment in advance
-          </Text>
+        <Flex direction="column" mb="5">
           <Button
             className="hover"
             size="4"
@@ -23,18 +26,15 @@ export const BookingButton = () => {
             variant="soft"
             style={{ width: "100%", color: "black" }}
           >
-            Book a time
+            {t("bookingbtn.btn")}
           </Button>{" "}
         </Flex>
       </Link>
       <Text size="4" align="center">
-        Booking is quick and easy through our online system, or you can contact
-        us directly to find a time that works for you. Thank you for helping us
-        make every visit relaxing and enjoyable!
+        {t("bookingbtn.bio")}
       </Text>
       <Text size="5" align="center">
-        We warmly welcome all our clients and are happy to assist you in English
-        or Estonian.
+        {t("bookingbtn.langInfo")}
       </Text>
     </Flex>
   );

@@ -28,7 +28,7 @@ export function useGoogleMap({ center, zoom = 14 }: UseGoogleMapProps) {
       <GoogleMap
         mapContainerStyle={{
           width: "100%",
-          height: "300px",
+          height: "100%",
           borderRadius: "12px",
         }}
         center={center}

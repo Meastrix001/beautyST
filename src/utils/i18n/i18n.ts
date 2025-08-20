@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { i18n_en } from "./English";
-import { i18n_est } from "./Englishest";
+import { i18n_est } from "./Estonian";
 
 const supportedLanguages = {
   en: "en",
@@ -9,7 +9,7 @@ const supportedLanguages = {
 };
 
 const language =
-  supportedLanguages[localStorage.getItem("beautyst_lang_last")] || "en";
+  supportedLanguages[localStorage.getItem("beautyst_lang_last")] || "est";
 
 const resources = {
   en: {

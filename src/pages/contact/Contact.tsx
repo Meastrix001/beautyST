@@ -29,7 +29,7 @@ export const ContactPage = () => {
           {/* Hero */}
           <Box className="contact__hero" mb="6">
             <Flex direction="column" align="center" gap="2">
-              <Heading size="8" weight="bold">
+              <Heading size="8" weight="bold" mb="0">
                 <DrawingPinFilledIcon width="24px" height="24px" /> Ilustuudio
                 Mariell Tallinn
               </Heading>
@@ -60,7 +60,7 @@ export const ContactPage = () => {
           >
             {/* Contact Info */}
             <Box className="contact__info">
-              <Flex align="start" justify="center">
+              <Flex align="center" justify="center" height="100%">
                 <DataList.Root>
                   {contactData.map((item, idx) => (
                     <DataList.Item

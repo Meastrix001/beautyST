@@ -12,17 +12,17 @@ export const contactData = [
   },
   {
     key: "contact.key.phone",
-    value: "123456789",
+    value: "+372 565 715 52",
     icon: <ChatBubbleIcon />,
   },
   {
     key: "Facebook",
-    value: "FB url",
+    value: "https://tinyurl.com/bjsjs2fp",
     icon: <ChatBubbleIcon />,
   },
   {
     key: "Instagram",
-    value: "insta url",
+    value: "https://tinyurl.com/4v4pptcs",
     icon: <InstagramLogoIcon />,
   },
 ] as {

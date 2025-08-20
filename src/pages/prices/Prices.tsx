@@ -3,8 +3,11 @@ import WaxStick from "../../assets/landing/wax-sticks.webp";
 import { BookingButton } from "@/components/booking/bookingBtn";
 import { Box, Flex, Heading, Text, Separator } from "@radix-ui/themes";
 import { pricesDataMen, pricesDataWomen } from "./priceData";
+import { useTranslation } from "react-i18next";
 
 export const Prices = () => {
+  const { t } = useTranslation();
+
   return (
     <Box className="prices">
       <Container>
@@ -14,19 +17,17 @@ export const Prices = () => {
           gap="6"
           className="prices__container"
         >
-          {/* Hero Section */}
           <Box className="prices__hero" mb="6">
             <Heading size="8" weight="bold" mb="3" align="center">
-              Services & Prices
+              {t("ss.header")}
             </Heading>
             <Text size="4" className="prices__subtitle" align="center">
-              Price overview, for both Men and Women
+              {t("ss.bio")}
             </Text>
           </Box>
 
           <Separator size="4" />
 
-          {/* Price Lists */}
           <Flex
             className="prices__list"
             direction={{ initial: "column", md: "row" }}
@@ -34,33 +35,31 @@ export const Prices = () => {
             gap="6"
             mt="6"
           >
-            {/* Women */}
             <Box className="prices__list-section">
               <Flex align="center" justify="center" mb="4" gap="2">
                 <img src={WaxStick} alt="" className="prices__icon" />
                 <Text size="8" weight="bold">
-                  Women
+                  {t("ss.rowWomen.heading")}
                 </Text>
               </Flex>
 
               {pricesDataWomen.map((doc, idx) => (
                 <Flex key={idx} className="prices__item" align="center">
                   <Text as="p" size="6">
-                    {doc.name}
+                    {t(doc.nameKey)}{" "}
                   </Text>
                   <Box className="prices__dots" />
                   <Text as="p" size="6">
-                    {doc.price}
+                    {doc.price} / {doc.duration}
                   </Text>
                 </Flex>
               ))}
             </Box>
 
-            {/* Men */}
             <Box className="prices__list-section">
               <Flex align="center" justify="center" mb="4" gap="2">
                 <Text size="8" weight="bold">
-                  Men
+                  {t("ss.rowMen.heading")}
                 </Text>
                 <img src={WaxStick} alt="" className="prices__icon flipped" />
               </Flex>
@@ -68,18 +67,17 @@ export const Prices = () => {
               {pricesDataMen.map((doc, idx) => (
                 <Flex key={idx} className="prices__item" align="center">
                   <Text as="p" size="6">
-                    {doc.name}
+                    {t(doc.nameKey)}{" "}
                   </Text>
                   <Box className="prices__dots" />
                   <Text as="p" size="6">
-                    {doc.price}
+                    {doc.price} / {doc.duration}
                   </Text>
                 </Flex>
               ))}
             </Box>
           </Flex>
 
-          {/* Booking Button */}
           <Box mt="9" mb="9">
             <BookingButton />
           </Box>

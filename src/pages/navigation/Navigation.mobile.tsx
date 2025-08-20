@@ -5,10 +5,13 @@ import { Badge, Box, Flex, Text } from "@radix-ui/themes";
 import { useEffect, useState } from "react";
 import { Constants } from "@/utils/constants/constantValues";
 import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { useTranslation } from "react-i18next";
 
 export const NavigationMobile = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { t } = useTranslation();
+
   const [activeLanguage, setActiveLanguage] = useState<string>(
     localStorage.getItem("beautyst_lang_last") || i18n.language
   );
@@ -75,7 +78,13 @@ export const NavigationMobile = () => {
                   />
                 </Flex>
               </Box>
-              <Flex direction="column" gap="3" mt="auto" mb="auto">
+              <Flex
+                style={{ textTransform: "uppercase" }}
+                direction="column"
+                gap="3"
+                mt="auto"
+                mb="auto"
+              >
                 <Box
                   onClick={() => {
                     setIsMenuOpen(false);
@@ -83,7 +92,7 @@ export const NavigationMobile = () => {
                   }}
                 >
                   <Text as="p" size="5">
-                    Home
+                    {t("nav.keys.home")}
                   </Text>
                 </Box>
                 <Box
@@ -93,7 +102,7 @@ export const NavigationMobile = () => {
                   }}
                 >
                   <Text as="p" size="5">
-                    Services & prices
+                    {t("nav.keys.ss")}
                   </Text>
                 </Box>
 
@@ -104,7 +113,7 @@ export const NavigationMobile = () => {
                   }}
                 >
                   <Text as="p" size="5">
-                    About me
+                    {t("nav.keys.aboutme")}
                   </Text>
                 </Box>
                 <Box
@@ -114,7 +123,7 @@ export const NavigationMobile = () => {
                   }}
                 >
                   <Text as="p" size="5">
-                    Contact
+                    {t("nav.keys.contact")}
                   </Text>
                 </Box>
               </Flex>
