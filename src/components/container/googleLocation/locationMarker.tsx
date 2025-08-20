@@ -7,8 +7,8 @@ type UseGoogleMapProps = {
 };
 export function useGoogleMap({ center, zoom = 14 }: UseGoogleMapProps) {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env
-      .REACT_APP_GOOGLE_MAPS_API_KEY as string as string, // <-- keep key in env
+    googleMapsApiKey: import.meta.env
+      .VITE_GOOGLE_MAPS_API_KEY as string as string, // <-- keep key in env
     libraries: ["places"],
   });
 
