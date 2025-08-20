@@ -1,15 +1,16 @@
 import { Container } from "@/components/container/container";
-import BrandLogo from "../../assets/landing/brand-logo.png";
 import { useNavigate } from "react-router-dom";
 import i18n from "@/utils/i18n/i18n";
-import { Badge } from "@radix-ui/themes";
+import { Badge, Box } from "@radix-ui/themes";
 import { useEffect, useState } from "react";
+import { Constants } from "@/utils/constants/constantValues";
 
 export const Navigation = () => {
   const navigate = useNavigate();
   const [activeLanguage, setActiveLanguage] = useState<string>(
     localStorage.getItem("beautyst_lang_last") || i18n.language
   );
+
   const handleLanguageChange = (lang: "en" | "est") => {
     localStorage.setItem("beautyst_lang_last", lang);
     return i18n.changeLanguage(lang);
@@ -26,11 +27,12 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <nav className="navigation">
+    <nav className={`navigation`}>
       <Container>
         <div className="navigation__brand">
-          {" "}
-          <img src={BrandLogo} alt="" />
+          <Box>
+            <img src={Constants.logo} alt="" />
+          </Box>
         </div>
 
         <div className="navigation__menu">

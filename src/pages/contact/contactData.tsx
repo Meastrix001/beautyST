@@ -7,7 +7,7 @@ import {
 export const contactData = [
   {
     key: "contact.key.email",
-    value: "stiina@beautyst.com",
+    value: "beautybystiina@hotmail.com",
     icon: <EnvelopeClosedIcon />,
   },
   {

@@ -1,4 +1,5 @@
 import { RouteWrapper } from "@/pages";
+import { About } from "@/pages/about/About";
 import { ContactPage } from "@/pages/contact/Contact";
 import PageNotFound from "@/pages/error/404.page";
 import { Landing } from "@/pages/landing/Landing";
@@ -24,7 +25,7 @@ export const Routes = () => {
         },
         {
           path: "/about",
-          element: <Prices />,
+          element: <About />,
           errorElement: <PageNotFound />,
         },
         {

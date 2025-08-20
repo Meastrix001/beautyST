@@ -1,6 +1,14 @@
 import { Container } from "@/components/container/container";
-import { DrawingPinFilledIcon } from "@radix-ui/react-icons";
-import { Box, DataList, Flex, Link, Text } from "@radix-ui/themes";
+import { DrawingPinFilledIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
+import {
+  Box,
+  DataList,
+  Flex,
+  Link,
+  Text,
+  Heading,
+  Separator,
+} from "@radix-ui/themes";
 import { contactData } from "./contactData";
 import { ContactMap } from "./Contact.map";
 import { useTranslation } from "react-i18next";
@@ -8,62 +16,87 @@ import { BookingButton } from "@/components/booking/bookingBtn";
 
 export const ContactPage = () => {
   const { t } = useTranslation();
-  return (
-    <Flex
-      className="contact"
-      align="center"
-      justify="center"
-      height="100vh"
-      width="100vw"
-    >
-      <Container>
-        <Box>
-          <Flex direction="column">
-            <Text>
-              <DrawingPinFilledIcon width="24px" height="24px" />
-            </Text>
-            <Text size="6">Ilustuudio Mariell Tallinn</Text>
-            <Link
-              style={{ color: "black" }}
-              target="_blank"
-              href="https://maps.app.goo.gl/LZF8gxW5QXRok6iRA"
-            >
-              <Text size="8">Ehitajate tee 114, 13517 Tallinn</Text>
-            </Link>
-          </Flex>
-        </Box>
 
-        <Flex direction="row" align="center" justify="center" mb="9">
-          <Box width="50%">
-            <Flex align="center" justify="center">
-              <DataList.Root>
-                {contactData.map((item) => {
-                  return (
-                    <DataList.Item align="center">
-                      <DataList.Label minWidth="88px">
-                        <Flex align="center" justify="center" gap="2">
-                          <Text>{item.icon}</Text>
-                          <Text size="6" align="right">
+  return (
+    <Box className="contact">
+      <Container>
+        <Flex
+          direction="column"
+          align="center"
+          gap="6"
+          className="contact__container"
+        >
+          {/* Hero */}
+          <Box className="contact__hero" mb="6">
+            <Flex direction="column" align="center" gap="2">
+              <Heading size="8" weight="bold">
+                <DrawingPinFilledIcon width="24px" height="24px" /> Ilustuudio
+                Mariell Tallinn
+              </Heading>
+              <Link
+                className="contact__link"
+                target="_blank"
+                href="https://maps.app.goo.gl/LZF8gxW5QXRok6iRA"
+              >
+                <Flex align="center" justify="center" gap="2">
+                  <Text size="6">Ehitajate tee 114, 13517 Tallinn </Text>
+                  <ExternalLinkIcon width="24px" height="24px" />
+                </Flex>
+              </Link>
+            </Flex>
+          </Box>
+
+          <Separator size="4" />
+
+          {/* Contact Details & Map */}
+          <Flex
+            className="contact__content"
+            direction={{ initial: "column", md: "row" }}
+            align="stretch"
+            justify="center"
+            gap="6"
+            mt="6"
+            mb="9"
+          >
+            {/* Contact Info */}
+            <Box className="contact__info">
+              <Flex align="start" justify="center">
+                <DataList.Root>
+                  {contactData.map((item, idx) => (
+                    <DataList.Item
+                      key={idx}
+                      align="center"
+                      className="contact__item"
+                    >
+                      <DataList.Label minWidth="120px">
+                        <Flex align="center" gap="2">
+                          {item.icon}
+                          <Text size="5" weight="medium">
                             {t(item.key)}
                           </Text>
                         </Flex>
                       </DataList.Label>
                       <DataList.Value>
-                        <Text size="6">{item.value}</Text>
+                        <Text size="5">{item.value}</Text>
                       </DataList.Value>
                     </DataList.Item>
-                  );
-                })}
-              </DataList.Root>
-            </Flex>
-          </Box>
-          <Box width="50%">
-            <ContactMap />
+                  ))}
+                </DataList.Root>
+              </Flex>
+            </Box>
+
+            {/* Map */}
+            <Box className="contact__map">
+              <ContactMap />
+            </Box>
+          </Flex>
+
+          {/* Booking CTA */}
+          <Box mb="9">
+            <BookingButton />
           </Box>
         </Flex>
-
-        <BookingButton />
       </Container>
-    </Flex>
+    </Box>
   );
 };

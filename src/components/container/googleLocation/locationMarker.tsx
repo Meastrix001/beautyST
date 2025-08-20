@@ -5,7 +5,6 @@ type UseGoogleMapProps = {
   center: google.maps.LatLngLiteral;
   zoom?: number;
 };
-
 export function useGoogleMap({ center, zoom = 14 }: UseGoogleMapProps) {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: import.meta.env

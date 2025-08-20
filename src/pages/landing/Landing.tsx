@@ -1,11 +1,11 @@
 import { Container } from "@/components/container/container";
-import BrandLogo from "../../assets/landing/brand-logo.png";
-import WaxSticks from "../../assets/landing/wax-sticks.webp";
+// import WaxSticks from "../../assets/landing/wax-sticks.webp";
 import WaxPots from "../../assets/landing/wax-pot.webp";
 import LandingLegs from "../../assets/landing/smooth-in-grown-free-legs-e144529772770-Photoroom (2) (1).png";
 import { BookingButton } from "@/components/booking/bookingBtn";
 import { Box, Flex, Text } from "@radix-ui/themes";
 import LyconBrand from "../../assets/landing/Lycon_svg.svg";
+import { Constants } from "@/utils/constants/constantValues";
 
 export const Landing = () => {
   return (
@@ -16,12 +16,10 @@ export const Landing = () => {
         <div className="landing__content">
           <div className="content">
             <div className="content__logos">
-              <img className="logos__brand" src={BrandLogo} alt="" />
-              <img className="logos__brand-background" src={WaxSticks} alt="" />
+              <img className="logos__brand" src={Constants.logo} alt="" />
             </div>
             <Flex direction="column" gap="5">
-              <Text size="6">Choose smooth</Text>
-              <Text size="5">Scroll down for some magic</Text>
+              {/* <Text size="6">Be Back Soon</Text> */}
             </Flex>
           </div>
         </div>

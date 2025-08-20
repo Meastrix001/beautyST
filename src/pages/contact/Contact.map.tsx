@@ -7,7 +7,7 @@ export const ContactMap = () => {
     zoom: 18,
   });
 
-  if (!isLoaded) return <Spinner />;
+  if (!isLoaded) return <Spinner size="3" />;
 
-  return <div>{GoogleMapComponent}</div>;
+  return <div className="contact__map-inner">{GoogleMapComponent}</div>;
 };
