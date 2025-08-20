@@ -12,11 +12,11 @@ export const RouteWrapper = () => {
 
   return (
     <main>
-      <Box height="15vh" width="100vw">
+      <Box height="15vh">
         <Navigation />
         <NavigationMobile />
       </Box>
-      <Box height="90vh" width="100vw">
+      <Box height="90vh">
         <Outlet />
       </Box>
     </main>

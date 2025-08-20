@@ -4,7 +4,7 @@ export const i18n_en = {
       home: "home",
       ss: "services & prices",
       aboutme: "about me",
-      contact: "kontakt",
+      contact: "Contact",
     },
   },
 
