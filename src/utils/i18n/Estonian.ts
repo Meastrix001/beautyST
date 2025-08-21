@@ -5,6 +5,7 @@ export const i18n_est = {
       ss: "Teenused ja hinnad",
       aboutme: "minust",
       contact: "kontakt",
+      faq: "kkk",
     },
   },
   contact: {
@@ -79,5 +80,71 @@ export const i18n_est = {
       thighs: "Reite",
       arms: "Käte",
     },
+  },
+
+  faq: {
+    header: "Korduma kippuvad küsimused",
+    subHeader: "Teave levinud küsimuste kohta vahatamise kohta",
+    data: [
+      {
+        question: "Kas vahatamine on valus?",
+        answer:
+          "Esimesel korral võib esineda ebamugavustunnet, kuid enamik kliente ütleb, et protseduur on kiire ja muutub iga korraga lihtsamaks, kuna karvad kasvavad tagasi peenemad.",
+      },
+      {
+        question: "Kui pikad peavad karvad olema enne vahatamist?",
+        answer:
+          "Karvad peaksid olema vähemalt 0,5 cm pikad (umbes riisitera pikkused), et vaha saaks korralikult haarata. Väldi raseerimist vähemalt 2–3 nädalat enne aega.",
+      },
+      {
+        question: "Kas vahatamine sobib tundlikule nahale?",
+        answer:
+          "Jah! Me kasutame kvaliteetseid Lycon vahasid, mis on spetsiaalselt mõeldud tundlikule nahale. Kui sul on muresid, anna meile teada ja kohandame protseduuri vastavalt.",
+      },
+      {
+        question: "Mida peaksin tegema enne esimest vahatamist?",
+        answer:
+          "Koori nahka õrnalt 24 tundi enne, ära kasuta losjoneid ega õlisid samal päeval ja kanna mugavaid avaraid riideid pärast protseduuri.",
+      },
+      {
+        question: "Mida peaksin vältima pärast vahatamist?",
+        answer:
+          "Järgneva 24–48 tunni jooksul väldi kuumi dušše, sauna, päevitamist, intensiivset treeningut ja kitsaid riideid. See aitab vältida nahaärritust ja sissekasvanud karvu.",
+      },
+      {
+        question: "Kui kaua tulemused kestavad?",
+        answer:
+          "Tulemused kestavad tavaliselt 3–4 nädalat sõltuvalt sinu karvakasvu tsüklist. Regulaarse vahatamisega kasvavad karvad tagasi aeglasemalt ja pehmemad.",
+      },
+      {
+        question: "Ma olen närvis – kas see on normaalne?",
+        answer:
+          "Absoluutselt! Paljud esmakordsed kliendid tunnevad ärevust. Meie prioriteet on panna sind tundma end mugavalt ning juhendame sind iga sammu juures.",
+      },
+      {
+        question: "Kas ma võin vahatada, kui olen rase?",
+        answer:
+          "Jah, vahatamine on üldiselt raseduse ajal ohutu, kuid nahk võib olla tundlikum. Kui sa pole kindel, pea alati nõu oma arstiga.",
+      },
+      {
+        question: "Kas vahatamine põhjustab sissekasvanud karvu?",
+        answer:
+          "Õige hoolduse korral vähendab vahatamine tavaliselt sissekasvanud karvu võrreldes raseerimisega. Regulaarne koorimine ja niisutamine aitavad hoida naha siledana.",
+      },
+      {
+        question: "Kui tihti peaksin aega broneerima?",
+        answer:
+          "Soovitatav on korrata vahatamist iga 4–6 nädala järel parimate tulemuste saavutamiseks. Järjepidevus vähendab ebamugavust, hoiab naha sileda ja takistab karvade liiga pikaks ja jämedaks kasvamist.",
+      },
+      {
+        question: "Kas peaksin enne aega raseerima?",
+        answer:
+          "Ei ole soovitatav raseerida vähemalt 2–3 nädalat enne vahatamist. Vastasel juhul ei haara vaha karvu korralikult ja tulemused võivad olla ebaühtlased.",
+      },
+    ],
+  },
+
+  footer: {
+    arr: "Kõik õigused kaitstud",
   },
 };

@@ -5,6 +5,7 @@ export const i18n_en = {
       ss: "services & prices",
       aboutme: "about me",
       contact: "Contact",
+      faq: "faq",
     },
   },
 
@@ -79,5 +80,71 @@ My name is Stiina Roofthooft, and I am 24 years old. I’m new to the beauty ind
       thighs: "Thighs",
       arms: "Arms",
     },
+  },
+
+  faq: {
+    header: "Frequently asked questions",
+    subHeader: "Info about common questions about waxing",
+    data: [
+      {
+        question: "Does waxing hurt?",
+        answer:
+          "You may feel some discomfort, especially on your first visit. Most clients say it’s quick and gets easier with each session as hair grows back finer.",
+      },
+      {
+        question: "How long should my hair be before waxing?",
+        answer:
+          "Hair should be at least 0.5 cm long (about the length of a grain of rice) for the wax to grip properly. Avoid shaving at least 2 - 3 weeks before your appointment.",
+      },
+      {
+        question: "Is waxing safe for sensitive skin?",
+        answer:
+          "Yes! We use premium waxes like Lycon that are formulated for sensitive skin. If you have concerns, let us know so we can adjust the treatment.",
+      },
+      {
+        question: "What should I do before my first wax?",
+        answer:
+          "Gently exfoliate 24 hours before, avoid lotions or oils on the day of your appointment, and wear loose-fitting clothing for comfort afterward.",
+      },
+      {
+        question: "What should I avoid after waxing?",
+        answer:
+          "For the next 24 - 48 hours, avoid hot showers, saunas, tanning, intense workouts, and tight clothing. This helps prevent irritation and ingrown hairs.",
+      },
+      {
+        question: "How long will the results last?",
+        answer:
+          "Results typically last 3 - 4 weeks depending on your hair growth cycle. With regular waxing, hair grows back slower and finer.",
+      },
+      {
+        question: "I’m nervous - is it normal to feel that way?",
+        answer:
+          "Absolutely! Many first-time clients feel nervous. Our priority is to make you feel comfortable, and we’ll guide you through each step of the process.",
+      },
+      {
+        question: "Can I wax if I’m pregnant?",
+        answer:
+          "Yes, waxing is generally safe during pregnancy, though your skin may be more sensitive. Always consult with your doctor first if you’re unsure.",
+      },
+      {
+        question: "Will waxing cause ingrown hairs?",
+        answer:
+          "If proper aftercare is followed, waxing usually reduces ingrown hairs compared to shaving. Regular exfoliation and moisturizing help keep skin smooth.",
+      },
+      {
+        question: "How often should I book a appointment?",
+        answer:
+          "It is recommended to repeat this every 4 - 6 weeks for best results. Staying consistent helps reduce discomfort, maintain smooth skin, and prevents hair from growing back too long and thick.",
+      },
+      {
+        question: "Should I shave before the appointment?",
+        answer:
+          "It is not recommended to shave for at least 2 - 3 weeks before your appointment. Otherwise, the wax will not hold the hairs properly and can cause inconsistent results.",
+      },
+    ],
+  },
+
+  footer: {
+    arr: "All rights reserved",
   },
 };

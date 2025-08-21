@@ -126,6 +126,14 @@ export const NavigationMobile = () => {
                     {t("nav.keys.contact")}
                   </Text>
                 </Box>
+                <Text
+                  className="hover"
+                  as="p"
+                  size="6"
+                  onClick={() => navigate("/faq")}
+                >
+                  {t("nav.keys.faq")}{" "}
+                </Text>
               </Flex>
               <Box
                 className={`navigation__socials ${isMenuOpen ? "open" : ""}`}

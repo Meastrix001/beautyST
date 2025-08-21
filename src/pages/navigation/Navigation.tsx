@@ -74,31 +74,37 @@ export const Navigation = () => {
             >
               {t("nav.keys.contact")}{" "}
             </Text>
+            <Text
+              className="hover"
+              as="p"
+              size="6"
+              onClick={() => navigate("/faq")}
+            >
+              {t("nav.keys.faq")}{" "}
+            </Text>
           </Flex>
         </Box>
 
-        <div className="navigation__socials">
-          <ul>
-            <Badge
-              className="hover"
-              size="3"
-              variant={activeLanguage === "en" ? "solid" : "soft"}
-              color={activeLanguage === "en" ? "pink" : "gold"}
-              onClick={() => handleLanguageChange("en")}
-            >
-              English
-            </Badge>
-            <Badge
-              className="hover"
-              size="3"
-              variant={activeLanguage === "est" ? "solid" : "soft"}
-              color={activeLanguage === "est" ? "pink" : "gold"}
-              onClick={() => handleLanguageChange("est")}
-            >
-              Eesti
-            </Badge>
-          </ul>
-        </div>
+        <Flex gap="2" className="navigation__socials">
+          <Badge
+            className="hover"
+            size="3"
+            variant={activeLanguage === "en" ? "solid" : "soft"}
+            color={activeLanguage === "en" ? "pink" : "gold"}
+            onClick={() => handleLanguageChange("en")}
+          >
+            English
+          </Badge>
+          <Badge
+            className="hover"
+            size="3"
+            variant={activeLanguage === "est" ? "solid" : "soft"}
+            color={activeLanguage === "est" ? "pink" : "gold"}
+            onClick={() => handleLanguageChange("est")}
+          >
+            Eesti
+          </Badge>
+        </Flex>
       </Container>
     </nav>
   );

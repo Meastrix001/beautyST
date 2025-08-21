@@ -90,7 +90,12 @@ export const About = () => {
                 <Box px="3">
                   <Heading size="4">{t("about.petsHeader")}</Heading>
                 </Box>
-                <Flex direction="row" justify="between" px="3" mb="2">
+                <Flex
+                  direction={{ initial: "column", md: "row" }}
+                  justify="between"
+                  px="3"
+                  mb="2"
+                >
                   {picturesArr.map((obj) => {
                     return (
                       <Card className="pets">

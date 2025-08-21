@@ -1,11 +1,11 @@
 .landing {
   position: relative;
-  height: 185vh;
+  min-height: 170vh;
   .div-one {
     background: rgb(247, 177, 176);
     max-width: 100%;
     width: 100%;
-    height: 85vh;
+    min-height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -16,10 +16,10 @@
     background: #eedec5;
 
     -webkit-clip-path: polygon(0vw -14%, 0% 100vh, 90vw 100vh);
-    clip-path: polygon(0vw -14%, 0% 100vh, 110vw 100vh);
+    clip-path: polygon(0vw -14%, 0% 100vh, 114.8vw 100vh);
     max-width: 100%;
     width: 100%;
-    height: 85vh;
+    min-height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 40%;
@@ -30,7 +30,7 @@
     background: #eedec5;
     max-width: 100%;
     width: 100%;
-    height: 100vh;
+    min-height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -41,10 +41,10 @@
     background: rgb(247, 177, 176);
     // margin-top: -1.5rem;
     -webkit-clip-path: polygon(0vw -14%, 0% 100vh, 90vw 100vh);
-    clip-path: polygon(100vw -5%, 0% 102vh, 100vw 102vh);
+    clip-path: polygon(100vw -0.6%, 0% 102vh, 100vw 102vh);
     max-width: 100%;
     width: 100%;
-    height: 100vh;
+    min-height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 40%;
@@ -67,6 +67,7 @@
     position: relative;
     z-index: 1000;
     min-height: 85vh;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: start;
@@ -131,18 +132,51 @@
   }
   &__image {
     position: absolute;
-    right: 0;
-    top: 50vh;
-    transform: translateY(-50%);
+    width: fit-content;
     z-index: 10000;
+    right: -1rem;
+    top: 0;
+    transform: rotate(-55deg);
     img {
-      max-width: 50vw;
+      border-radius: 75%;
+      width: 30vw;
     }
   }
 
   &__below-fold {
     .below-fold {
-      height: 100vh;
+      min-height: 85vh;
+    }
+  }
+
+  .landing-galary {
+    min-width: 32%;
+    &__image {
+      position: relative;
+      .image {
+        // Layout
+        width: 100%; // Fill available space
+        height: 100%; // Fill available space
+        padding-top: 75%; // Aspect ratio 3:2
+        position: relative; // Used for &__content
+        display: block;
+
+        &__content {
+          position: absolute; // Use space inside the avatar;
+          inset: 0; // Fill available space
+          border-radius: var(--border-primary);
+          overflow: hidden; // Remove any part that is outside the circle
+
+          img {
+            // Layout
+            width: 100%; // Use images own size
+            height: 100%; // Use images own size
+
+            object-fit: cover; // Fill available space
+            object-position: center center; // Center the image horizontally and vertically
+          }
+        }
+      }
     }
   }
 }
@@ -150,7 +184,7 @@
 .wax-pot {
   position: absolute;
   z-index: 100;
-  left: calc(47%);
+  left: calc(48%);
   transform: translateY(-40%) translateX(-50%);
 }
 
