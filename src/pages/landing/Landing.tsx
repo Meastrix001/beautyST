@@ -1,5 +1,4 @@
 import { Container } from "@/components/container/container";
-import WaxSticks from "../../assets/landing/wax-sticks.webp";
 import WaxPots from "../../assets/landing/wax-pot.webp";
 // import LandingLegs from "../../assets/landing/smooth-in-grown-free-legs-e144529772770-Photoroom (2) (1).png";
 import { BookingButton } from "@/components/booking/bookingBtn";
@@ -7,7 +6,6 @@ import { Box, Flex, Text } from "@radix-ui/themes";
 import LyconBrand from "../../assets/landing/Lycon_svg.svg";
 import { Constants } from "@/utils/constants/constantValues";
 
-import testImg from "../../assets/wax/wax_3.jpg";
 export const Landing = () => {
   return (
     <Box className="landing">
