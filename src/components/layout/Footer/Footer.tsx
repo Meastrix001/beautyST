@@ -17,9 +17,7 @@ import { useTranslation } from "react-i18next";
  */
 
 const Footer: React.FC = () => {
-  const [activeLanguage, setActiveLanguage] = useState<string>(
-    localStorage.getItem("beautyst_lang_last") || i18n.language
-  );
+  const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
 
   const { t } = useTranslation();
   const handleLanguageChange = (lang: "en" | "est") => {
@@ -28,6 +26,10 @@ const Footer: React.FC = () => {
   };
 
   useEffect(() => {
+    if (localStorage.getItem("beautyst_lang_last")) {
+      setActiveLanguage(localStorage.getItem("beautyst_lang_last") as string);
+    }
+
     const handleChange = (lng: string) => setActiveLanguage(lng);
 
     i18n.on("languageChanged", handleChange);

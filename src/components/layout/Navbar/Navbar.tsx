@@ -23,9 +23,7 @@ import i18n from "@/utils/i18n/i18n";
  */
 
 const Navbar: React.FC = () => {
-  const [activeLanguage, setActiveLanguage] = useState<string>(
-    localStorage.getItem("beautyst_lang_last") || i18n.language
-  );
+  const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
 
   const handleLanguageChange = (lang: "en" | "est") => {
     localStorage.setItem("beautyst_lang_last", lang);
@@ -33,6 +31,10 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
+    if (localStorage.getItem("beautyst_lang_last")) {
+      setActiveLanguage(localStorage.getItem("beautyst_lang_last") as string);
+    }
+
     const handleChange = (lng: string) => setActiveLanguage(lng);
 
     i18n.on("languageChanged", handleChange);

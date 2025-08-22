@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Button, Flex } from "@radix-ui/themes";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { NavLinks } from "@/components";
 import useViewportWidth from "@/hooks/useViewportWidth";
+import { i18n } from "next-i18next";
 
 /**
  * Navigation component that renders a responsive navigation bar.
@@ -23,6 +24,14 @@ const Nav: React.FC = () => {
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("beautyst_lang_last")) {
+      i18n?.changeLanguage(
+        localStorage.getItem("beautyst_lang_last") as string
+      );
+    }
+  }, []);
 
   return (
     <>

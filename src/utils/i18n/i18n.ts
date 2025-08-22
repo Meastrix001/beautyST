@@ -9,9 +9,7 @@ const supportedLanguages = {
   est: "est",
 };
 
-const language =
-  // @ts-expect-error ddwdaw
-  supportedLanguages[localStorage.getItem("beautyst_lang_last")] || "est";
+const language = supportedLanguages["est"];
 
 const resources = {
   en: {

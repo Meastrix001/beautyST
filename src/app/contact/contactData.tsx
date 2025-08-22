@@ -3,6 +3,7 @@ import {
   ChatBubbleIcon,
   InstagramLogoIcon,
 } from "@radix-ui/react-icons";
+import { JSX } from "react";
 
 export const contactData = [
   {
@@ -28,5 +29,5 @@ export const contactData = [
 ] as {
   key: string;
   value: string;
-  icon: any;
+  icon: JSX.Element;
 }[];
