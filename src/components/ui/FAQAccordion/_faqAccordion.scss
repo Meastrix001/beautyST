@@ -1,0 +1,51 @@
+.faq-accordion {
+  &__trigger {
+    background-color: var(--accent-a3);
+    padding: var(--space-4) var(--space-6);
+    border-radius: max(var(--radius-3));
+    border: none;
+    width: 100%;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__chevron {
+    transition: transform 300ms;
+  }
+
+  &__trigger[data-state="open"] > &__chevron {
+    transform: rotate(180deg);
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__content[data-state="open"] {
+    animation: slideDown 300ms ease-out;
+  }
+
+  &__content[data-state="closed"] {
+    animation: slideUp 300ms ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}

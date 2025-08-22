@@ -1,0 +1,10 @@
+.testimonial-card {
+  background-color: var(--accent-a3);
+  color: var(--accent-a11);
+  padding: var(--space-6);
+  border-radius: max(var(--radius-3));
+  margin: 0 var(--space-4);
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+}

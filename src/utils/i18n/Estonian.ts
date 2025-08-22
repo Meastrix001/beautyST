@@ -3,11 +3,34 @@ export const i18n_est = {
     keys: {
       home: "Avaleht",
       ss: "Teenused ja hinnad",
-      aboutme: "minust",
+      about: "minust",
       contact: "kontakt",
       faq: "kkk",
     },
   },
+
+  landing: {
+    heading: "Tõsta oma enesekindlust",
+    subHeading: `Osaline või täielik keha vahatamine Tallinnas. Eksperthooldus, hügieenilised praktikad ja tulemused, mis kestavad. Meie eesmärk on muuta vahatamine lihtsaks, turvaliseks ja stressivabaks.`,
+    partner: {
+      desc: `Oleme uhked, et kasutame kõigi vahatamisteenustega seotud toodete peamiseks kaubamärgiks Lyconi.`,
+    },
+    features: {
+      key: "Miks valida meid?",
+      desc: "",
+      data: {
+        0: {
+          heading: "Miks vahatada, mitte raseerida?",
+          desc: "Vahatamine annab pikaajalisi tulemusi, eemaldades karvad juuri mööda, tagades siledama naha kui raseerimine. Samuti koorib see surnud naharakke, parandades naha tekstuuri, kuni 4 nädalaks.",
+        },
+        1: {
+          heading: "Tehtud kirglikult ja hoolivalt",
+          desc: "Ma lähenen igale vahatamisele kirglikult, mitte lihtsalt tööna. Kuna mulle meeldib tõeliselt see, mida teen, on iga aeg kokku lepitud protseduur mugavam ja nauditavam ka sulle.",
+        },
+      },
+    },
+  },
+
   contact: {
     key: {
       email: "Email",
@@ -146,5 +169,38 @@ export const i18n_est = {
 
   footer: {
     arr: "Kõik õigused kaitstud",
+  },
+
+  usp: {
+    heading: "Miks valida meid?",
+    subHeading: `See on koht “Miks valida meid?” sektsiooni jaoks. Siia saab lisada oma sisu.`,
+
+    data: {
+      0: {
+        heading: "Pikaajaline siledus",
+        description: "Naudi kuni 4 nädalat raseerimiseta ja siledat nahka.",
+      },
+      1: {
+        heading: "Professionaalne & hügieeniline",
+        description:
+          "Pakume iga kord turvalisi, puhtaid ja täpseid protseduure.",
+      },
+      2: {
+        heading: "Enesekindlus",
+        description:
+          "Alates kulmudest kuni kogu kehani, pakume laia valikut vahatamisvõimalusi nii meestele kui naistele.",
+      },
+      3: {
+        heading: "Avatud kõigile",
+        description:
+          "Kasutame kvaliteetset vaha, võimaldades protseduure nii esmakordsetele klientidele kui ka regulaarselt külastavatele klientidele.",
+      },
+    },
+  },
+
+  cta: {
+    heading: "Broneeri aeg",
+    subHeading:
+      "Aja broneerimine on kiire ja lihtne. Vali kõik piirkonnad, mida soovid vahatada, ja vali sobiv aeg, mis sulle sobib.",
   },
 };

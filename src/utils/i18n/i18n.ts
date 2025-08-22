@@ -1,3 +1,4 @@
+"use client";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { i18n_en } from "./English";
@@ -9,6 +10,7 @@ const supportedLanguages = {
 };
 
 const language =
+  // @ts-expect-error ddwdaw
   supportedLanguages[localStorage.getItem("beautyst_lang_last")] || "est";
 
 const resources = {

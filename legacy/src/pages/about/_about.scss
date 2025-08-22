@@ -1,0 +1,98 @@
+.about {
+  background: rgb(247, 177, 176);
+  color: var(--color-text);
+  min-height: 90vh;
+
+  z-index: 0;
+  position: relative;
+
+  &__hero {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .about__subtitle {
+      color: var(--gray-11);
+      font-style: italic;
+    }
+  }
+
+  &__card {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    width: 100%;
+  }
+
+  &__image {
+    position: relative;
+    .image {
+      // Layout
+      width: 100%; // Fill available space
+      height: 100%; // Fill available space
+      padding-top: 100%; // Aspect ratio 3:2
+      position: relative; // Used for &__content
+      display: block;
+
+      &__content {
+        position: absolute; // Use space inside the avatar;
+        inset: 0; // Fill available space
+        border-radius: var(--border-primary);
+        overflow: hidden; // Remove any part that is outside the circle
+
+        img {
+          // Layout
+          width: 100%; // Use images own size
+          height: 100%; // Use images own size
+
+          object-fit: cover; // Fill available space
+          object-position: center center; // Center the image horizontally and vertically
+        }
+      }
+    }
+  }
+
+  .pets {
+    min-width: 32%;
+    &__image {
+      position: relative;
+      .image {
+        // Layout
+        width: 100%; // Fill available space
+        height: 100%; // Fill available space
+        padding-top: 100%; // Aspect ratio 3:2
+        position: relative; // Used for &__content
+        display: block;
+
+        &__content {
+          position: absolute; // Use space inside the avatar;
+          inset: 0; // Fill available space
+          border-radius: var(--border-primary);
+          overflow: hidden; // Remove any part that is outside the circle
+
+          img {
+            // Layout
+            width: 100%; // Use images own size
+            height: 100%; // Use images own size
+
+            object-fit: cover; // Fill available space
+            object-position: center center; // Center the image horizontally and vertically
+          }
+        }
+      }
+    }
+  }
+
+  &__details {
+    flex: 2;
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 1.25rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      list-style: disc;
+    }
+  }
+}

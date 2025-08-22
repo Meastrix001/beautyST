@@ -1,0 +1,22 @@
+import { ThemeProps } from "@radix-ui/themes";
+
+export const brand = {
+  defaultLanguage: "en",
+  company: {
+    name: "BeautyByStiina - in Tallinn",
+    logo: {
+      src: "/static/logos/logo_new_3_hq.png",
+      alt: "Your Company Logo",
+      width: 118.2,
+      height: 24,
+    },
+  },
+  theme: {
+    appearance: "light",
+    accentColor: "blue",
+    grayColor: "slate",
+    panelBackground: "solid",
+    scaling: "100%",
+    radius: "full",
+  } as ThemeProps,
+};

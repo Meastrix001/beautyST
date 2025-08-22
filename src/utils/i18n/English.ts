@@ -1,14 +1,36 @@
 export const i18n_en = {
   nav: {
     keys: {
-      home: "home",
-      ss: "services & prices",
-      aboutme: "about me",
+      home: "Home",
+      ss: "Services & Prices",
+      about: "About me",
       contact: "Contact",
-      faq: "faq",
+      faq: "FAQ",
     },
   },
 
+  landing: {
+    heading: "Boost your confidence",
+    subHeading: `Partial or full body waxing in Tallinn, Expert care, hygienic practices, and results that last. We’re
+                here to make waxing simple, safe, and stress free`,
+    partner: {
+      desc: `We are proud to use Lycon as our primary brand for everything waxing related`,
+    },
+    features: {
+      key: "Why choose us?",
+      desc: "",
+      data: {
+        0: {
+          heading: "Why wax instead of shave?",
+          desc: "Waxing provides long-lasting results, removing hair from the root for smoother skin than shaving, and also exfoliates by removing dead skin cells, improving skin texture, for up to 4 weeks.",
+        },
+        1: {
+          heading: "Done with passion and care",
+          desc: "I approach every waxing session with passion, not just as work. Because I truly enjoy what I do, each appointment is more comfortable and enjoyable for you.",
+        },
+      },
+    },
+  },
   contact: {
     key: {
       email: "Email",
@@ -47,7 +69,8 @@ My name is Stiina Roofthooft, and I am 24 years old. I’m new to the beauty ind
   ss: {
     header: "Services & Prices",
     bio: "Price overview for both men and women",
-
+    mensNote: `Please note: Manzilian waxes for men are not offered, cannot be
+booked and are not available by request.`,
     rowMen: {
       heading: "Men",
     },
@@ -146,5 +169,39 @@ My name is Stiina Roofthooft, and I am 24 years old. I’m new to the beauty ind
 
   footer: {
     arr: "All rights reserved",
+  },
+
+  usp: {
+    heading: "Why chose us?",
+    subHeading: `This is a placeholder for the Why Choose Us Section. You can add
+            your content here.`,
+
+    data: {
+      0: {
+        heading: "Long-Lasting Smoothness",
+        description: "Enjoy up to 4 weeks of no shaving, and smooth skin.",
+      },
+      1: {
+        heading: "Professional & Hygienic",
+        description:
+          "We provide safe, clean, and precise treatments every time.",
+      },
+      2: {
+        heading: "Confidence",
+        description:
+          "From eyebrows to full body, we offer a wide range of waxes for both men & women.",
+      },
+      3: {
+        heading: "Open for anyone",
+        description:
+          "We use high-quality wax, making it possible for both first-timers and regulars.",
+      },
+    },
+  },
+
+  cta: {
+    heading: "Book a time",
+    subHeading:
+      "Booking a time is quickly and straigt-forward. select all the options you want waxed, and select a time that works for you.",
   },
 };
