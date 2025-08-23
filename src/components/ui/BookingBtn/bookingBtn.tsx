@@ -1,5 +1,5 @@
 "use client";
-import { Button, Flex, Link, Text } from "@radix-ui/themes";
+import { Box, Button, Flex, Link, Text } from "@radix-ui/themes";
 import { useTranslation } from "react-i18next";
 
 export const BookingButton = ({ onlyBtn }: { onlyBtn?: boolean }) => {
@@ -15,12 +15,14 @@ export const BookingButton = ({ onlyBtn }: { onlyBtn?: boolean }) => {
         {t("bookingbtn.reminder")}{" "}
       </Text>
       <BTN />
-      <Text size="4" align="center">
-        {t("bookingbtn.bio")}
-      </Text>
-      <Text size="5" align="center">
-        {t("bookingbtn.langInfo")}
-      </Text>
+      <Box style={{ textAlign: "center" }}>
+        <Text size="4" align="center">
+          {t("bookingbtn.bio")}
+        </Text>
+        <Text size="5" align="center">
+          {t("bookingbtn.langInfo")}
+        </Text>
+      </Box>
     </Flex>
   );
 };
@@ -38,13 +40,14 @@ const BTN = () => {
       target="_blank"
       style={{ color: "black" }}
     >
-      <Flex direction="column" mb="5">
+      <Flex direction="column">
         <Button
           className="hover"
           size="4"
           color="pink"
           variant="soft"
           style={{ width: "100%", color: "black" }}
+          mb="0"
         >
           {t("bookingbtn.btn")}
         </Button>{" "}

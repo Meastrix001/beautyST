@@ -39,15 +39,8 @@ const Nav: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    // if (localStorage.getItem("beautyst_lang_last")) {
-    // i18n?.changeLanguage(localStorage.getItem("beautyst_lang_last") as string);
-    // }
-  }, []);
-
   return (
     <>
-      {/* Mobile Navigation */}
       {isMobile && (
         <>
           <Flex justify="between" align="center">
@@ -56,12 +49,11 @@ const Nav: React.FC = () => {
             </Button>
           </Flex>
 
-          {/* Mobile Menu Overlay */}
           {isOpen && (
             <Box
               position="fixed"
               inset="0"
-              style={{ backgroundColor: "white", zIndex: 1000 }}
+              style={{ backgroundColor: "rgb(247, 177, 176)", zIndex: 1000 }}
             >
               <Flex direction="column" p="4" gap="5" height="100%">
                 <Flex justify="end">
@@ -120,7 +112,6 @@ const Nav: React.FC = () => {
         </>
       )}
 
-      {/* Desktop Navigation */}
       {!isMobile && (
         <Flex justify="end" align="center" gap="6">
           <NavLinks />

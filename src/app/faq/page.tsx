@@ -97,7 +97,7 @@ export default function FaqPage() {
           </Flex>
 
           {/* Booking CTA */}
-          <Box mb="9">
+          <Box mt="9" mb="9">
             <BookingButton />
           </Box>
         </Flex>

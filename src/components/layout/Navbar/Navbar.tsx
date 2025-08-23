@@ -43,7 +43,6 @@ const Navbar: React.FC = () => {
     <Box className="navigation">
       <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>
         <Grid align="center" columns={{ initial: "3", lg: "6" }} gap="4">
-          {/* Logo */}
           <Flex gridColumn={{ initial: "1 / 2", lg: "1 / 2" }} gridRow="1">
             <Link href={siteRoutes.home.path} title={brand.company.logo.alt}>
               <Image
@@ -55,7 +54,6 @@ const Navbar: React.FC = () => {
             </Link>
           </Flex>
 
-          {/* Nav */}
           <Flex
             justify={{ initial: "end", lg: "center" }}
             gridColumn={{ initial: "2 / 4", lg: "2 / 6" }}
@@ -64,7 +62,6 @@ const Navbar: React.FC = () => {
             <Nav />
           </Flex>
 
-          {/* CTA */}
           <Flex
             justify={{ initial: "center", lg: "end" }}
             gridColumn={{ initial: "2 / 3", lg: "6 / 7" }}

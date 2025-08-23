@@ -14,16 +14,23 @@ const HeroSection: React.FC = () => {
       <Box>
         <Grid
           columns={{ initial: "1", lg: "6" }}
-          gap={{ initial: "1", lg: "9" }}
+          gap={{ initial: "5", lg: "9" }}
           align="center"
+          justify="center"
         >
           <Box gridColumn={{ initial: "1 / -1", lg: "1 / 5" }}>
-            <Flex direction="column" gap="6">
+            <Flex direction="column" gap="6" justify="center">
               <Heading size={{ initial: "8", lg: "9" }} as="h1" m="0">
                 {t("landing.heading")}
               </Heading>
 
-              <Text as="p" color="gray" size="5" weight="bold" m="0">
+              <Text
+                as="p"
+                color="gray"
+                size={{ initial: "4", lg: "5" }}
+                weight="bold"
+                m="0"
+              >
                 {t("landing.subHeading")}
               </Text>
 
