@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
       <Box>
         <Grid
           columns={{ initial: "1", lg: "6" }}
-          gap={{ initial: "5", lg: "9" }}
+          gap={{ initial: "4", lg: "9" }}
           align="center"
           justify="center"
         >
@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
               <Text
                 as="p"
                 color="gray"
-                size={{ initial: "4", lg: "5" }}
+                size={{ initial: "3", lg: "5" }}
                 weight="bold"
                 m="0"
               >
