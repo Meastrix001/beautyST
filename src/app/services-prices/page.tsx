@@ -45,7 +45,7 @@ export default function Prices() {
             <Box className="prices__list-section">
               <Flex align="center" justify="center" mb="4" gap="2">
                 <Image
-                  src="/static/wax/wax-sticks.webp"
+                  src="/static/wax/wax-sticks.png"
                   alt=""
                   className="prices__icon"
                   width="1000"
@@ -77,7 +77,7 @@ export default function Prices() {
                 <Image
                   width="1000"
                   height="1000"
-                  src="/static/wax/wax-sticks.webp"
+                  src="/static/wax/wax-sticks.png"
                   alt=""
                   className="prices__icon flipped"
                 />

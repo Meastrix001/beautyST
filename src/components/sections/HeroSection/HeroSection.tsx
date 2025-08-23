@@ -2,6 +2,7 @@
 import { HeroImage } from "@/components";
 import { BookingButton } from "@/components/ui/BookingBtn/bookingBtn";
 import { Box, Flex, Grid, Heading, Section, Text } from "@radix-ui/themes";
+
 import React from "react";
 import { useTranslation } from "react-i18next";
 
