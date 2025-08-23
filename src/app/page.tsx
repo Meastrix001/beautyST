@@ -22,7 +22,7 @@ export default function Home() {
               align="center"
               justify="center"
               direction="column"
-              mb="9"
+              mb="10rem"
               style={{
                 minHeight: "calc((100vh - 102px) - (16px* var(--scaling)))",
               }}
