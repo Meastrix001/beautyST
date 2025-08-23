@@ -26,15 +26,10 @@ const Navbar: React.FC = () => {
   const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
 
   const handleLanguageChange = (lang: "en" | "est") => {
-    localStorage.setItem("beautyst_lang_last", lang);
     return i18n.changeLanguage(lang);
   };
 
   useEffect(() => {
-    if (localStorage.getItem("beautyst_lang_last")) {
-      setActiveLanguage(localStorage.getItem("beautyst_lang_last") as string);
-    }
-
     const handleChange = (lng: string) => setActiveLanguage(lng);
 
     i18n.on("languageChanged", handleChange);

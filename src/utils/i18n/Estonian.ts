@@ -3,9 +3,9 @@ export const i18n_est = {
     keys: {
       home: "Avaleht",
       ss: "Teenused ja hinnad",
-      about: "minust",
-      contact: "kontakt",
-      faq: "kkk",
+      about: "Minust",
+      contact: "Kontakt",
+      faq: "KKK",
     },
   },
 

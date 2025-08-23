@@ -1,10 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Box, Button, Flex } from "@radix-ui/themes";
+import { Badge, Box, Button, Flex } from "@radix-ui/themes";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { NavLinks } from "@/components";
 import useViewportWidth from "@/hooks/useViewportWidth";
-import { i18n } from "next-i18next";
+import i18n from "@/utils/i18n/i18n";
+// import { i18n } from "next-i18next";
 
 /**
  * Navigation component that renders a responsive navigation bar.
@@ -20,17 +21,28 @@ import { i18n } from "next-i18next";
 const Nav: React.FC = () => {
   const isMobile = useViewportWidth(768);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
+  useEffect(() => {
+    const handleChange = (lng: string) => setActiveLanguage(lng);
 
+    i18n.on("languageChanged", handleChange);
+
+    return () => {
+      i18n.off("languageChanged", handleChange);
+    };
+  }, []);
+
+  const handleLanguageChange = (lang: "en" | "est") => {
+    return i18n.changeLanguage(lang);
+  };
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
-    if (localStorage.getItem("beautyst_lang_last")) {
-      i18n?.changeLanguage(
-        localStorage.getItem("beautyst_lang_last") as string
-      );
-    }
+    // if (localStorage.getItem("beautyst_lang_last")) {
+    // i18n?.changeLanguage(localStorage.getItem("beautyst_lang_last") as string);
+    // }
   }, []);
 
   return (
@@ -51,14 +63,56 @@ const Nav: React.FC = () => {
               inset="0"
               style={{ backgroundColor: "white", zIndex: 1000 }}
             >
-              <Flex direction="column" p="4" gap="5">
+              <Flex direction="column" p="4" gap="5" height="100%">
                 <Flex justify="end">
                   <Button variant="soft" onClick={toggleNav}>
                     <Cross1Icon />
                   </Button>
                 </Flex>
-                <Flex direction="column" gap="6" align="center" py="8">
-                  <NavLinks onClick={toggleNav} />
+
+                <Flex
+                  direction="column"
+                  gap="6"
+                  align="center"
+                  py="8"
+                  height="100%"
+                  justify="between"
+                >
+                  <Flex
+                    direction="column"
+                    gap="6"
+                    align="center"
+                    py="8"
+                    height="100%"
+                  >
+                    <NavLinks onClick={toggleNav} />
+                  </Flex>
+
+                  <Flex
+                    justify={{ initial: "center", lg: "end" }}
+                    gridColumn={{ initial: "2 / 3", lg: "6 / 7" }}
+                    gridRow="1"
+                    gap="2"
+                  >
+                    <Badge
+                      className="hover"
+                      size="3"
+                      variant={activeLanguage === "en" ? "solid" : "soft"}
+                      color={activeLanguage === "en" ? "pink" : "gold"}
+                      onClick={() => handleLanguageChange("en")}
+                    >
+                      English
+                    </Badge>
+                    <Badge
+                      className="hover"
+                      size="3"
+                      variant={activeLanguage === "est" ? "solid" : "soft"}
+                      color={activeLanguage === "est" ? "pink" : "gold"}
+                      onClick={() => handleLanguageChange("est")}
+                    >
+                      Eesti
+                    </Badge>
+                  </Flex>
                 </Flex>
               </Flex>
             </Box>

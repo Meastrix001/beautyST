@@ -21,14 +21,14 @@ const Footer: React.FC = () => {
 
   const { t } = useTranslation();
   const handleLanguageChange = (lang: "en" | "est") => {
-    localStorage.setItem("beautyst_lang_last", lang);
+    // localStorage.setItem("beautyst_lang_last", lang);
     return i18n.changeLanguage(lang);
   };
 
   useEffect(() => {
-    if (localStorage.getItem("beautyst_lang_last")) {
-      setActiveLanguage(localStorage.getItem("beautyst_lang_last") as string);
-    }
+    // if (localStorage.getItem("beautyst_lang_last")) {
+    // setActiveLanguage(localStorage.getItem("beautyst_lang_last") as string);
+    // }
 
     const handleChange = (lng: string) => setActiveLanguage(lng);
 
