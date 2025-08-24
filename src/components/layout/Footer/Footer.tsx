@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { brand } from "@/theme/brand.config";
 import i18n from "@/utils/i18n/i18n";
 import { useTranslation } from "react-i18next";
+import { useRouter } from "next/navigation";
 
 /**
  * Footer component that displays the site copyright and social media links.
@@ -18,18 +19,13 @@ import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
   const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
-
+  const router = useRouter();
   const { t } = useTranslation();
   const handleLanguageChange = (lang: "en" | "est") => {
-    // localStorage.setItem("beautyst_lang_last", lang);
     return i18n.changeLanguage(lang);
   };
 
   useEffect(() => {
-    // if (localStorage.getItem("beautyst_lang_last")) {
-    // setActiveLanguage(localStorage.getItem("beautyst_lang_last") as string);
-    // }
-
     const handleChange = (lng: string) => setActiveLanguage(lng);
 
     i18n.on("languageChanged", handleChange);
@@ -53,9 +49,12 @@ const Footer: React.FC = () => {
             <Text size="2" color="gray">
               &copy; {new Date().getFullYear()} {brand.company.name}.{" "}
               {t("footer.arr")}
+            </Text>{" "}
+            -{" "}
+            <Text size="2" onClick={() => router.push("/review/")}>
+              log in
             </Text>
           </Box>
-
           {/* CTA */}
           <Flex justify={{ initial: "center", lg: "end" }} gap="2">
             <Badge

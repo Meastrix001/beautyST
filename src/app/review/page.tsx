@@ -23,6 +23,10 @@ export default function ReviewPage() {
   const [hover, setHover] = useState(0);
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
+  const [loginPass, setLoginPass] = useState<string>("");
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
+
+  const loginPassVal = "stiina@nick18072025";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,6 +40,46 @@ export default function ReviewPage() {
       setDisableReview(false);
     }, 60000);
   };
+
+  const handleLogin = () => {
+    if (loginPass === loginPassVal) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
+
+  if (isLoggedIn) {
+    return (
+      <Box className="prices">
+        <Container>
+          <Flex
+            direction="column"
+            align="center"
+            gap="6"
+            className="prices__container"
+          >
+            <Box className="field" mt="9">
+              <Label.Root htmlFor="name">Password</Label.Root>
+              <TextField.Root
+                placeholder=""
+                id="pass"
+                type="password"
+                value={loginPass}
+                mb="4"
+                onChange={(e) => setLoginPass(e.target.value)}
+              >
+                <TextField.Slot>
+                  <StarFilledIcon height="16" width="16" />
+                </TextField.Slot>
+              </TextField.Root>
+              <Button onClick={() => handleLogin()}>Log in</Button>
+            </Box>
+          </Flex>
+        </Container>
+      </Box>
+    );
+  }
 
   return (
     <Box className="prices">
