@@ -21,6 +21,10 @@ export const siteRoutes = {
     path: "/faq",
     label: "nav.keys.faq",
   } as Route,
+  review: {
+    path: "/review",
+    label: "",
+  } as Route,
   // Nav
   nav: {
     home: {
