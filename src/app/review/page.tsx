@@ -13,12 +13,7 @@ import {
 } from "@radix-ui/themes";
 import { Label } from "radix-ui";
 import { Dispatch, SetStateAction, useState } from "react";
-import {
-  ChatBubbleIcon,
-  PersonIcon,
-  StarFilledIcon,
-  StarIcon,
-} from "@radix-ui/react-icons";
+import { PersonIcon, StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { brand } from "@/theme/brand.config";
 
