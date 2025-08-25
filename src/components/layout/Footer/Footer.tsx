@@ -51,8 +51,8 @@ const Footer: React.FC = () => {
               {t("footer.arr")}
             </Text>{" "}
             -{" "}
-            <Text size="2" onClick={() => router.push("/review/")}>
-              log in
+            <Text className="hover" size="2" onClick={() => router.push("/review/")}>
+              Leave a review
             </Text>
           </Box>
           {/* CTA */}

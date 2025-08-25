@@ -1,7 +1,7 @@
 import { StarFilledIcon } from "@radix-ui/react-icons";
-import { Avatar, Box, Flex, Separator, Text } from "@radix-ui/themes";
+import { Box, Flex, Separator, Text } from "@radix-ui/themes";
 import React from "react";
-import { TestimonialCardProps } from "./TestimonialCard.types";
+import { Review } from "@/api/firebase.config";
 
 /**
  * Renders a testimonial card displaying a star rating, testimonial statement, and person details.
@@ -14,10 +14,8 @@ import { TestimonialCardProps } from "./TestimonialCard.types";
  * @returns A styled testimonial card component.
  */
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({
-  stars,
-  statement,
-  person,
+const TestimonialCard: React.FC<{ review: Review }> = ({
+  review,
 }) => {
   return (
     <Box className="testimonial-card">
@@ -28,29 +26,22 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
               key={index}
               width={18}
               height={18}
-              style={{ color: index < stars ? "gold" : "gray" }}
+              style={{ color: index < review.rating ? "gold" : "gray" }}
             />
           ))}
         </Flex>
-        <Text as="p">{statement}</Text>
+        <Text as="p">{review.message}</Text>
         <Separator
           orientation="horizontal"
           style={{ width: "100%", margin: "1rem 0" }}
         />
         <Flex gap="3" align="center">
-          <Avatar
-            size="3"
-            variant="solid"
-            color="indigo"
-            src={person.avatar}
-            fallback={person.name.slice(0, 1).toUpperCase()}
-          />
           <Flex direction="column" gap="0">
             <Text weight="bold" color="gray" highContrast truncate>
-              {person.name}
+              {review.name}
             </Text>
             <Text color="gray" size="2" truncate>
-              {person.title}
+              {new Date(review.created.seconds * 1000).toLocaleDateString()}
             </Text>
           </Flex>
         </Flex>

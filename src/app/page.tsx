@@ -46,7 +46,7 @@ export default function Home() {
       </Container>
 
       <Flex direction="column" py="9">
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
       </Flex>
 
       <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>

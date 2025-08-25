@@ -16,70 +16,37 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { PersonIcon, StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { brand } from "@/theme/brand.config";
+import { useCreateReview } from "./hooks/useCreateReview";
+import { Review } from "@/api/firebase.config";
 
 export default function ReviewPage() {
+
+  const [reviewData, setReviewData] = useState<Partial<Review>>({
+    message: "",
+    name: "",
+    rating: 0,
+  }
+  )
+
+  const setNewValue = (key: string, value: string | number) => {
+    setReviewData((prev) => ({
+      ...prev,
+      [key]: value
+    }
+    ))
+  }
   const [disableReview, setDisableReview] = useState<boolean>(false);
-  const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-  const [name, setName] = useState("");
-  const [review, setReview] = useState("");
-  const [loginPass, setLoginPass] = useState<string>("");
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
+  const { createReview } = useCreateReview()
 
-  const loginPassVal = "stiina@nick18072025";
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log({ rating, name, review });
-    setRating(0);
-    setName("");
-    setReview("");
+  const handleSubmit = () => {
+    createReview(reviewData)
     setDisableReview(true);
 
     setTimeout(() => {
       setDisableReview(false);
     }, 60000);
   };
-
-  const handleLogin = () => {
-    if (loginPass === loginPassVal) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
-  };
-
-  if (isLoggedIn) {
-    return (
-      <Box className="prices">
-        <Container>
-          <Flex
-            direction="column"
-            align="center"
-            gap="6"
-            className="prices__container"
-          >
-            <Box className="field" mt="9">
-              <Label.Root htmlFor="name">Password</Label.Root>
-              <TextField.Root
-                placeholder=""
-                id="pass"
-                type="password"
-                value={loginPass}
-                mb="4"
-                onChange={(e) => setLoginPass(e.target.value)}
-              >
-                <TextField.Slot>
-                  <StarFilledIcon height="16" width="16" />
-                </TextField.Slot>
-              </TextField.Root>
-              <Button onClick={() => handleLogin()}>Log in</Button>
-            </Box>
-          </Flex>
-        </Container>
-      </Box>
-    );
-  }
 
   return (
     <Box className="prices">
@@ -112,15 +79,11 @@ export default function ReviewPage() {
               <ThankYouMess />
             ) : (
               <Form
-                setRating={setRating}
                 handleSubmit={handleSubmit}
                 hover={hover}
-                rating={rating}
                 setHover={setHover}
-                name={name}
-                setName={setName}
-                review={review}
-                setReview={setReview}
+                reviewData={reviewData}
+                setNewValue={setNewValue}
               />
             )}
           </Flex>
@@ -155,25 +118,17 @@ const ThankYouMess = () => {
 };
 
 const Form = ({
-  setRating,
   handleSubmit,
   hover,
-  rating,
   setHover,
-  name,
-  setName,
-  review,
-  setReview,
+  reviewData,
+  setNewValue
 }: {
-  setRating: Dispatch<SetStateAction<number>>;
   handleSubmit: (e: React.FormEvent) => void;
   hover: number;
-  rating: number;
-  setHover: Dispatch<SetStateAction<number>>;
-  name: string;
-  setName: Dispatch<SetStateAction<string>>;
-  review: string;
-  setReview: Dispatch<SetStateAction<string>>;
+  setHover: Dispatch<SetStateAction<number>>
+  reviewData: Partial<Review>
+  setNewValue: (key: string, value: string | number) => void
 }) => {
   return (
     <form onSubmit={handleSubmit} className="review-form">
@@ -183,12 +138,12 @@ const Form = ({
           <Button
             type="button"
             key={star}
-            className={`star ${star <= (hover || rating) ? "active" : ""}`}
-            onClick={() => setRating(star)}
+            className={`star ${star <= (hover || reviewData.rating || 0) ? "active" : ""}`}
+            onClick={() => setNewValue("rating", star)}
             onMouseEnter={() => setHover(star)}
             onMouseLeave={() => setHover(0)}
           >
-            {star <= (hover || rating) ? (
+            {star <= (hover || reviewData.rating || 0) ? (
               <StarFilledIcon width={36} height={36} />
             ) : (
               <StarIcon width={36} height={36} />
@@ -199,12 +154,13 @@ const Form = ({
 
       <Box className="field">
         <Label.Root htmlFor="name">Your Name</Label.Root>
+        <Text size="1" style={{ fontStyle: "italic" }}>Your name helps us validate your review.</Text>
         <TextField.Root
           placeholder="Optional"
           id="name"
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={reviewData.name}
+          onChange={(e) => setNewValue("name", e.target.value)}
         >
           <TextField.Slot>
             <PersonIcon height="16" width="16" />
@@ -214,10 +170,11 @@ const Form = ({
 
       <Box className="field">
         <Label.Root htmlFor="review">Your Review</Label.Root>
+        <Text size="1" style={{ fontStyle: "italic" }}>Any feedback or tips is welcome.</Text>
         <TextArea
           id="review"
-          value={review}
-          onChange={(e) => setReview(e.target.value)}
+          value={reviewData.message}
+          onChange={(e) => setNewValue("message", e.target.value)}
           placeholder="Tell us about your experience..."
           rows={4}
         />
@@ -226,6 +183,7 @@ const Form = ({
       <Button type="submit" className="submit-btn">
         Submit Review
       </Button>
+      <Text style={{ fontStyle: "italic" }} size="1">Reviews will be checked for explicit language or false reviews before being published. </Text>
     </form>
   );
 };

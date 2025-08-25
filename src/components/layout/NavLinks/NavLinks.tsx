@@ -23,8 +23,6 @@ const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
   return (
     <>
       {Object.values(siteRoutes.nav).map((route: Route, index) => {
-        console.log(route.path, pathname);
-
         return (
           <Link
             key={index}

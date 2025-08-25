@@ -2,8 +2,8 @@
 import TestimonialCard from "@/components/ui/TestimonialCard/TestimonialCard";
 import { Box } from "@radix-ui/themes";
 import Slider from "react-infinite-logo-slider";
-import React from "react";
-import { testimonials } from "@/constants/testimonials";
+import React, { useEffect, useState } from "react";
+import { getAllReviews, Review } from "@/api/firebase.config";
 
 /**
  * A testimonial slider component that displays a list of testimonials in a horizontally scrolling slider.
@@ -20,19 +20,26 @@ import { testimonials } from "@/constants/testimonials";
  */
 
 const TestimonialSlider: React.FC = () => {
+
+  const [reviews, setReviews] = useState<Review[]>([]);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      const data = await getAllReviews();
+      setReviews(data as Review[]);
+    };
+    fetchReviews();
+  }, []); // <-- empty dependency so it runs once
+
+
+
   return (
     <Slider width="350px" duration={80} pauseOnHover={true} blurBorders={false}>
-      {testimonials.map((testimonial, index) => (
+      {reviews.map((review, index) => (
         <Slider.Slide key={index}>
           <Box minHeight="100%" maxWidth="100%">
             <TestimonialCard
-              stars={testimonial.stars}
-              statement={testimonial.statement}
-              person={{
-                name: testimonial.person.name,
-                title: testimonial.person.title,
-                avatar: testimonial.person.avatar,
-              }}
+              review={review}
             />
           </Box>
         </Slider.Slide>

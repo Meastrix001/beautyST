@@ -17,11 +17,10 @@ const TestimonialsSection: React.FC = () => {
         <Container px={{ initial: "4", lg: "0" }}>
           <Flex direction="column" gap="2" align="center" pb="4">
             <Heading as="h2" size="8" align="center" m="0">
-              Review Section
+              Reviews
             </Heading>
             <Text as="p" size="3" align="center" color="gray">
-              This is a placeholder for the testimonials. You can add your
-              content here.
+              See what past customers experienced
             </Text>
           </Flex>
         </Container>
