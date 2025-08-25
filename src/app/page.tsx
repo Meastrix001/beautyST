@@ -4,7 +4,6 @@ import {
   FeaturesSection,
   HeroSection,
   PartnerSection,
-  TestimonialsSection,
   USPSection,
 } from "@/components";
 import { Box, Container, Flex, Separator } from "@radix-ui/themes";
