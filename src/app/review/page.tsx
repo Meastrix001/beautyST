@@ -156,7 +156,7 @@ const Form = ({
         <Label.Root htmlFor="name">Your Name</Label.Root>
         <Text size="1" style={{ fontStyle: "italic" }}>Your name helps us validate your review.</Text>
         <TextField.Root
-          placeholder="Optional"
+          placeholder=""
           id="name"
           type="text"
           value={reviewData.name}
