@@ -9,11 +9,14 @@ import {
   Heading,
   Separator,
   Container,
+  Button,
 } from "@radix-ui/themes";
 import { contactData } from "./contactData";
 import { ContactMap } from "./Contact.map";
 import { useTranslation } from "react-i18next";
 import { BookingButton } from "@/components/ui/BookingBtn/bookingBtn";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { JSX } from "react";
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -76,7 +79,9 @@ export default function Contact() {
                         </Flex>
                       </DataList.Label>
                       <DataList.Value>
-                        <Text size="5">{item.value}</Text>
+
+                        {/* <Text size="5">{item.value}</Text> */}
+                        <SocialButtons item={item} />
                       </DataList.Value>
                     </DataList.Item>
                   ))}
@@ -99,3 +104,41 @@ export default function Contact() {
     </Box>
   );
 }
+interface SocialButtonsProps {
+  item: {
+    key: string;
+    value: string;
+    icon: JSX.Element;
+  };
+}
+
+const SocialButtons: React.FC<SocialButtonsProps> = ({ item }) => {
+  const social = {
+    Facebook: {
+      icon: <FaFacebookF />,
+      color: "#1877F2",
+    },
+    Instagram: {
+      icon: <FaInstagram />,
+      color: "#E1306C",
+    },
+  };
+
+
+  const logo = social[item.key as "Facebook"];
+
+  if (item.key === "Facebook" || item.key === "Instagram") {
+    return (
+      <Box style={{ display: "flex", gap: "0.5rem" }}>
+        <Link href={item.value} target="_blank" rel="noopener noreferrer">
+          <Button size="2" variant="solid" style={{ padding: "0.5rem", backgroundColor: logo.color, }}>
+            {logo.icon} {item.key}
+          </Button>
+        </Link>
+      </Box>
+    );
+
+  } else {
+    return <Text size="5">{item.value}</Text>
+  }
+};

@@ -1,7 +1,7 @@
 "use client";
 import USPItem from "@/components/ui/USPItem/USPItem";
 import { uniqueSellingPoints } from "@/constants/uniqueSellingPoints";
-import { Flex, Heading, Section, Text } from "@radix-ui/themes";
+import { Box, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -27,12 +27,14 @@ const USPSection: React.FC = () => {
           justify="between"
         >
           {uniqueSellingPoints.map((usp, index) => (
-            <USPItem
-              key={index}
-              heading={t(usp.heading)}
-              description={t(usp.description)}
-              icon={usp.icon}
-            />
+            <Box key={index} width={{ initial: "100%", lg: "25%" }}>
+              <USPItem
+                heading={t(usp.heading)}
+                description={t(usp.description)}
+                icon={usp.icon}
+              />
+
+            </Box>
           ))}
         </Flex>
       </Flex>

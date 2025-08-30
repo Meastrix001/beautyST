@@ -27,6 +27,14 @@ export const i18n_est = {
           heading: "Tehtud kirglikult ja hoolivalt",
           desc: "Ma lähenen igale vahatamisele kirglikult, mitte lihtsalt tööna. Kuna mulle meeldib tõeliselt see, mida teen, on iga aeg kokku lepitud protseduur mugavam ja nauditavam ka sulle.",
         },
+        2: {
+          heading: "Tugev vahatamine",
+          desc: "Delikaatsetele piirkondadele ja tundlikule nahale on tavaline vaha õrn, kuid tõhus lahendus. See haarab juukseid, kuid mitte nahka, muutes selle ideaalseks piirkondadeks nagu nägu, kaenlaalused ja bikiiniliin. Juuksed eemaldatakse juurest täpselt.",
+        },
+        3: {
+          heading: "Riba vahatamine",
+          desc: "Kiire, sile ja tõhus, ideaalne suurematele piirkondadele nagu jalad, käed, rind ja selg. Kiired tulemused ja kauakestev siledus.",
+        }
       },
     },
   },
@@ -69,6 +77,7 @@ export const i18n_est = {
   ss: {
     header: "Teenused ja hinnad",
     bio: "Hinnakiri nii meestele kui ka naistele",
+    mensNote: `Palun pange tähele: meeste Manziliani vahatamist ei pakuta, seda ei saa broneerida ega tellida.`,
 
     rowMen: {
       heading: "Mehed",

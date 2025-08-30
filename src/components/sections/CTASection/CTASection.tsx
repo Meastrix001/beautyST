@@ -11,7 +11,7 @@ const CTASection: React.FC = () => {
     <CTACard
       heading={t("cta.heading")}
       description={t("cta.subHeading")}
-      image="/static/landing/cta_icon.svg"
+      image="/static/landing/corner_img.jpg"
     >
       <BookingButton onlyBtn />
     </CTACard>

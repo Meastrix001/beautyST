@@ -21,26 +21,37 @@ const FeaturesSection: React.FC = () => {
 
         {/* Feature Cards */}
         <Flex gap="4" direction="column">
-          {/* <FeatureCard
-            size="large"
-            heading=""
-            description=""
-            image="/static/wax/wax_1.avif"
-          /> */}
+
+
+          <Grid columns={{ initial: "1", lg: "2" }} gap="4">
+            <Box gridColumn={{ initial: "1 / -1", lg: "1 / 2" }}>
+              <FeatureCard
+                heading={t(`landing.features.data.2.heading`)}
+                description={t(`landing.features.data.2.desc`)}
+                image="/static/landing/feature_2.jpg" />
+            </Box>
+            <Box gridColumn={{ initial: "1 / -1", lg: "2 / 3" }}>
+              <FeatureCard
+                heading={t(`landing.features.data.3.heading`)}
+                description={t(`landing.features.data.3.desc`)}
+                image="/static/landing/feature_1.jpg"
+              />
+            </Box>
+          </Grid>
 
           <Grid columns={{ initial: "1", lg: "2" }} gap="4">
             <Box gridColumn={{ initial: "1 / -1", lg: "1 / 2" }}>
               <FeatureCard
                 heading={t(`landing.features.data.0.heading`)}
                 description={t(`landing.features.data.0.desc`)}
-                image="/static/wax/wax_1_alt.png"
+                image="/static/wax/wax_img.jpg"
               />
             </Box>
             <Box gridColumn={{ initial: "1 / -1", lg: "2 / 3" }}>
               <FeatureCard
                 heading={t(`landing.features.data.1.heading`)}
                 description={t(`landing.features.data.1.desc`)}
-                image="/static/images/photo-1479030160180-b1860951d696.jpeg"
+                image="/static/landing/img_me.jpg"
               />
             </Box>
           </Grid>

@@ -4,30 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { CTACardProps } from "./CTACard.types";
 
-/**
- * CTACard is a reusable call-to-action card component.
- *
- * @remarks
- * This component displays a heading, description, optional children (such as buttons or links),
- * and an image. It uses a responsive grid layout to adjust the arrangement of content
- * based on the screen size.
- *
- * @param props.heading - The main heading text for the CTA card.
- * @param props.description - The description text displayed below the heading.
- * @param props.image - The source URL of the image to display on the card.
- * @param props.children - Optional React nodes to render below the description (e.g., buttons).
- *
- * @example
- * ```tsx
- * <CTACard
- *   heading="Join our newsletter"
- *   description="Stay updated with the latest news and offers."
- *   image="/newsletter.png"
- * >
- *   <Button>Subscribe</Button>
- * </CTACard>
- * ```
- */
 
 const CTACard: React.FC<CTACardProps> = ({
   heading,
@@ -58,19 +34,19 @@ const CTACard: React.FC<CTACardProps> = ({
           align="center"
         >
           <AspectRatio ratio={16 / 9}>
-            <Flex align="center" justify="center" height="100%">
+            <Flex align="center" justify="center" >
               <Image
                 src={image}
                 alt={heading}
-                // fill
-                height={10}
-                width={150}
-                quality={50}
+                fill   // 👈 this makes the image fill the parent container
+                quality={70}
                 style={{
                   objectFit: "cover",
-                  borderRadius: "var(--radius-3) var(--radius-3)",
+                  borderRadius: "var(--radius-3)",
+                  objectPosition: "center 35%", // 👈 pushes the image content down
                 }}
               />
+
             </Flex>
           </AspectRatio>
         </Flex>

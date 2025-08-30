@@ -28,6 +28,14 @@ export const i18n_en = {
           heading: "Done with passion and care",
           desc: "I approach every waxing session with passion, not just as work. Because I truly enjoy what I do, each appointment is more comfortable and enjoyable for you.",
         },
+        2: {
+          heading: "Hard waxing",
+          desc: "For delicate areas and sensitive skin, normal wax is the gentle but powerful solution. It grips the hair but not the skin, making it ideal for spots like the face, underarms, and bikini line. lifting hairs directly from the root with precision.",
+        },
+        3: {
+          heading: "Strip Waxing",
+          desc: "Quick, smooth, and effective, perfect for larger areas like legs, arms, chest, and back. Fast results, long-lasting smoothness.",
+        }
       },
     },
   },

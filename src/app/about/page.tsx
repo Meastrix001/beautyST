@@ -62,7 +62,7 @@ export default function About() {
                       width="1000"
                       height="1000"
                       alt="image me"
-                      src="/static/about/IMG_0229.jpeg"
+                      src="/static/about/img_me.jpg"
                     />
                   </Box>
                 </Box>
