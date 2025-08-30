@@ -48,8 +48,8 @@ export const i18n_est = {
 
   about: {
     subHeader:
-      "Ma olen kirglik vahatamise vastu ja mul on soov aidata inimestel end enesekindlamalt tunda.",
-    bio: "Tere, Minu nimi on Stiina Roofthooft",
+      "Ma olen kirglik vahatamise vastu ja mul on soov aidata inimestel end enesekindlamalt tunda",
+    bio: "Minu nimi on Stiina Roofthooft",
     headerAbout: "Minust",
     headerPhilo: "Minu filosoofia",
     philo: `Elu ei pea olema täiuslik, et olla ilus. Iga korts, iga mälestus ja iga kogemus on osa sinu loost, mis teeb sind kordumatuks.`,
@@ -76,7 +76,7 @@ export const i18n_est = {
 
   ss: {
     header: "Teenused ja hinnad",
-    bio: "Hinnakiri nii meestele kui ka naistele",
+    bio: "Hinnakiri nii naistele kui ka meestele",
     mensNote: `Palun pange tähele: meeste Manziliani vahatamist ei pakuta, seda ei saa broneerida ega tellida.`,
 
     rowMen: {

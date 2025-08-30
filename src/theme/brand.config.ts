@@ -3,6 +3,7 @@ import { ThemeProps } from "@radix-ui/themes";
 export const brand = {
   defaultLanguage: "en",
   company: {
+    site: "https://www.beautybystiina.ee/",
     name: "BeautyByStiina - in Tallinn",
     logo: {
       src: "/static/logos/logo_new_3_hq.png",

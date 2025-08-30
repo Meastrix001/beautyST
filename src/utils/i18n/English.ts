@@ -48,7 +48,8 @@ export const i18n_en = {
 
   about: {
     subHeader: "Passion for waxing, and helping people feel confident.",
-    bio: "Hi, My name is Stiina Roofthooft",
+    bio: "My name is Stiina Roofthooft and I am a Lycon certified waxer.",
+
     headerAbout: "About me",
     headerPhilo: "My Philosophy",
     philo: `Life doesn’t have to be perfect to be beautiful. Every wrinkle, every memory, and every experience is part of your story that makes you unique.`,
@@ -71,12 +72,12 @@ My name is Stiina Roofthooft, and I am 24 years old. I’m new to the beauty ind
     btn: "Book a time",
     bio: "Booking is quick and easy through our online system, or you can contact us directly to find a time that works for you. Thank you for helping us make every visit relaxing and enjoyable!",
     langInfo:
-      "We warmly welcome all our clients and are happy to assist you in English or Estonian.",
+      " We warmly welcome all our clients and are happy to assist you in English or Estonian.",
   },
 
   ss: {
     header: "Services & Prices",
-    bio: "Price overview for both men and women",
+    bio: "Price overview for women and men",
     mensNote: `Please note: Manzilian waxes for men are not offered, cannot be
 booked and are not available by request.`,
     rowMen: {

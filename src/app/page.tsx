@@ -1,4 +1,3 @@
-"use client";
 import {
   CTASection,
   FeaturesSection,
@@ -7,50 +6,18 @@ import {
   // TestimonialsSection,
   USPSection,
 } from "@/components";
-import { Box, Container, Flex, Separator } from "@radix-ui/themes";
-import { useState, useEffect } from "react";
+import BackgroundSlider from "@/components/backgroundSlider/backgroundSlider";
+import { brand } from "@/theme/brand.config";
+import { Box, Container, Flex, Section, Separator } from "@radix-ui/themes";
+import { Metadata } from "next";
 
 export default function Home() {
-  const [currentBg, setCurrentBg] = useState(0);
-
-  const bgImages = [
-    "/static/landing/slider/slider_2.jpg",
-    "/static/landing/slider/slider_3.jpg",
-    "/static/landing/slider/slider_4.jpg",
-    "/static/landing/slider/slider_5.jpg",
-    "/static/landing/slider/slider_6.jpg",
-    "/static/landing/slider/slider_1.jpg",
-  ];
-
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBg((prev) => (prev + 1) % bgImages.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-
-  useEffect(() => {
-    bgImages.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
 
 
   return (
     <Box className="landing">
       <Box className="div-one" />
-      <Box
-        className="bg_test"
-        style={{
-          backgroundImage: `url(${bgImages[currentBg]})`,
-          transition: "background-image 1s ease-in-out",
-        }}
-      />
-
+      <BackgroundSlider />
       <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>
         <Flex direction="column" gap="9">
           <Box className="index-top" p="0">
@@ -63,17 +30,23 @@ export default function Home() {
                 minHeight: "calc((100vh - 102px) - (16px* var(--scaling)))",
               }}
             >
-              <HeroSection />
+              <Section>
+                <HeroSection />
+              </Section>
             </Flex>
             <PartnerSection />
 
             <Separator size="4" />
 
-            <FeaturesSection />
+            <Section>
+              <FeaturesSection />
+            </Section>
 
             <Separator size="4" />
 
-            <USPSection />
+            <Section>
+              <USPSection />
+            </Section>
 
             <Separator size="4" />
           </Box>
@@ -86,9 +59,36 @@ export default function Home() {
 
       <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>
         <Flex direction="column" gap="9" mb="9">
-          <CTASection />
+          <Section>
+            <CTASection />
+          </Section>
         </Flex>
       </Container>
     </Box>
   );
 }
+
+export const metadata: Metadata = {
+  metadataBase: new URL(brand.company.site),
+  alternates: {
+    canonical: "landing"
+  },
+  title: brand.company.name,
+  description: "Get full body waxed in Tallinn, Estonia",
+  openGraph: {
+    title: brand.company.name,
+    description: "Get full body waxed in Tallinn, Estonia",
+    url: `${brand.company.site}`,
+    siteName: brand.company.name,
+    images: [
+      {
+        url: brand.company.logo.src,
+        width: 1200,
+        height: 630,
+        alt: `${brand.company.name} hero image`,
+      },
+    ],
+    type: "website",
+  },
+};
+
