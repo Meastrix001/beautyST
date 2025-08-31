@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
               {t("footer.arr")}
             </Text>{" "}
             -{" "}
-            <Text className="hover" size="2" onClick={() => router.push("/review/")}>
+            <Text className="hover" size="2" onClick={() => router.push("/en/review/")}>
               Leave a review
             </Text>
           </Box>
