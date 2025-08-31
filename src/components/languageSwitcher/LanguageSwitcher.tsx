@@ -12,14 +12,19 @@ export default function LanguageSwitcher() {
   const handleLanguageChange = async (lang: 'en' | 'est') => {
     await i18n.changeLanguage(lang);
     let currentPath = window.location.pathname;
-
-    currentPath = currentPath.replace("/est/", ``);
-    currentPath = currentPath.replace("/en/", ``);
-
-    currentPath = `/${lang}/${currentPath}/`;
-
     setActiveLanguage(lang)
-    router.push(currentPath);
+    if (window.location.pathname === "/est" || window.location.pathname === "/en") {
+      router.push(`/${lang}/`);
+
+    } else {
+      currentPath = currentPath.replace("/est/", ``);
+      currentPath = currentPath.replace("/en/", ``);
+
+      currentPath = `/${lang}/${currentPath}/`;
+
+      router.push(currentPath);
+
+    }
   };
 
   // useEffect(() => {
