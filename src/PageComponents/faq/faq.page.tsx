@@ -6,10 +6,9 @@ import {
 } from "@radix-ui/themes";
 
 import { BookingButton } from "@/components/ui/BookingBtn/bookingBtn";
-import { Metadata } from "next";
-import { brand } from "@/theme/brand.config";
 import { FaqHero } from "./faq.hero";
 import { FaqList } from "./faq.list";
+import { brand } from "@/theme/brand.config";
 
 export default function FaqPage() {
 
@@ -27,7 +26,7 @@ export default function FaqPage() {
             <FaqHero />
           </Box>
 
-          <Separator size="4" />
+          <Separator style={{ background: brand.company.colorPrimary, height: "2px" }} size="4" />
 
           <Flex
             className="contact__content"
@@ -51,28 +50,3 @@ export default function FaqPage() {
     </Box>
   );
 }
-
-
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "layout"
-  },
-  title: brand.company.name,
-  description: "Get full body waxed in Tallinn, Estonia",
-  openGraph: {
-    title: brand.company.name,
-    description: "Get full body waxed in Tallinn, Estonia",
-    url: `${brand.company.site}/faq`,
-    siteName: brand.company.name,
-    images: [
-      {
-        url: brand.company.logo.src,
-        width: 1200,
-        height: 630,
-        alt: `${brand.company.name} hero image`,
-      },
-    ],
-    type: "website",
-  },
-};
-

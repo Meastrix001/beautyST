@@ -3,7 +3,13 @@ import { Box, ChevronDownIcon, Flex, Text } from "@radix-ui/themes"
 import { Separator } from "@radix-ui/themes"
 import { useState } from "react";
 
-export const FaqItem = ({ faq, index }) => {
+export const FaqItem = ({ faq, index }: {
+    faq: {
+        question: string,
+        answer: string
+    },
+    index: number
+}) => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggle = (index: number) => {

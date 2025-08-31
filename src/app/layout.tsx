@@ -5,6 +5,7 @@ import { Footer, Navbar } from "@/components";
 import I18nProvider from "@/providers/I18nProvider";
 import type { Metadata } from "next";
 import { brand } from "@/theme/brand.config";
+import { BuildSiteMap } from "@/utils/sitemap/sitemap.builder";
 
 export const metadata: Metadata = {
   metadataBase: new URL(brand.company.site), // ✅ important for resolving OG/Twitter images
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
   },
 };
 
+BuildSiteMap()
 export default function RootLayout({
   children,
 }: {

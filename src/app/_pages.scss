@@ -1,6 +1,6 @@
-@use "./about/about";
-@use "./contact/contact";
-@use "./faq/faq";
-@use "./services-prices/prices";
-@use "./review/review";
-@use "./landing";
+@use "../PageComponents/about/about";
+@use "../PageComponents/contact/contact";
+@use "../PageComponents/faq/faq";
+@use "../PageComponents/services-prices/prices";
+@use "../PageComponents/review/review";
+@use "./landing"

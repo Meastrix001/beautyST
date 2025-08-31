@@ -212,4 +212,12 @@ export const i18n_est = {
     subHeading:
       "Aja broneerimine on kiire ja lihtne. Vali kõik piirkonnad, mida soovid vahatada, ja vali sobiv aeg, mis sulle sobib.",
   },
+
+  SEO: {
+    about: {
+      title: "Minust",
+      desc: "Description of the 'About' page",
+    }
+  }
+
 };

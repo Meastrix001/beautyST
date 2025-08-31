@@ -1,7 +1,12 @@
 import { Box, Card, Text } from "@radix-ui/themes"
 import Image from "next/image"
 
-export const AboutPicturesItem = ({ obj }) => {
+export const AboutPicturesItem = ({ obj }: {
+    obj: {
+        desc: string,
+        picture: string
+    }
+}) => {
 
     return <Card key={obj.desc} className="pets">
         <Box className="pets__image">

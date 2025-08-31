@@ -11,6 +11,7 @@ import { pricesDataMen, pricesDataWomen } from "./priceData";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import { BookingButton } from "@/components/ui/BookingBtn/bookingBtn";
+import { brand } from "@/theme/brand.config";
 
 export default function Prices() {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ export default function Prices() {
             </Text>
           </Box>
 
-          <Separator size="4" />
+          <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
 
           <Flex
             className="prices__list"
@@ -43,17 +44,20 @@ export default function Prices() {
             mt="6"
           >
             <Box className="prices__list-section">
-              <Flex align="center" justify="center" mb="4" gap="2">
-                <Image
-                  src="/static/wax/wax-sticks.png"
-                  alt=""
-                  className="prices__icon"
-                  width="1000"
-                  height="1000"
-                />
-                <Text size="8" weight="bold">
-                  {t("ss.rowWomen.heading")}
-                </Text>
+              <Flex direction={"column"} mb="8">
+                <Flex align="center" justify="center" mb="4" gap="2">
+                  <Image
+                    src="/static/wax/wax-sticks.png"
+                    alt=""
+                    className="prices__icon"
+                    width="1000"
+                    height="1000"
+                  />
+                  <Text size="8" weight="bold">
+                    {t("ss.rowWomen.heading")}
+                  </Text>
+                </Flex>
+                <Separator style={{ background: brand.company.colorSecondary, height: "1px" }} size="4" />
               </Flex>
 
               {pricesDataWomen.map((doc, idx) => (
@@ -70,17 +74,20 @@ export default function Prices() {
             </Box>
 
             <Box className="prices__list-section">
-              <Flex align="center" justify="center" mb="4" gap="2">
-                <Text size="8" weight="bold">
-                  {t("ss.rowMen.heading")}
-                </Text>
-                <Image
-                  width="1000"
-                  height="1000"
-                  src="/static/wax/wax-sticks.png"
-                  alt=""
-                  className="prices__icon flipped"
-                />
+              <Flex direction={"column"} mb="8">
+                <Flex align="center" justify="center" mb="4" gap="2">
+                  <Text size="8" weight="bold">
+                    {t("ss.rowMen.heading")}
+                  </Text>
+                  <Image
+                    width="1000"
+                    height="1000"
+                    src="/static/wax/wax-sticks.png"
+                    alt=""
+                    className="prices__icon flipped"
+                  />
+                </Flex>
+                <Separator style={{ background: brand.company.colorSecondary, height: "1px" }} size="4" />
               </Flex>
               {pricesDataMen.map((doc, idx) => (
                 <Flex key={idx} className="prices__item" align="center">

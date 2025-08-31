@@ -6,7 +6,14 @@ import { JSX } from "react";
 import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
-export const ContactListItem = ({ item, idx }) => {
+export const ContactListItem = ({ item, idx }: {
+    item: {
+        key: string;
+        value: string;
+        icon: JSX.Element;
+    },
+    idx: number
+}) => {
     const { t } = useTranslation();
 
 

@@ -1,4 +1,3 @@
-import { brand } from "@/theme/brand.config";
 import {
   Box,
   Flex,
@@ -6,11 +5,11 @@ import {
   Separator,
   Container,
 } from "@radix-ui/themes";
-import { Metadata } from "next";
 import Image from "next/image";
 import { AboutHero } from "./about.hero";
 import { AboutBio } from "./about.bio";
 import { AboutDetails } from "./about.details";
+import { brand } from "@/theme/brand.config";
 
 export default function About() {
   return (
@@ -24,7 +23,7 @@ export default function About() {
         >
           <AboutHero />
 
-          <Separator size="4" />
+          <Separator style={{ background: brand.company.colorPrimary, height: "2px" }} size="4" />
 
           <Flex
             direction={{ initial: "column", md: "row" }}
@@ -58,28 +57,4 @@ export default function About() {
   );
 }
 
-
-export const metadata: Metadata = {
-  metadataBase: new URL(brand.company.site),
-  alternates: {
-    canonical: "about"
-  },
-  title: brand.company.name,
-  description: "Get full body waxed in Tallinn - about, Estonia",
-  openGraph: {
-    title: brand.company.name,
-    description: "Get full body waxed in Tallinn - about, Estonia",
-    url: `${brand.company.site}/about`,
-    siteName: brand.company.name,
-    images: [
-      {
-        url: brand.company.logo.src,
-        width: 1200,
-        height: 630,
-        alt: `${brand.company.name} hero image`,
-      },
-    ],
-    type: "website",
-  },
-};
 

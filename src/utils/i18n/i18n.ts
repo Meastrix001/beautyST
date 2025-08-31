@@ -4,6 +4,8 @@ import { initReactI18next } from "react-i18next";
 import { i18n_en } from "./English";
 import { i18n_est } from "./Estonian";
 
+export type Languages = "en" | "est"
+
 const supportedLanguages = {
   en: "en",
   est: "est",

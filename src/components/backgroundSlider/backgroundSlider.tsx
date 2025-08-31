@@ -1,4 +1,3 @@
-// src/components/BackgroundSlider.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -21,14 +20,15 @@ export default function BackgroundSlider() {
             setCurrentBg((prev) => (prev + 1) % bgImages.length);
         }, 5000);
         return () => clearInterval(interval);
-    }, []);
+    });
 
     useEffect(() => {
         bgImages.forEach((src) => {
             const img = new Image();
             img.src = src;
         });
-    }, []);
+
+    });
 
     return (
         <Box

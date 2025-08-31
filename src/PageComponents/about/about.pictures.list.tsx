@@ -1,4 +1,4 @@
-import { Box, Flex } from "@radix-ui/themes";
+import { Flex } from "@radix-ui/themes";
 import { AboutPicturesItem } from "./about.pictures.item";
 
 export const AboutPicturesList = () => {
@@ -26,9 +26,9 @@ export const AboutPicturesList = () => {
     >
         {picturesArr.map((obj, index) => {
             return (
-                <Box key={index}>
-                    <AboutPicturesItem obj={obj} />
-                </Box>
+
+                <AboutPicturesItem obj={obj} key={index} />
+
             );
         })}
     </Flex>

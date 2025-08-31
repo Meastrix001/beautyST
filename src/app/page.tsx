@@ -36,19 +36,19 @@ export default function Home() {
             </Flex>
             <PartnerSection />
 
-            <Separator size="4" />
+            <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
 
             <Section>
               <FeaturesSection />
             </Section>
 
-            <Separator size="4" />
+            <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
 
             <Section>
               <USPSection />
             </Section>
 
-            <Separator size="4" />
+            <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
           </Box>
         </Flex>
       </Container>

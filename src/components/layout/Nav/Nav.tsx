@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Badge, Box, Button, Flex } from "@radix-ui/themes";
+import React, { useState } from "react";
+import { Box, Button, Flex } from "@radix-ui/themes";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { NavLinks } from "@/components";
 import useViewportWidth from "@/hooks/useViewportWidth";
-import i18n from "@/utils/i18n/i18n";
+import LanguageSwitcher from "@/components/languageSwitcher/LanguageSwitcher";
 // import { i18n } from "next-i18next";
 
 /**
@@ -21,20 +21,7 @@ import i18n from "@/utils/i18n/i18n";
 const Nav: React.FC = () => {
   const isMobile = useViewportWidth(768);
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
-  useEffect(() => {
-    const handleChange = (lng: string) => setActiveLanguage(lng);
 
-    i18n.on("languageChanged", handleChange);
-
-    return () => {
-      i18n.off("languageChanged", handleChange);
-    };
-  }, []);
-
-  const handleLanguageChange = (lang: "en" | "est") => {
-    return i18n.changeLanguage(lang);
-  };
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
@@ -80,31 +67,7 @@ const Nav: React.FC = () => {
                     <NavLinks onClick={toggleNav} />
                   </Flex>
 
-                  <Flex
-                    justify={{ initial: "center", lg: "end" }}
-                    gridColumn={{ initial: "2 / 3", lg: "6 / 7" }}
-                    gridRow="1"
-                    gap="2"
-                  >
-                    <Badge
-                      className="hover"
-                      size="3"
-                      variant={activeLanguage === "en" ? "solid" : "soft"}
-                      color={activeLanguage === "en" ? "pink" : "gold"}
-                      onClick={() => handleLanguageChange("en")}
-                    >
-                      English
-                    </Badge>
-                    <Badge
-                      className="hover"
-                      size="3"
-                      variant={activeLanguage === "est" ? "solid" : "soft"}
-                      color={activeLanguage === "est" ? "pink" : "gold"}
-                      onClick={() => handleLanguageChange("est")}
-                    >
-                      Eesti
-                    </Badge>
-                  </Flex>
+                  <LanguageSwitcher />
                 </Flex>
               </Flex>
             </Box>

@@ -1,12 +1,14 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Text } from "@radix-ui/themes";
-import { siteRoutes } from "@/routes/siteRoutes";
 import { Route } from "@/models/Routes";
 import { NavLinksProps } from "./NavLinks.types";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
+import i18n from "@/utils/i18n/i18n";
+import { siteRoutesEn } from "@/routes/siteRoutes.en";
+import { siteRoutesEst } from "@/routes/siteRoutes.est";
 
 /**
  * Renders a list of navigation links based on the `siteRoutes.nav` object.
@@ -18,11 +20,24 @@ import { usePathname } from "next/navigation";
 
 const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
   const { t } = useTranslation();
+  const [activeSiteRoutes, setActiveSiteRoutes] = useState(siteRoutesEst)
   const pathname = usePathname();
+  const i18nLang = i18n.language
+
+
+
+  useEffect(() => {
+    if (i18nLang === "en") {
+      setActiveSiteRoutes(siteRoutesEn)
+    }
+    if (i18nLang === "est") {
+      setActiveSiteRoutes(siteRoutesEst)
+    }
+  }, [i18nLang])
 
   return (
     <>
-      {Object.values(siteRoutes.nav).map((route: Route, index) => {
+      {Object.values(activeSiteRoutes.nav).map((route: Route, index) => {
         return (
           <Link
             key={index}
@@ -34,8 +49,8 @@ const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
               style={{
                 color: "black",
                 borderBottom:
-                  pathname.replaceAll("/", "") ===
-                  route.path.replaceAll("/", "")
+                  pathname.replaceAll("/", "").replaceAll("/est/", "").replaceAll("/en/", "") ===
+                    route.path.replaceAll("/", "").replaceAll("/est/", "").replaceAll("/en/", "")
                     ? "2px solid #eedec5"
                     : "",
               }}

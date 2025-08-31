@@ -11,6 +11,8 @@ export const brand = {
       width: 118.2,
       height: 24,
     },
+    colorPrimary: "#eedec5",
+    colorSecondary: "#f7b1b0"
   },
   theme: {
     appearance: "light",

@@ -213,4 +213,13 @@ booked and are not available by request.`,
     subHeading:
       "Booking a time is quickly and straigt-forward. select all the options you want waxed, and select a time that works for you.",
   },
+
+  SEO: {
+    about: {
+      title: "About",
+      desc: "Get full body waxed in Tallinn - about, Estonia",
+    }
+  }
 };
+
+
