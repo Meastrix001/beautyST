@@ -7,17 +7,20 @@ import Image from "next/image";
 import { brand } from "@/theme/brand.config";
 import LanguageSwitcher from "@/components/languageSwitcher/LanguageSwitcher";
 import { siteRoutesEn } from "@/routes/siteRoutes.en";
+import { useParams } from "next/navigation";
+import { siteRoutesEst } from "@/routes/siteRoutes.est";
 
 const Navbar: React.FC = () => {
   const [lang, setLang] = useState<string>("est")
-
+  const params = useParams(); // reactive
+  const i18nLang = params.lang || "est";
 
   return (
     <Box className="navigation">
       <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>
         <Grid align="center" columns={{ initial: "3", lg: "6" }} gap="4">
           <Flex gridColumn={{ initial: "1 / 2", lg: "1 / 2" }} gridRow="1">
-            <Link href={siteRoutesEn.home.path} title={brand.company.logo.alt}>
+            <Link href={i18nLang === "en" ? siteRoutesEn.home.path : siteRoutesEst.home.path} title={brand.company.logo.alt}>
               <Image
                 src={brand.company.logo.src}
                 alt={brand.company.logo.alt}
