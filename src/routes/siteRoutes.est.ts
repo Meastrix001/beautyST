@@ -28,7 +28,7 @@ export const siteRoutesEst = {
   // Nav
   nav: {
     home: {
-      path: "",
+      path: "/",
       label: "nav.keys.home",
     } as Route,
     "services-prices": {

@@ -19,9 +19,9 @@ export default function LanguageSwitcher({ setLang }: { setLang?: React.Dispatch
     setActiveLanguage(lang)
     if (window.location.pathname === "/est") {
       router.push(`/${lang}/`);
-
     }
-    if (window.location.pathname === "/en") {
+
+    if (window.location.pathname === "/en" || window.location.pathname === "") {
       router.push(`/`);
     }
 
