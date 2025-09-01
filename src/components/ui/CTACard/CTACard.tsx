@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { Box, Heading, Text, Flex, Grid, AspectRatio } from "@radix-ui/themes";
 import React from "react";
 import Image from "next/image";

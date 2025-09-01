@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ffe4ec, #fff5f7);
 }
 
 .review-overlay {
@@ -71,16 +70,9 @@
 
     input,
     textarea {
-      border: 1px solid #ddd;
-      border-radius: 0.5rem;
+
       padding: 0.6rem 0.8rem;
       font-size: 0.95rem;
-
-      &:focus {
-        outline: none;
-        border-color: #ec4899;
-        box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.2);
-      }
     }
   }
 }
@@ -102,9 +94,6 @@
       color: #facc15; // yellow-400
     }
 
-    &:hover {
-      color: #f59e0b; // yellow-500
-    }
   }
 }
 

@@ -4,11 +4,12 @@ import { Text } from "@radix-ui/themes";
 import { Route } from "@/models/Routes";
 import { NavLinksProps } from "./NavLinks.types";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
-import i18n from "@/utils/i18n/i18n";
 import { siteRoutesEn } from "@/routes/siteRoutes.en";
 import { siteRoutesEst } from "@/routes/siteRoutes.est";
+import { PageLang } from "@/models/pageLang.model";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
+import { getNestedValue } from "@/utils/getNestedValues";
 
 /**
  * Renders a list of navigation links based on the `siteRoutes.nav` object.
@@ -18,22 +19,22 @@ import { siteRoutesEst } from "@/routes/siteRoutes.est";
  * @returns {JSX.Element} A fragment containing navigation links.
  */
 
-const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
-  const { t } = useTranslation();
+const NavLinks: React.FC<NavLinksProps & PageLang> = ({ onClick, lang }) => {
   const [activeSiteRoutes, setActiveSiteRoutes] = useState(siteRoutesEst)
   const pathname = usePathname();
-  const i18nLang = i18n.language
 
 
 
   useEffect(() => {
-    if (i18nLang === "en") {
+    if (lang === "en") {
       setActiveSiteRoutes(siteRoutesEn)
     }
-    if (i18nLang === "est") {
+    if (lang === "est") {
       setActiveSiteRoutes(siteRoutesEst)
     }
-  }, [i18nLang])
+  }, [lang])
+
+
 
   return (
     <>
@@ -56,7 +57,9 @@ const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
               }}
               size="5"
             >
-              {t(route.label)}
+
+              {getNestedValue(LanguageKeys[lang], route.label) || ""}
+
             </Text>
           </Link>
         );

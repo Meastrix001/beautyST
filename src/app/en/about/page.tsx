@@ -2,8 +2,9 @@ import About from "@/PageComponents/about/page";
 import { brand } from "@/theme/brand.config";
 import { Metadata } from "next";
 
+const pageLanguage = "en"
 export default function AboutPageEn() {
-    return <About />
+    return <About lang={pageLanguage} />
 }
 
 export const metadata: Metadata = {

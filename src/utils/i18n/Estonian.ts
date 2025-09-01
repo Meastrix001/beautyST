@@ -10,8 +10,8 @@ export const i18n_est = {
   },
 
   landing: {
-    heading: "Tõsta oma enesekindlust",
-    subHeading: `Osaline või täielik keha vahatamine Tallinnas. Eksperthooldus, hügieenilised praktikad ja tulemused, mis kestavad. Meie eesmärk on muuta vahatamine lihtsaks, turvaliseks ja stressivabaks.`,
+    heading: "Terve keha vahatus Tallinnas",
+    subHeading: `Professionaalne vahatamine näo-, keha- ja bikiinipiirkonnale. Kvaliteetsed vahad, puhas tehnika ning privaatne teenus. Broneeri aeg ja ütle tüütutele karvakestele head aega!`,
     partner: {
       desc: `Oleme uhked, et kasutame kõigi vahatamisteenustega seotud toodete peamiseks kaubamärgiks Lyconi.`,
     },
@@ -52,9 +52,9 @@ export const i18n_est = {
     bio: "Minu nimi on Stiina Roofthooft",
     headerAbout: "Minust",
     headerPhilo: "Minu filosoofia",
-    philo: `Elu ei pea olema täiuslik, et olla ilus. Iga korts, iga mälestus ja iga kogemus on osa sinu loost, mis teeb sind kordumatuks.`,
+    philo: `Pere on need inimesed, kes on olemas tahtlikult - mitte need, kes peavad olema DNA pärast.`,
     aboutme1: `Tere teile, kes siia lehele on jõudnud ning soovivad natuke rohkem minu kohta teada saada👋🏼`,
-    aboutme2: `Ma ei ole kunagi osanud ennast väga hästi iseloomustada, aga annan endast parima. Minu nimi on Stiina Roofthooft ning ma olen 24-aastane. Olen siin iluvaldkonnas uus kala, aga luban, et teen oma tööd profesionaalselt ning südamega. Läbisin Baas - ja brasiilii koolituse augustis 2024. aastal Lycon-Soulin OÜ salongis. Alates sellest olen kätt harjutanud nii enda kui ka tuttavate peal ning julgen kindlusega öelda, et olen nüüd valmis kliente vastu võtma. 🥳`,
+    aboutme2: `Ma ei ole kunagi osanud ennast väga hästi iseloomustada, aga annan endast parima. Minu nimi on Stiina Roofthooft ning ma olen 24-aastane. Olen siin iluvaldkonnas uus kala, aga luban, et teen oma tööd professionaalselt ning südamega. Läbisin Baas - ja brasiilia koolituse augustis 2024. aastal Lycon-Soulin salongis. Alates sellest olen kätt harjutanud nii enda kui ka tuttavate peal ning julgen kindlusega öelda, et olen nüüd valmis kliente vastu võtma. 🥳`,
     aboutme3: `Räägin natuke ka endast väljaspool stuudiot: olen suur loomaarmastaja ning meil on kodus 3 looma. Vaikne, kuid range 15-aastane kass Saara, meie pere teenager 2-aastane kass Gin ning 8-aastane printsess, koer Bambi. Kõik loomad on meie juurde sattunud tänu päästmisele rasketest olukordadest ning saame neile nüüd pakkuda turvalist ning mõnusat kodu.`,
     aboutme4: `Juulis 2025. aastal abiellusin oma parima sõbra ning tugipunktiga, kelleks on Nick (sellest ka minu veider perekonnanimi). Minu abikaasa on pärit Belgiast ning mõned aastad tagasi otsustasime tulla tagasi Eestisse, et siin ühist tulevikku ehitama hakata.`,
     aboutme5: `Üldiselt olen väga sõbralik ning empaatiline inimene. Alguses natuke tagasihoidlik, aga see hajub, kui tunnetan head seltskonda. Olen väga lojaalne, aus ja abivalmis.`,
@@ -89,28 +89,28 @@ export const i18n_est = {
 
   prices: {
     women: {
-      lowerLegsOrThighs: "Säärte või reite",
+      lowerLegsOrThighs: "Sääred või reied",
       brazilian: "Brasiilia",
-      deepBikini: "Sügav bikiinipiirkonna",
-      bikiniLine: "Bikiiniääre",
-      armpits: "Kaenlaaluste",
-      legsFull: "Jalgade (sääred ja reied)",
-      buttocks: "Tuharate",
-      upperLip: "Ülahuule",
-      chin: "Lõua",
-      arms: "Käte",
-      abdomen: "Kõhu",
+      deepBikini: "Sügav bikiin",
+      bikiniLine: "Bikiiniäär",
+      armpits: "Kaenlaalused",
+      legsFull: "Jalad (sääred ja reied)",
+      buttocks: "Tuharad",
+      upperLip: "Ülahuul",
+      chin: "Lõug",
+      arms: "Käed",
+      abdomen: "Kõht",
     },
 
     men: {
-      back: "Selja",
-      chest: "Rinna",
-      backAndChest: "Rinna ja selja",
-      armpits: "Kaenlaaluste",
-      legsFull: "Jalgade (sääred ja reied)",
-      lowerLegs: "Säärte",
-      thighs: "Reite",
-      arms: "Käte",
+      back: "Selg",
+      chest: "Rind",
+      backAndChest: "Rind ja selg",
+      armpits: "Kaenlaalused",
+      legsFull: "Jalad (sääred ja reied)",
+      lowerLegs: "Sääred",
+      thighs: "Reied",
+      arms: "Käed",
     },
   },
 
@@ -126,32 +126,32 @@ export const i18n_est = {
       {
         question: "Kui pikad peavad karvad olema enne vahatamist?",
         answer:
-          "Karvad peaksid olema vähemalt 0,5 cm pikad (umbes riisitera pikkused), et vaha saaks korralikult haarata. Väldi raseerimist vähemalt 2–3 nädalat enne aega.",
+          "Karvad peaksid olema vähemalt 0,2 cm pikad (umbes riisitera pikkused), et vaha saaks korralikult haarata. Väldi raseerimist vähemalt 2–3 nädalat enne aega.",
       },
       {
         question: "Kas vahatamine sobib tundlikule nahale?",
         answer:
-          "Jah! Me kasutame kvaliteetseid Lycon vahasid, mis on spetsiaalselt mõeldud tundlikule nahale. Kui sul on muresid, anna meile teada ja kohandame protseduuri vastavalt.",
+          "Jah! Ma kasutan kvaliteetseid Lycon vahasid, mis on spetsiaalselt mõeldud tundlikule nahale. Kui sul on muresid, anna mulle teada ja kohandan protseduuri vastavalt sinule.",
       },
       {
         question: "Mida peaksin tegema enne esimest vahatamist?",
         answer:
-          "Koori nahka õrnalt 24 tundi enne, ära kasuta losjoneid ega õlisid samal päeval ja kanna mugavaid avaraid riideid pärast protseduuri.",
+          "Ära koori oma nahka vähemalt nädal enne, kui sul on mingeid nahahaigusi või muresid siis anna mulle nendest teada, käi enne pesus ning tule võimalusel mugavate riietega.",
       },
       {
         question: "Mida peaksin vältima pärast vahatamist?",
         answer:
-          "Järgneva 24–48 tunni jooksul väldi kuumi dušše, sauna, päevitamist, intensiivset treeningut ja kitsaid riideid. See aitab vältida nahaärritust ja sissekasvanud karvu.",
+          "Järgneva 24 tunni jooksul väldi vannis käimist, saunas käimist, päevitamist, intensiivset treeningut, seksi ja nahahoolduseid/jumestust. Need tegevused võivad tekitada nahaärritust ja sissekasvanud karvu.",
       },
       {
         question: "Kui kaua tulemused kestavad?",
         answer:
-          "Tulemused kestavad tavaliselt 3–4 nädalat sõltuvalt sinu karvakasvu tsüklist. Regulaarse vahatamisega kasvavad karvad tagasi aeglasemalt ja pehmemad.",
+          "Tulemused kestavad tavaliselt 2-4 nädalat sõltuvalt sinu karvakasvu tsüklist. Regulaarse vahatamisega kasvavad karvad tagasi aeglasemalt ja pehmemalt.",
       },
       {
         question: "Ma olen närvis – kas see on normaalne?",
         answer:
-          "Absoluutselt! Paljud esmakordsed kliendid tunnevad ärevust. Meie prioriteet on panna sind tundma end mugavalt ning juhendame sind iga sammu juures.",
+          "Absoluutselt! Paljud esmakordsed kliendid tunnevad ärevust. Järgmised korrad on juba palju paremad. Kui sul on selle kohta küsimusi, siis võtta julgelt minuga ühendust!",
       },
       {
         question: "Kas ma võin vahatada, kui olen rase?",
@@ -166,14 +166,14 @@ export const i18n_est = {
       {
         question: "Kui tihti peaksin aega broneerima?",
         answer:
-          "Soovitatav on korrata vahatamist iga 4–6 nädala järel parimate tulemuste saavutamiseks. Järjepidevus vähendab ebamugavust, hoiab naha sileda ja takistab karvade liiga pikaks ja jämedaks kasvamist.",
+          "Soovitatav on korrata vahatamist iga 3–5 nädala järel parimate tulemuste saavutamiseks. Järjepidevus vähendab ebamugavust, hoiab naha siledana ja takistab karvade liiga pikaks ja jämedaks kasvamist.",
       },
       {
         question: "Kas peaksin enne aega raseerima?",
         answer:
           "Ei ole soovitatav raseerida vähemalt 2–3 nädalat enne vahatamist. Vastasel juhul ei haara vaha karvu korralikult ja tulemused võivad olla ebaühtlased.",
       },
-    ],
+    ]
   },
 
   footer: {
@@ -219,5 +219,4 @@ export const i18n_est = {
       desc: "Description of the 'About' page",
     }
   }
-
 };

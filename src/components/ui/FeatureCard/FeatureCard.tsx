@@ -37,6 +37,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           </Flex>
         </Box>
         <Flex
+          mb={"5"}
           gridColumn={
             isLarge
               ? { initial: "1 / -1", lg: "5 / 7" }
@@ -44,7 +45,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           }
           gridRow={isLarge ? { initial: "2", lg: "1" } : "2"}
         >
-          <AspectRatio ratio={isLarge ? 4 / 5 : 4 / 3}>
+          <AspectRatio ratio={isLarge ? 4 / 5 : 4 / 3} >
             <Image
               src={image}
               alt={heading}
@@ -52,7 +53,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
               quality={50}
               style={{
                 objectFit: "cover",
-                borderRadius: "var(--radius-3) var(--radius-3) 0 0",
+                borderRadius: "var(--radius-3)",
               }}
             />
           </AspectRatio>

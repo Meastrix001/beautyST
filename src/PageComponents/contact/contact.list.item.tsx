@@ -1,20 +1,21 @@
 "use client"
+import { PageLang } from "@/models/pageLang.model";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Box, Button, DataList, Flex, Text } from "@radix-ui/themes"
 import Link from "next/link";
 
 import { JSX } from "react";
-import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
-export const ContactListItem = ({ item, idx }: {
+export const ContactListItem = ({ item, idx, lang }: {
     item: {
         key: string;
         value: string;
         icon: JSX.Element;
     },
     idx: number
-}) => {
-    const { t } = useTranslation();
+    lang: "est" | "en"
+} & PageLang) => {
 
 
     return <DataList.Item
@@ -26,7 +27,8 @@ export const ContactListItem = ({ item, idx }: {
             <Flex align="center" gap="2">
                 {item.icon}
                 <Text size="5" weight="bold">
-                    {t(item.key)}
+                    {/* @ts-expect-error TS Cant verify types die to languages and indexing */}
+                    {LanguageKeys[lang][item.key]}
                 </Text>
             </Flex>
         </DataList.Label>

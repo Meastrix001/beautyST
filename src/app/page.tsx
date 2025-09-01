@@ -1,3 +1,4 @@
+
 import {
   CTASection,
   FeaturesSection,
@@ -7,11 +8,12 @@ import {
   USPSection,
 } from "@/components";
 import BackgroundSlider from "@/components/backgroundSlider/backgroundSlider";
+import { PageLang } from "@/models/pageLang.model";
 import { brand } from "@/theme/brand.config";
 import { Box, Container, Flex, Section, Separator } from "@radix-ui/themes";
 import { Metadata } from "next";
 
-export default function Home() {
+export default function Home({ lang = "est" }: PageLang) {
 
 
   return (
@@ -31,21 +33,21 @@ export default function Home() {
               }}
             >
               <Section>
-                <HeroSection />
+                <HeroSection lang={lang} />
               </Section>
             </Flex>
-            <PartnerSection />
+            <PartnerSection lang={lang} />
 
             <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
 
             <Section>
-              <FeaturesSection />
+              <FeaturesSection lang={lang} />
             </Section>
 
             <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
 
             <Section>
-              <USPSection />
+              <USPSection lang={lang} />
             </Section>
 
             <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
@@ -60,7 +62,7 @@ export default function Home() {
       <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>
         <Flex direction="column" gap="9" mb="9">
           <Section>
-            <CTASection />
+            <CTASection lang={lang} />
           </Section>
         </Flex>
       </Container>

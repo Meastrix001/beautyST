@@ -2,7 +2,7 @@ import { Route } from "@/models/Routes";
 
 export const siteRoutesEst = {
   home: {
-    path: "/est/",
+    path: "/",
     label: "nav.keys.home",
   } as Route,
   "services-prices": {
@@ -28,7 +28,7 @@ export const siteRoutesEst = {
   // Nav
   nav: {
     home: {
-      path: "/est/",
+      path: "",
       label: "nav.keys.home",
     } as Route,
     "services-prices": {

@@ -28,11 +28,16 @@ export const Form = () => {
     const [hover, setHover] = useState(0);
     const { createReview } = useCreateReview()
 
-    const handleSubmit = () => {
-        createReview(reviewData)
+    const handleSubmit = async () => {
+        await createReview(reviewData)
         setDisableReview(true);
 
         setTimeout(() => {
+            setReviewData({
+                message: "",
+                name: "",
+                rating: 0
+            })
             setDisableReview(false);
         }, 60000);
     };

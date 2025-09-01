@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Box } from "@radix-ui/themes";
 
 export default function BackgroundSlider() {
@@ -20,23 +21,23 @@ export default function BackgroundSlider() {
             setCurrentBg((prev) => (prev + 1) % bgImages.length);
         }, 5000);
         return () => clearInterval(interval);
-    });
-
-    useEffect(() => {
-        bgImages.forEach((src) => {
-            const img = new Image();
-            img.src = src;
-        });
-
-    });
+    }, [bgImages.length]);
 
     return (
-        <Box
-            className="bg_test"
-            style={{
-                backgroundImage: `url(${bgImages[currentBg]})`,
-                transition: "background-image 1s ease-in-out",
-            }}
-        />
+        <Box className="slider-container">
+            {bgImages.map((src, i) => (
+                <Box key={i} className={`slide ${i === currentBg ? "active" : ""}`}>
+                    <Image
+                        rel="preload"
+                        src={src}
+                        alt={`Background ${i}`}
+                        fill
+                        priority={i === 0} // load first image eagerly
+                        sizes="100vw"
+                        style={{ objectFit: "cover" }}
+                    />
+                </Box>
+            ))}
+        </Box>
     );
 }

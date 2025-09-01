@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { Container, Box, Grid, Flex } from "@radix-ui/themes";
 import { Nav } from "@/components";
 import Link from "next/link";
@@ -7,21 +8,9 @@ import { brand } from "@/theme/brand.config";
 import LanguageSwitcher from "@/components/languageSwitcher/LanguageSwitcher";
 import { siteRoutesEn } from "@/routes/siteRoutes.en";
 
-/**
- * Navbar component that renders the main navigation bar for the application.
- *
- * The Navbar includes:
- * - A logo section that links to the home page.
- * - A navigation menu.
- * - A call-to-action (CTA) button.
- *
- * The layout is responsive, adjusting grid columns and alignment for different screen sizes.
- *
- * @component
- * @returns {JSX.Element} The rendered Navbar component.
- */
-
 const Navbar: React.FC = () => {
+  const [lang, setLang] = useState<string>("est")
+
 
   return (
     <Box className="navigation">
@@ -43,10 +32,11 @@ const Navbar: React.FC = () => {
             gridColumn={{ initial: "2 / 4", lg: "2 / 6" }}
             gridRow="1"
           >
-            <Nav />
+            {/* @ts-expect-error expected */}
+            <Nav lang={lang} setLang={setLang} />
           </Flex>
 
-          <LanguageSwitcher />
+          <LanguageSwitcher setLang={setLang} />
         </Grid>
       </Container>
     </Box>

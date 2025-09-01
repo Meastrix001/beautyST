@@ -5,18 +5,27 @@ import { Badge, Flex } from "@radix-ui/themes";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ setLang }: { setLang?: React.Dispatch<React.SetStateAction<string>> }) {
   const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
   const router = useRouter();
 
   const handleLanguageChange = async (lang: 'en' | 'est') => {
     await i18n.changeLanguage(lang);
+    if (setLang) {
+      setLang(lang)
+    }
+
     let currentPath = window.location.pathname;
     setActiveLanguage(lang)
-    if (window.location.pathname === "/est" || window.location.pathname === "/en") {
+    if (window.location.pathname === "/est") {
       router.push(`/${lang}/`);
 
-    } else {
+    }
+    if (window.location.pathname === "/en") {
+      router.push(`/`);
+    }
+
+    else {
       currentPath = currentPath.replace("/est/", ``);
       currentPath = currentPath.replace("/en/", ``);
 
@@ -26,16 +35,6 @@ export default function LanguageSwitcher() {
 
     }
   };
-
-  // useEffect(() => {
-  //   const handleChange = (lng: string) => setActiveLanguage(lng);
-
-  //   i18n.on("languageChanged", handleChange);
-
-  //   return () => {
-  //     i18n.off("languageChanged", handleChange);
-  //   };
-  // }, []);
 
   return (
     <Flex justify={{ initial: "center", lg: "end" }} gap="2">

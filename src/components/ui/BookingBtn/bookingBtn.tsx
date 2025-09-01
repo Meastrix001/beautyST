@@ -1,34 +1,33 @@
-"use client";
-import { Box, Button, Flex, Link, Text } from "@radix-ui/themes";
-import { useTranslation } from "react-i18next";
+"use client"
+import { PageLang } from "@/models/pageLang.model";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
+import { Button, Flex, Link, Text } from "@radix-ui/themes";
 
-export const BookingButton = ({ onlyBtn }: { onlyBtn?: boolean }) => {
-  const { t } = useTranslation();
+export const BookingButton = ({ onlyBtn, lang }: { onlyBtn?: boolean } & PageLang) => {
 
   if (onlyBtn) {
-    return <BTN />;
+    return <BTN lang={lang} />;
   }
 
   return (
     <Flex direction="column" className="bookingButton">
       <Text size="6" mt="5" mb="5" align="center">
-        {t("bookingbtn.reminder")}{" "}
+        {LanguageKeys[lang].bookingbtn.reminder}
       </Text>
-      <BTN />
-      <Box style={{ textAlign: "center" }}>
-        <Text size="4" align="center">
-          {t("bookingbtn.bio")}
+      <BTN lang={lang} />
+      <Flex direction={"column"} style={{ textAlign: "center" }} mt={"4"}>
+        <Text color="gray" size="3" align="center">
+          {LanguageKeys[lang].bookingbtn.bio}
         </Text>
-        <Text size="5" align="center">
-          {t("bookingbtn.langInfo")}
+        <Text color="gray" size="3" align="center">
+          {LanguageKeys[lang].bookingbtn.langInfo}
         </Text>
-      </Box>
+      </Flex>
     </Flex>
   );
 };
 
-const BTN = () => {
-  const { t } = useTranslation();
+const BTN = ({ lang }: PageLang) => {
 
   const BookingLink =
     "https://broneerimine.timma.ee/ilustuudiomarielltallinnehitajatetee114";
@@ -49,7 +48,7 @@ const BTN = () => {
           style={{ width: "100%", color: "black" }}
           mb="0"
         >
-          {t("bookingbtn.btn")}
+          {LanguageKeys[lang].bookingbtn.btn}
         </Button>{" "}
       </Flex>
     </Link>

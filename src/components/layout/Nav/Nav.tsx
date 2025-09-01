@@ -5,20 +5,11 @@ import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { NavLinks } from "@/components";
 import useViewportWidth from "@/hooks/useViewportWidth";
 import LanguageSwitcher from "@/components/languageSwitcher/LanguageSwitcher";
-// import { i18n } from "next-i18next";
+import { PageLang } from "@/models/pageLang.model";
 
-/**
- * Navigation component that renders a responsive navigation bar.
- *
- * - On mobile devices (viewport width <= 768px), displays a hamburger menu button.
- *   When clicked, it opens a full-screen overlay with navigation links and a close button.
- * - On desktop devices, displays navigation links inline.
- *
- * @component
- * @returns {JSX.Element} The rendered navigation component.
- */
-
-const Nav: React.FC = () => {
+const Nav: React.FC<PageLang & {
+  setLang: React.Dispatch<React.SetStateAction<string>>
+}> = ({ lang, setLang }) => {
   const isMobile = useViewportWidth(768);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,10 +55,10 @@ const Nav: React.FC = () => {
                     py="8"
                     height="100%"
                   >
-                    <NavLinks onClick={toggleNav} />
+                    <NavLinks lang={lang as "en"} onClick={toggleNav} />
                   </Flex>
 
-                  <LanguageSwitcher />
+                  <LanguageSwitcher setLang={setLang} />
                 </Flex>
               </Flex>
             </Box>
@@ -77,7 +68,7 @@ const Nav: React.FC = () => {
 
       {!isMobile && (
         <Flex justify="end" align="center" gap="6">
-          <NavLinks />
+          <NavLinks lang={lang as "en"} />
         </Flex>
       )}
     </>

@@ -10,8 +10,9 @@ import { BookingButton } from "@/components/ui/BookingBtn/bookingBtn";
 import { ContactList } from "./contact.list";
 import { ContactHero } from "./contact.hero";
 import { brand } from "@/theme/brand.config";
+import { PageLang } from "@/models/pageLang.model";
 
-export default function Contact() {
+export default function Contact({ lang }: PageLang) {
 
   return (
     <Box className="contact">
@@ -40,7 +41,7 @@ export default function Contact() {
           >
             <Box className="contact__info">
               <Flex align="center" justify="center" height="100%">
-                <ContactList />
+                <ContactList lang={lang} />
               </Flex>
             </Box>
 
@@ -52,7 +53,7 @@ export default function Contact() {
 
           {/* Booking CTA */}
           <Box mb="9">
-            <BookingButton />
+            <BookingButton lang={lang} />
           </Box>
         </Flex>
       </Container>

@@ -2,8 +2,9 @@ import Contact from "@/PageComponents/contact/page";
 import { brand } from "@/theme/brand.config";
 import { Metadata } from "next";
 
+const pageLanguage = "en"
 export default function ContactPageEn() {
-    return <Contact />
+    return <Contact lang={pageLanguage} />
 }
 
 export const metadata: Metadata = {

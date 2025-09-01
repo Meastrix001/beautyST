@@ -1,5 +1,8 @@
 import Home from "../page"
 
+const pageLanguage = "en"
+
+
 export default function LandingPageEn() {
-    return <Home />
+    return <Home lang={pageLanguage} />
 }

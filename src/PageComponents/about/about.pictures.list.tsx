@@ -26,9 +26,7 @@ export const AboutPicturesList = () => {
     >
         {picturesArr.map((obj, index) => {
             return (
-
                 <AboutPicturesItem obj={obj} key={index} />
-
             );
         })}
     </Flex>

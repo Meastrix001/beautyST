@@ -40,11 +40,11 @@ export async function getAllReviews(): Promise<Review[]> {
   const snapshot = await getDocs(q);
   const reviews = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as Review));
 
-    // 🔹 Shuffle the array
-    for (let i = reviews.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [reviews[i], reviews[j]] = [reviews[j], reviews[i]];
-    }
+  // 🔹 Shuffle the array
+  for (let i = reviews.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [reviews[i], reviews[j]] = [reviews[j], reviews[i]];
+  }
 
   return reviews;
 }

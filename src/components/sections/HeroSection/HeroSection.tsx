@@ -1,13 +1,12 @@
-"use client";
 import { HeroImage } from "@/components";
 import { BookingButton } from "@/components/ui/BookingBtn/bookingBtn";
+import { PageLang } from "@/models/pageLang.model";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Box, Flex, Grid, Heading, Section, Text } from "@radix-ui/themes";
 
 import React from "react";
-import { useTranslation } from "react-i18next";
 
-const HeroSection: React.FC = () => {
-  const { t } = useTranslation();
+const HeroSection: React.FC<PageLang> = ({ lang }) => {
 
   return (
     <Section size={{ initial: "2", lg: "3" }} className="hero">
@@ -21,7 +20,7 @@ const HeroSection: React.FC = () => {
           <Box gridColumn={{ initial: "1 / -1", lg: "1 / 5" }}>
             <Flex direction="column" gap="6" justify="center">
               <Heading size={{ initial: "8", lg: "9" }} as="h1" m="0">
-                {t("landing.heading")}
+                {LanguageKeys[lang].landing.heading}
               </Heading>
 
               <Text
@@ -31,11 +30,11 @@ const HeroSection: React.FC = () => {
                 weight="bold"
                 m="0"
               >
-                {t("landing.subHeading")}
+                {LanguageKeys[lang].landing.subHeading}
               </Text>
 
               <Box width="fit-content">
-                <BookingButton onlyBtn />
+                <BookingButton lang={lang} onlyBtn />
               </Box>
             </Flex>
           </Box>

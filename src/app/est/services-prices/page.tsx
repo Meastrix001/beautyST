@@ -1,9 +1,10 @@
 import Prices from "@/PageComponents/services-prices/page";
 import { brand } from "@/theme/brand.config";
 import { Metadata } from "next";
+const pageLanguage = "est"
 
 export default function ServicesPricesPageEst() {
-    return <Prices />
+    return <Prices lang={pageLanguage} />
 }
 
 export const metadata: Metadata = {

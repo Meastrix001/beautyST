@@ -88,6 +88,7 @@ ol {
   position: relative;
   z-index: 100;
 }
+
 .rt-ContainerInner,
 .container {
   max-width: 1600px;
@@ -99,13 +100,4 @@ ol {
   margin: 0 auto;
   box-sizing: border-box;
 
-  // @media (min-width: 1920px) {
-  //   max-width: 2000px;
-  //   transition: 0.125s ease all;
-  // }
-
-  // @media (min-width: 2500px) {
-  //   max-width: 2200px;
-  //   transition: 0.125s ease all;
-  // }
 }

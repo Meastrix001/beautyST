@@ -1,10 +1,10 @@
 "use client";
 import { Box, Container, Flex, Text } from "@radix-ui/themes";
-import React from "react";
+import React, { useState } from "react";
 import { brand } from "@/theme/brand.config";
-import { useTranslation } from "react-i18next";
 import { useRouter } from "next/navigation";
 import LanguageSwitcher from "@/components/languageSwitcher/LanguageSwitcher";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 
 /**
  * Footer component that displays the site copyright and social media links.
@@ -19,7 +19,7 @@ import LanguageSwitcher from "@/components/languageSwitcher/LanguageSwitcher";
 
 const Footer: React.FC = () => {
   const router = useRouter();
-  const { t } = useTranslation();
+  const [lang, setLang] = useState<string>("est")
 
   return (
     <Box className="footer" py="4">
@@ -34,7 +34,8 @@ const Footer: React.FC = () => {
           <Box>
             <Text size="2" color="gray">
               &copy; {new Date().getFullYear()} {brand.company.name}.{" "}
-              {t("footer.arr")}
+              {/* @ts-expect-error expected */}
+              {LanguageKeys[lang].footer.arr}
             </Text>{" "}
             -{" "}
             <Text className="hover" size="2" onClick={() => router.push("/en/review/")}>
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
             </Text>
           </Box>
           {/* CTA */}
-          <LanguageSwitcher />
+          <LanguageSwitcher setLang={setLang} />
         </Flex>
       </Container>
     </Box>

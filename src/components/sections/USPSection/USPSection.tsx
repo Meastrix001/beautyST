@@ -1,12 +1,11 @@
-"use client";
 import USPItem from "@/components/ui/USPItem/USPItem";
 import { uniqueSellingPoints } from "@/constants/uniqueSellingPoints";
+import { PageLang } from "@/models/pageLang.model";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Box, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import React from "react";
-import { useTranslation } from "react-i18next";
 
-const USPSection: React.FC = () => {
-  const { t } = useTranslation();
+const USPSection: React.FC<PageLang> = ({ lang }) => {
 
   return (
     <Section size={{ initial: "2", lg: "3" }}>
@@ -14,10 +13,10 @@ const USPSection: React.FC = () => {
         {/* Heading */}
         <Flex direction="column" gap="2" align="center" pb="4">
           <Heading as="h2" size="8" align="center" m="0">
-            {t("usp.heading")}
+            {LanguageKeys[lang].usp.heading}
           </Heading>
           <Text as="p" size="3" align="center" color="gray">
-            {t("usp.subHeading")}
+            {LanguageKeys[lang].usp.subHeading}
           </Text>
         </Flex>
 
@@ -29,8 +28,10 @@ const USPSection: React.FC = () => {
           {uniqueSellingPoints.map((usp, index) => (
             <Box key={index} width={{ initial: "100%", lg: "25%" }}>
               <USPItem
-                heading={t(usp.heading)}
-                description={t(usp.description)}
+                // @ts-expect-error Cant type check
+                heading={LanguageKeys[lang][usp.heading]}
+                // @ts-expect-error Cant type check
+                description={LanguageKeys[lang][usp.description]}
                 icon={usp.icon}
               />
 

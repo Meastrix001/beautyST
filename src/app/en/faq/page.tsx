@@ -1,9 +1,10 @@
 import FaqPage from "@/PageComponents/faq/faq.page";
 import { brand } from "@/theme/brand.config";
 import { Metadata } from "next";
+const pageLanguage = "en"
 
 export default function FaqPageEn() {
-    return <FaqPage />
+    return <FaqPage lang={pageLanguage} />
 }
 
 export const metadata: Metadata = {

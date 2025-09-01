@@ -1,16 +1,15 @@
-"use client"
+import { PageLang } from "@/models/pageLang.model"
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys"
 import { Box, Heading, Text } from "@radix-ui/themes"
-import { useTranslation } from "react-i18next";
 
-export const FaqHero = () => {
-    const { t } = useTranslation();
+export const FaqHero = ({ lang }: PageLang) => {
 
     return <Box>
         <Heading size="8" weight="bold" mb="3" as="h1">
-            {t("faq.header")}
+            {LanguageKeys[lang].faq.header}
         </Heading>
         <Text size="4">
-            {t("faq.subHeader")}{" "}</Text>
+            {LanguageKeys[lang].faq.subHeader}{" "}</Text>
     </Box>
 
 }

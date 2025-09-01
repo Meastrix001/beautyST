@@ -9,8 +9,9 @@ import { BookingButton } from "@/components/ui/BookingBtn/bookingBtn";
 import { FaqHero } from "./faq.hero";
 import { FaqList } from "./faq.list";
 import { brand } from "@/theme/brand.config";
+import { PageLang } from "@/models/pageLang.model";
 
-export default function FaqPage() {
+export default function FaqPage({ lang }: PageLang) {
 
 
   return (
@@ -23,7 +24,7 @@ export default function FaqPage() {
           className="contact__container"
         >
           <Box className="contact__hero" mb="6">
-            <FaqHero />
+            <FaqHero lang={lang} />
           </Box>
 
           <Separator style={{ background: brand.company.colorPrimary, height: "2px" }} size="4" />
@@ -38,12 +39,12 @@ export default function FaqPage() {
             mb="9"
           >
             <Box m="0 auto">
-              <FaqList />
+              <FaqList lang={lang} />
             </Box>
           </Flex>
 
           <Box mt="9" mb="9">
-            <BookingButton />
+            <BookingButton lang={lang} />
           </Box>
         </Flex>
       </Container>

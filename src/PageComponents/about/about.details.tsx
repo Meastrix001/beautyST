@@ -1,19 +1,18 @@
-"use client"
-
 import { Box, Card, Flex, Heading, Text } from "@radix-ui/themes"
 import { AboutPicturesList } from "./about.pictures.list"
-import { useTranslation } from "react-i18next";
+import { PageLang } from "@/models/pageLang.model"
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys"
 
-export const AboutDetails = () => {
-    const { t } = useTranslation();
+export const AboutDetails = ({ lang }: PageLang) => {
 
     return <>
         <Card size="3">
-            <Heading size="4" as="h2">{t("about.headerAbout")}</Heading>
+            <Heading size="4" as="h2">{LanguageKeys[lang].about.headerAbout}</Heading>
             <Flex direction="column" gap="3">
                 {Array.from(new Array(8), (_, index) => (
                     <Text key={index} size="3" weight="medium" as="p">
-                        {t(`about.aboutme${index + 1}`)}
+                        {/* @ts-expect-error looping a object, cant type check with index */}
+                        {LanguageKeys[lang].about[`aboutme${index + 1}`]}
                     </Text>
                 ))}
             </Flex>
@@ -21,16 +20,16 @@ export const AboutDetails = () => {
 
         <Card size="3">
             <Heading size="4" mb="2" as="h2">
-                {t("about.headerPhilo")}
+                {LanguageKeys[lang].about.headerPhilo}
             </Heading>
             <Text size="3" weight="medium">
-                {t("about.philo")}
+                {LanguageKeys[lang].about.philo}
             </Text>
         </Card>
 
         <Card mb="9">
             <Box px="3">
-                <Heading size="4">{t("about.petsHeader")}</Heading>
+                <Heading size="4">{LanguageKeys[lang].about.petsHeader}</Heading>
             </Box>
             <AboutPicturesList />
         </Card>

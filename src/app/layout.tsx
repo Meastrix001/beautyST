@@ -38,6 +38,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
   return (
     <html lang={brand.defaultLanguage}>
       <body>
@@ -46,7 +48,6 @@ export default function RootLayout({
             <Box>
               <Flex direction="column" minHeight="100vh">
                 <Navbar />
-
                 <Box flexGrow="1">{children}</Box>
                 <Footer />
               </Flex>

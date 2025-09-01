@@ -10,10 +10,11 @@ import { AboutHero } from "./about.hero";
 import { AboutBio } from "./about.bio";
 import { AboutDetails } from "./about.details";
 import { brand } from "@/theme/brand.config";
+import { PageLang } from "@/models/pageLang.model";
 
-export default function About() {
+export default function About({ lang }: PageLang) {
   return (
-    <Box className="about" width="100%">
+    <Box className="about" width="100%" position={"relative"} minHeight={"90vh"}>
       <Container>
         <Flex
           direction="column"
@@ -21,7 +22,7 @@ export default function About() {
           gap="6"
           className="about__container"
         >
-          <AboutHero />
+          <AboutHero lang={lang} />
 
           <Separator style={{ background: brand.company.colorPrimary, height: "2px" }} size="4" />
 
@@ -44,11 +45,11 @@ export default function About() {
                 </Box>
               </Box>
 
-              <AboutBio />
+              <AboutBio lang={lang} />
             </Card>
 
             <Flex direction="column" gap="4" className="about__details">
-              <AboutDetails />
+              <AboutDetails lang={lang} />
             </Flex>
           </Flex>
         </Flex>
