@@ -1,6 +1,7 @@
 import USPItem from "@/components/ui/USPItem/USPItem";
 import { uniqueSellingPoints } from "@/constants/uniqueSellingPoints";
 import { PageLang } from "@/models/pageLang.model";
+import { getNestedValue } from "@/utils/getNestedValues";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Box, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import React from "react";
@@ -28,10 +29,8 @@ const USPSection: React.FC<PageLang> = ({ lang }) => {
           {uniqueSellingPoints.map((usp, index) => (
             <Box key={index} width={{ initial: "100%", lg: "25%" }}>
               <USPItem
-                // @ts-expect-error Cant type check
-                heading={LanguageKeys[lang][usp.heading]}
-                // @ts-expect-error Cant type check
-                description={LanguageKeys[lang][usp.description]}
+                heading={getNestedValue(LanguageKeys[lang], usp.heading)}
+                description={getNestedValue(LanguageKeys[lang], usp.description)}
                 icon={usp.icon}
               />
 

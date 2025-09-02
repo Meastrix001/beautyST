@@ -1,5 +1,6 @@
 "use client"
 import { PageLang } from "@/models/pageLang.model";
+import { getNestedValue } from "@/utils/getNestedValues";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Box, Button, DataList, Flex, Text } from "@radix-ui/themes"
 import Link from "next/link";
@@ -27,8 +28,8 @@ export const ContactListItem = ({ item, idx, lang }: {
             <Flex align="center" gap="2">
                 {item.icon}
                 <Text size="5" weight="bold">
-                    {/* @ts-expect-error TS Cant verify types die to languages and indexing */}
-                    {LanguageKeys[lang][item.key]}
+                    {getNestedValue(LanguageKeys[lang], item.key) || item.key}
+
                 </Text>
             </Flex>
         </DataList.Label>

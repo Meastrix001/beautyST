@@ -1,6 +1,10 @@
 import ReviewPage from "@/PageComponents/review/page";
 import { brand } from "@/theme/brand.config";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
+
+const pageLanguage = "est"
+
 
 export default function ReviewPageEn() {
     return <ReviewPage />
@@ -8,14 +12,14 @@ export default function ReviewPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "layout"
+        canonical: "review-est"
     },
-    title: brand.company.name,
-    description: "Get full body waxed in Tallinn, Estonia",
+    title: LanguageKeys[pageLanguage].SEO.landing.title,
+    description: LanguageKeys[pageLanguage].SEO.landing.desc,
     openGraph: {
-        title: brand.company.name,
-        description: "Get full body waxed in Tallinn, Estonia",
-        url: `${brand.company.site}/faq`,
+        title: LanguageKeys[pageLanguage].SEO.landing.title,
+        description: LanguageKeys[pageLanguage].SEO.landing.desc,
+        url: `${brand.company.site}/${pageLanguage}/review`,
         siteName: brand.company.name,
         images: [
             {

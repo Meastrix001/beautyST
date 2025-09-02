@@ -1,5 +1,6 @@
 import FaqPage from "@/PageComponents/faq/faq.page";
 import { brand } from "@/theme/brand.config";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
 const pageLanguage = "est"
@@ -10,14 +11,14 @@ export default function FaqPageEst() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "layout"
+        canonical: "faq-est"
     },
-    title: brand.company.name,
-    description: "Get full body waxed in Tallinn, Estonia",
+    title: LanguageKeys[pageLanguage].SEO.faq.title,
+    description: LanguageKeys[pageLanguage].SEO.faq.desc,
     openGraph: {
-        title: brand.company.name,
-        description: "Get full body waxed in Tallinn, Estonia",
-        url: `${brand.company.site}/faq`,
+        title: LanguageKeys[pageLanguage].SEO.faq.title,
+        description: LanguageKeys[pageLanguage].SEO.faq.desc,
+        url: `${brand.company.site}/${pageLanguage}/faq`,
         siteName: brand.company.name,
         images: [
             {

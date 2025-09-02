@@ -214,11 +214,28 @@ booked and are not available by request.`,
   },
 
   SEO: {
+    landing: {
+      title: "Full Body Waxing in Tallinn | Professional & Private",
+      desc: "Professional waxing in Tallinn for face, body & bikini. Using Lycon wax for smooth, long-lasting results with clean technique & privacy.",
+    },
     about: {
-      title: "About",
-      desc: "Get full body waxed in Tallinn - about, Estonia",
+      title: "About Me | Stiina Roofthooft, Lycon Wax Specialist",
+      desc: "Learn about Stiina, a Lycon-certified waxing specialist in Tallinn. Passionate about waxing, animals & helping clients feel confident.",
+    },
+    contact: {
+      title: "Contact | Book Your Waxing Appointment in Tallinn",
+      desc: "Book your waxing in Tallinn today. Contact Stiina via email or phone for appointments, questions, and personalized service.",
+    },
+    faq: {
+      title: "Waxing FAQ | Common Questions Answered",
+      desc: "Get answers to top waxing questions: pain, preparation, aftercare, sensitive skin & more. Helpful info for first-time & regular clients.",
+    },
+    ss: {
+      title: "Waxing Services & Prices in Tallinn | Women & Men",
+      desc: "View full waxing price list for women & men in Tallinn. From Brazilian and bikini to legs, arms & chest. Professional Lycon waxing.",
     }
   }
+
 };
 
 

@@ -1,5 +1,6 @@
 import Contact from "@/PageComponents/contact/page";
 import { brand } from "@/theme/brand.config";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
 const pageLanguage = "est"
@@ -11,14 +12,14 @@ export default function ContactPageEst() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "layout"
+        canonical: "contact-est"
     },
-    title: brand.company.name,
-    description: "Get full body waxed in Tallinn, Estonia",
+    title: LanguageKeys[pageLanguage].SEO.contact.title,
+    description: LanguageKeys[pageLanguage].SEO.contact.desc,
     openGraph: {
-        title: brand.company.name,
-        description: "Get full body waxed in Tallinn, Estonia",
-        url: `${brand.company.site}/faq`,
+        title: LanguageKeys[pageLanguage].SEO.contact.title,
+        description: LanguageKeys[pageLanguage].SEO.contact.desc,
+        url: `${brand.company.site}/${pageLanguage}/contact`,
         siteName: brand.company.name,
         images: [
             {

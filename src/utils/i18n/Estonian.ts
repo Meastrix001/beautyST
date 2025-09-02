@@ -214,9 +214,25 @@ export const i18n_est = {
   },
 
   SEO: {
+    landing: {
+      title: "Täiskeha vahatamine Tallinnas | Professionaalne & Privaatne",
+      desc: "Professionaalne vahatamine Tallinnas näole, kehale ja bikiinialale. Kasutame Lyconi vaha, mis tagab sileda ja pikaajalise tulemuse puhta tehnikaga ja privaatselt.",
+    },
     about: {
-      title: "Minust",
-      desc: "Description of the 'About' page",
+      title: "Minust | Stiina Roofthooft, Lycon Vahatamise Spetsialist",
+      desc: "Tutvu Stiinaga, Lycon-sertifitseeritud vahatamise spetsialist Tallinnas. Kirglik vahatamise, loomade ja klientide enesekindluse aitamise vastu.",
+    },
+    contact: {
+      title: "Kontakt | Broneeri oma vahatamise aeg Tallinnas",
+      desc: "Broneeri oma vahatamise aeg Tallinnas juba täna. Võta ühendust Stiinaga e-posti või telefoni teel, et leida sobiv aeg või saada personaalset nõu.",
+    },
+    faq: {
+      title: "Vahatamise KKK | Sageli Küsimused ja Vastused",
+      desc: "Leia vastused kõige levinumatele vahatamise küsimustele: valu, ettevalmistus, hooldus pärast vahatamist, tundlik nahk ja palju muud. Kasulik nii esmakordsetele kui ka regulaarsetele klientidele.",
+    },
+    ss: {
+      title: "Vahatamise Teenused & Hinnad Tallinnas | Naised & Mehed",
+      desc: "Vaata täielikku vahatamise hinnakirja naistele ja meestele Tallinnas. Alates Brasiilia ja bikiini kuni jalgade, käte ja rinna/vastuvõtuga. Professionaalne Lyconi vahatamine.",
     }
   }
 };

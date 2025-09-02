@@ -1,5 +1,6 @@
 import Prices from "@/PageComponents/services-prices/page";
 import { brand } from "@/theme/brand.config";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
 const pageLanguage = "en"
@@ -10,14 +11,14 @@ export default function ServicesPricesPageEst() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "layout"
+        canonical: "ss-en"
     },
-    title: brand.company.name,
-    description: "Get full body waxed in Tallinn, Estonia",
+    title: LanguageKeys[pageLanguage].SEO.ss.title,
+    description: LanguageKeys[pageLanguage].SEO.ss.desc,
     openGraph: {
-        title: brand.company.name,
-        description: "Get full body waxed in Tallinn, Estonia",
-        url: `${brand.company.site}/faq`,
+        title: LanguageKeys[pageLanguage].SEO.ss.title,
+        description: LanguageKeys[pageLanguage].SEO.ss.desc,
+        url: `${brand.company.site}/${pageLanguage}/services-prices`,
         siteName: brand.company.name,
         images: [
             {

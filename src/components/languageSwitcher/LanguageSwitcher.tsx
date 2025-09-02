@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function LanguageSwitcher({ setLang }: { setLang?: React.Dispatch<React.SetStateAction<string>> }) {
-  const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
   const router = useRouter();
+  const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
 
   const handleLanguageChange = async (lang: 'en' | 'est') => {
     await i18n.changeLanguage(lang);

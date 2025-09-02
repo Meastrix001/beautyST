@@ -1,5 +1,6 @@
 import About from "@/PageComponents/about/page";
 import { brand } from "@/theme/brand.config";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
 const pageLanguage = "est"
@@ -11,14 +12,14 @@ export default function AboutPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "layout"
+        canonical: "about-est"
     },
-    title: brand.company.name,
-    description: "Get full body waxed in Tallinn, Estonia",
+    title: LanguageKeys[pageLanguage].SEO.about.title,
+    description: LanguageKeys[pageLanguage].SEO.about.desc,
     openGraph: {
-        title: brand.company.name,
-        description: "Get full body waxed in Tallinn, Estonia",
-        url: `${brand.company.site}/faq`,
+        title: LanguageKeys[pageLanguage].SEO.about.title,
+        description: LanguageKeys[pageLanguage].SEO.about.desc,
+        url: `${brand.company.site}/${pageLanguage}/about`,
         siteName: brand.company.name,
         images: [
             {
@@ -31,5 +32,4 @@ export const metadata: Metadata = {
         type: "website",
     },
 };
-
 
