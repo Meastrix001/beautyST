@@ -7,6 +7,7 @@ import { Footer, Navbar } from "@/components";
 import I18nProvider from "@/providers/I18nProvider";
 import { brand } from "@/theme/brand.config";
 import { BuildSiteMap } from "@/utils/sitemap/sitemap.builder";
+import { SiteHead } from "@/providers/headLinks";
 
 BuildSiteMap()
 export default function RootLayout({
@@ -18,14 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang={brand.defaultLanguage}>
-      <head>
-        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="BBS.Tallinn" />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-      </head>
+      <SiteHead />
       <body>
         <I18nProvider>
           <Theme>
