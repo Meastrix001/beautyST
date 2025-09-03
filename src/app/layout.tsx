@@ -23,9 +23,10 @@ export default function RootLayout({
             <Box>
               <Flex direction="column" minHeight="100vh">
                 <Navbar />
-                <Box flexGrow="1">{children}</Box>
+                <Box flexGrow="1">{children}
+                  <SpeedInsights />
+                </Box>
                 <Footer />
-                <SpeedInsights />
               </Flex>
             </Box>
           </Theme>
