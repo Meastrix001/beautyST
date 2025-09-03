@@ -1,6 +1,7 @@
 import "@radix-ui/themes/styles.css";
 import "@/styles/main.scss";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import { Box, Flex, Theme } from "@radix-ui/themes";
 import { Footer, Navbar } from "@/components";
 import I18nProvider from "@/providers/I18nProvider";
@@ -25,6 +26,7 @@ export default function RootLayout({
                 <Navbar />
                 <Box flexGrow="1">{children}
                   <SpeedInsights />
+                  <Analytics />
                 </Box>
                 <Footer />
               </Flex>
