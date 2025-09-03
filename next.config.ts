@@ -1,6 +1,8 @@
-/** @type {import('next-sitemap').IConfig} */
+/** next-sitemap.js */
 module.exports = {
-  siteUrl: "https://www.beautybystiina.ee",
+  siteUrl: 'https://www.beautybystiina.ee',
   generateRobotsTxt: true,
-  sitemapSize: 5000,
-};
+  sitemapSize: 500, // max URLs per sitemap
+  changefreq: 'monthly',
+  priority: 0.8,
+}
