@@ -7,8 +7,10 @@ import { Label } from "radix-ui";
 import { useState } from "react";
 import { useCreateReview } from "./hooks/useCreateReview";
 import { ReviewsMessage } from "./reviews.message";
+import { PageLang } from "@/models/pageLang.model";
+import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 
-export const Form = () => {
+export const Form = ({ lang }: PageLang) => {
 
     const [reviewData, setReviewData] = useState<Partial<Review>>({
         message: "",
@@ -29,6 +31,11 @@ export const Form = () => {
     const { createReview } = useCreateReview()
 
     const handleSubmit = async () => {
+
+        if (!reviewData.name) {
+            return
+        }
+
         await createReview(reviewData)
         setDisableReview(true);
 
@@ -69,9 +76,10 @@ export const Form = () => {
             </Box>
 
             <Box className="field">
-                <Label.Root htmlFor="name">Your Name</Label.Root>
-                <Text size="1" style={{ fontStyle: "italic" }}>Your name helps us validate your review.</Text>
+                <Label.Root htmlFor="name">{LanguageKeys[lang].review.form.nameHeading}</Label.Root>
+                <Text size="1" style={{ fontStyle: "italic" }}>{LanguageKeys[lang].review.form.nameSubHeading}</Text>
                 <TextField.Root
+                    required
                     placeholder=""
                     id="name"
                     type="text"
@@ -85,21 +93,21 @@ export const Form = () => {
             </Box>
 
             <Box className="field">
-                <Label.Root htmlFor="review">Your Review</Label.Root>
-                <Text size="1" style={{ fontStyle: "italic" }}>Any feedback or tips is welcome.</Text>
+                <Label.Root htmlFor="review">{LanguageKeys[lang].review.form.feedbackHeading}</Label.Root>
+                <Text size="1" style={{ fontStyle: "italic" }}>{LanguageKeys[lang].review.form.feedbackSubHeading}</Text>
                 <TextArea
                     id="review"
                     value={reviewData.message}
                     onChange={(e) => setNewValue("message", e.target.value)}
-                    placeholder="Tell us about your experience..."
+                    placeholder={LanguageKeys[lang].review.form.feedbackPlaceholder}
                     rows={4}
                 />
             </Box>
 
-            <Button type="submit" className="submit-btn">
-                Submit Review
+            <Button type="submit" className="submit-btn" disabled={!reviewData.name || !reviewData.rating}>
+                {LanguageKeys[lang].review.form.submitBtn}
             </Button>
-            <Text style={{ fontStyle: "italic" }} size="1">Reviews will be checked for explicit language or false reviews before being published. </Text>
+            <Text style={{ fontStyle: "italic" }} size="1">{LanguageKeys[lang].review.form.reviewDisclaimer}</Text>
         </form>
     );
 };

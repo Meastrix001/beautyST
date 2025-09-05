@@ -11,13 +11,6 @@ import { PageLang } from "@/models/pageLang.model";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { getNestedValue } from "@/utils/getNestedValues";
 
-/**
- * Renders a list of navigation links based on the `siteRoutes.nav` object.
- *
- * @param {NavLinksProps} props - The props for the NavLinks component.
- * @param {() => void} [props.onClick] - Optional click handler for each navigation link.
- * @returns {JSX.Element} A fragment containing navigation links.
- */
 
 const NavLinks: React.FC<NavLinksProps & PageLang> = ({ onClick, lang }) => {
   const [activeSiteRoutes, setActiveSiteRoutes] = useState(siteRoutesEst)

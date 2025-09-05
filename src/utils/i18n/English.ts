@@ -175,6 +175,20 @@ booked and are not available by request.`,
     ],
   },
 
+  review: {
+    heading: "Leave a Review",
+    subHeading: "We’d love to hear your feedback about your service!",
+    form: {
+      nameHeading: "Your Name (Required)",
+      nameSubHeading: "Your name helps us validate your review.",
+      feedbackHeading: "Your Review",
+      feedbackSubHeading: "Any feedback or tips is welcome.",
+      feedbackPlaceholder: "Tell us about your experience...",
+      submitBtn: "Submit Review",
+      reviewDisclaimer: "Reviews will be checked for explicit language or false reviews before being published."
+    }
+  },
+
   footer: {
     arr: "All rights reserved",
   },
@@ -218,21 +232,30 @@ booked and are not available by request.`,
       title: "Full Body Waxing in Tallinn | Professional & Private",
       desc: "Professional waxing in Tallinn for face, body & bikini. Using Lycon wax for smooth, long-lasting results with clean technique & privacy.",
     },
+
     about: {
       title: "About Me | Stiina Roofthooft, Lycon Wax Specialist",
       desc: "Learn about Stiina, a Lycon-certified waxing specialist in Tallinn. Passionate about waxing, animals & helping clients feel confident.",
     },
+
     contact: {
       title: "Contact | Book Your Waxing Appointment in Tallinn",
       desc: "Book your waxing in Tallinn today. Contact Stiina via email or phone for appointments, questions, and personalized service.",
     },
+
     faq: {
       title: "Waxing FAQ | Common Questions Answered",
       desc: "Get answers to top waxing questions: pain, preparation, aftercare, sensitive skin & more. Helpful info for first-time & regular clients.",
     },
+
     ss: {
       title: "Waxing Services & Prices in Tallinn | Women & Men",
       desc: "View full waxing price list for women & men in Tallinn. From Brazilian and bikini to legs, arms & chest. Professional Lycon waxing.",
+    },
+
+    review: {
+      title: "Review | Share Your Experience with BeautyByStiina - in Tallinn",
+      desc: "Leave a review for BeautyByStiina in Tallinn. Share your feedback about your visit to this waxing salon and help others.",
     }
   }
 

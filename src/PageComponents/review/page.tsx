@@ -6,8 +6,9 @@ import {
 } from "@radix-ui/themes";
 import { Form } from "./reviews.form";
 import { ReviewsHero } from "./reviews.hero";
+import { PageLang } from "@/models/pageLang.model";
 
-export default function ReviewPage() {
+export default function ReviewPage({ lang }: PageLang) {
 
   return (
     <Box className="prices">
@@ -18,7 +19,7 @@ export default function ReviewPage() {
           gap="6"
           className="prices__container"
         >
-          <ReviewsHero />
+          <ReviewsHero lang={lang} />
 
           <Separator size="4" />
 
@@ -30,7 +31,7 @@ export default function ReviewPage() {
             mt="6"
           >
 
-            <Form />
+            <Form lang={lang} />
 
           </Flex>
         </Flex>

@@ -176,6 +176,20 @@ export const i18n_est = {
     ]
   },
 
+  review: {
+    heading: "Jäta arvustus",
+    subHeading: "Meil oleks väga hea meel kuulda sinu tagasisidet teenuse kohta!",
+    form: {
+      nameHeading: "Sinu nimi (kohustuslik)",
+      nameSubHeading: "Sinu nimi aitab meil arvustuse kinnitada.",
+      feedbackHeading: "Sinu arvustus",
+      feedbackSubHeading: "Igasugune tagasiside või soovitused on teretulnud.",
+      feedbackPlaceholder: "Räägi meile oma kogemusest...",
+      submitBtn: "Saada arvustus",
+      reviewDisclaimer: "Arvustused vaadatakse enne avaldamist üle, et vältida sobimatut sisu või valeinfot."
+    }
+  },
+
   footer: {
     arr: "Kõik õigused kaitstud",
   },
@@ -218,21 +232,30 @@ export const i18n_est = {
       title: "Täiskeha vahatamine Tallinnas | Professionaalne & Privaatne",
       desc: "Professionaalne vahatamine Tallinnas näole, kehale ja bikiinialale. Kasutame Lyconi vaha, mis tagab sileda ja pikaajalise tulemuse puhta tehnikaga ja privaatselt.",
     },
+
     about: {
       title: "Minust | Stiina Roofthooft, Lycon Vahatamise Spetsialist",
       desc: "Tutvu Stiinaga, Lycon-sertifitseeritud vahatamise spetsialist Tallinnas. Kirglik vahatamise, loomade ja klientide enesekindluse aitamise vastu.",
     },
+
     contact: {
       title: "Kontakt | Broneeri oma vahatamise aeg Tallinnas",
       desc: "Broneeri oma vahatamise aeg Tallinnas juba täna. Võta ühendust Stiinaga e-posti või telefoni teel, et leida sobiv aeg või saada personaalset nõu.",
     },
+
     faq: {
       title: "Vahatamise KKK | Sageli Küsimused ja Vastused",
       desc: "Leia vastused kõige levinumatele vahatamise küsimustele: valu, ettevalmistus, hooldus pärast vahatamist, tundlik nahk ja palju muud. Kasulik nii esmakordsetele kui ka regulaarsetele klientidele.",
     },
+
     ss: {
       title: "Vahatamise Teenused & Hinnad Tallinnas | Naised & Mehed",
       desc: "Vaata täielikku vahatamise hinnakirja naistele ja meestele Tallinnas. Alates Brasiilia ja bikiini kuni jalgade, käte ja rinna/vastuvõtuga. Professionaalne Lyconi vahatamine.",
+    },
+
+    review: {
+      title: "Arvustus | Jaga oma kogemust BeautyByStiina - in Tallinn",
+      desc: "Jäta arvustus BeautyByStiina - in Tallinn. Jaga oma tagasisidet oma külastusest vahasalongi ja aita teisi."
     }
   }
 };

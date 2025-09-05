@@ -6,17 +6,6 @@ import { useRouter } from "next/navigation";
 import LanguageSwitcher from "@/components/languageSwitcher/LanguageSwitcher";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 
-/**
- * Footer component that displays the site copyright and social media links.
- *
- * @remarks
- * - Uses responsive layout with different paddings and flex directions for initial and large (`lg`) breakpoints.
- * - Displays the current year and a customizable company name.
- * - Renders a list of social media links provided by the `socialLinks` array.
- *
- * @returns The footer section of the page.
- */
-
 const Footer: React.FC = () => {
   const router = useRouter();
   const [lang, setLang] = useState<string>("est")
@@ -38,7 +27,7 @@ const Footer: React.FC = () => {
               {LanguageKeys[lang].footer.arr}
             </Text>{" "}
             -{" "}
-            <Text className="hover" size="2" onClick={() => router.push("/en/review/")}>
+            <Text className="hover" size="2" onClick={() => router.push(`/${lang}/review/`)}>
               Leave a review
             </Text>
           </Box>
