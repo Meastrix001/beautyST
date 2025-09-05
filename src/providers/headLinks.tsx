@@ -1,9 +1,6 @@
-import Head from "next/head"
-
-
 export const SiteHead = () => {
 
-    return <Head>
+    return <head>
         <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
@@ -34,5 +31,5 @@ export const SiteHead = () => {
         {/* FAQ */}
         <link rel="alternate" href="https://www.beautybystiina.ee/en/faq" hrefLang="en" />
         <link rel="alternate" href="https://www.beautybystiina.ee/est/faq" hrefLang="est" />
-    </ Head>
+    </ head>
 }

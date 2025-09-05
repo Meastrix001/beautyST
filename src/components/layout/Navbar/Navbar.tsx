@@ -39,7 +39,9 @@ const Navbar: React.FC = () => {
             <Nav lang={lang} setLang={setLang} />
           </Flex>
 
-          <LanguageSwitcher setLang={setLang} />
+          <Box display={{ initial: "none", lg: "block" }}>
+            <LanguageSwitcher setLang={setLang} />
+          </Box>
         </Grid>
       </Container>
     </Box>
