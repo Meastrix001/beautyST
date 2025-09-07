@@ -1,3 +1,5 @@
+import Script from "next/script"
+
 export const SiteHead = () => {
 
     return <head>
@@ -31,5 +33,19 @@ export const SiteHead = () => {
         {/* FAQ */}
         <link rel="alternate" href="https://www.beautybystiina.ee/en/faq" hrefLang="en" />
         <link rel="alternate" href="https://www.beautybystiina.ee/est/faq" hrefLang="est" />
+
+        {/* Google tag (gtag.js) */}
+        <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17538672523"
+            strategy="afterInteractive"
+        />
+        <Script id="google-gtag" strategy="afterInteractive">
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17538672523');
+          `}
+        </Script>
     </ head>
 }
