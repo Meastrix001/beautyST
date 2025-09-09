@@ -113,7 +113,7 @@ export const Form = ({ lang }: PageLang) => {
       <Button
         onClick={() => handleSubmit()}
         className="submit-btn"
-        type="button" // 🚫 won't submit the form
+        type="button"
         disabled={!reviewData.name || !reviewData.rating}
       >
         {LanguageKeys[lang].review.form.submitBtn}
