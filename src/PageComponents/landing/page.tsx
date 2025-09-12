@@ -4,7 +4,7 @@ import {
   FeaturesSection,
   HeroSection,
   PartnerSection,
-  // TestimonialsSection,
+  TestimonialsSection,
   USPSection,
 } from "@/components";
 import BackgroundSlider from "@/components/backgroundSlider/backgroundSlider";
@@ -50,14 +50,16 @@ export default function Home({ lang = "est" }: PageLang) {
             </Section>
 
             <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+
+            <Section>
+              <TestimonialsSection lang={lang} />
+            </Section>
+
+            <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+
           </Box>
         </Flex>
       </Container>
-
-      {/* <Flex direction="column" py="9"> */}
-      {/* <TestimonialsSection /> */}
-      {/* </Flex> */}
-
       <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>
         <Flex direction="column" gap="9" mb="9">
           <Section>

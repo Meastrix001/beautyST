@@ -190,6 +190,11 @@ export const i18n_est = {
     }
   },
 
+  reviews: {
+    header: "Arvustused",
+    subHeader: "Vaata, mida varasemad kliendid kogesid"
+  },
+
   footer: {
     arr: "Kõik õigused kaitstud",
   },

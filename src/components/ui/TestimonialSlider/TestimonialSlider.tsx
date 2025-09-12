@@ -1,6 +1,6 @@
 "use client";
 import TestimonialCard from "@/components/ui/TestimonialCard/TestimonialCard";
-import { Box } from "@radix-ui/themes";
+import { Box, Flex, Spinner } from "@radix-ui/themes";
 import Slider from "react-infinite-logo-slider";
 import React, { useEffect, useState } from "react";
 import { getAllReviews, Review } from "@/api/firebase.config";
@@ -33,18 +33,30 @@ const TestimonialSlider: React.FC = () => {
 
 
 
+  if (reviews.length === 0 || !reviews) {
+    return <Flex align={"center"} justify={"center"}>
+      <Spinner />
+    </Flex>
+  }
+
   return (
-    <Slider width="350px" duration={80} pauseOnHover={true} blurBorders={false}>
-      {reviews.map((review, index) => (
-        <Slider.Slide key={index}>
-          <Box minHeight="100%" maxWidth="100%">
-            <TestimonialCard
-              review={review}
-            />
-          </Box>
-        </Slider.Slide>
-      ))}
-    </Slider>
+
+    <Box className="testimonial">
+      <Slider width="350px" duration={80} pauseOnHover={true} blurBorders={false}>
+
+        {reviews.map((review, index) => (
+          <Slider.Slide key={index}>
+            <Box maxWidth="100%" width={"100%"} >
+              <TestimonialCard
+                index={index}
+                review={review}
+              />
+            </Box>
+          </Slider.Slide>
+        ))}
+      </Slider>
+
+    </Box>
   );
 };
 

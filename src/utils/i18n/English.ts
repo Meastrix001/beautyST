@@ -189,6 +189,11 @@ booked and are not available by request.`,
     }
   },
 
+  reviews: {
+    header: "Reviews",
+    subHeader: "See what past customers experienced",
+  },
+
   footer: {
     arr: "All rights reserved",
   },

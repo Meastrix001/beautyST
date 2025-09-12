@@ -14,12 +14,13 @@ import { Review } from "@/api/firebase.config";
  * @returns A styled testimonial card component.
  */
 
-const TestimonialCard: React.FC<{ review: Review }> = ({
+const TestimonialCard: React.FC<{ review: Review, index: number }> = ({
   review,
+  index
 }) => {
   return (
-    <Box className="testimonial-card">
-      <Flex direction="column" gap="4">
+    <Box className={`testimonial-card ${(index + 1) % 2 === 0 ? "light" : "dark"}`} height={"15rem"} >
+      <Flex direction="column" gap="4" height={"15rem"} width={"100%"}>
         <Flex>
           {Array.from({ length: 5 }, (_, index) => (
             <StarFilledIcon
@@ -30,10 +31,10 @@ const TestimonialCard: React.FC<{ review: Review }> = ({
             />
           ))}
         </Flex>
-        <Text as="p">{review.message}</Text>
+        <Text as="p" mb={"auto"}>{review.message}</Text>
         <Separator
           orientation="horizontal"
-          style={{ width: "100%", margin: "1rem 0" }}
+          style={{ width: "100%" }}
         />
         <Flex gap="3" align="center">
           <Flex direction="column" gap="0">
