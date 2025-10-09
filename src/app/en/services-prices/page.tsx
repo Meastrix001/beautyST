@@ -11,14 +11,14 @@ export default function ServicesPricesPageEst() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "ss-en"
+        canonical: `${brand.company.site}${pageLanguage}/services-prices`
     },
     title: LanguageKeys[pageLanguage].SEO.ss.title,
     description: LanguageKeys[pageLanguage].SEO.ss.desc,
     openGraph: {
         title: LanguageKeys[pageLanguage].SEO.ss.title,
         description: LanguageKeys[pageLanguage].SEO.ss.desc,
-        url: `${brand.company.site}/${pageLanguage}/services-prices`,
+        url: `${brand.company.site}${pageLanguage}/services-prices`,
         siteName: brand.company.name,
         images: [
             {

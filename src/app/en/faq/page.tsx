@@ -9,15 +9,19 @@ export default function FaqPageEn() {
 }
 
 export const metadata: Metadata = {
-    alternates: {
-        canonical: "faq-en"
-    },
     title: LanguageKeys[pageLanguage].SEO.faq.title,
     description: LanguageKeys[pageLanguage].SEO.faq.desc,
+    alternates: {
+        canonical: `${brand.company.site}${pageLanguage}/faq`,
+        languages: {
+            en: `${brand.company.site}en/faq`,
+            et: `${brand.company.site}est/faq`,
+        },
+    },
     openGraph: {
         title: LanguageKeys[pageLanguage].SEO.faq.title,
         description: LanguageKeys[pageLanguage].SEO.faq.desc,
-        url: `${brand.company.site}/${pageLanguage}/faq`,
+        url: `${brand.company.site}${pageLanguage}/faq`,
         siteName: brand.company.name,
         images: [
             {

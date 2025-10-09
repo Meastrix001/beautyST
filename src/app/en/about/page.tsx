@@ -10,14 +10,14 @@ export default function AboutPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "about-en"
+        canonical: `${brand.company.site}${pageLanguage}/about`
     },
     title: LanguageKeys[pageLanguage].SEO.about.title,
     description: LanguageKeys[pageLanguage].SEO.about.desc,
     openGraph: {
         title: LanguageKeys[pageLanguage].SEO.about.title,
         description: LanguageKeys[pageLanguage].SEO.about.desc,
-        url: `${brand.company.site}/${pageLanguage}/about`,
+        url: `${brand.company.site}${pageLanguage}/about`,
         siteName: brand.company.name,
         images: [
             {

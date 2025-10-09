@@ -12,14 +12,14 @@ export default function ContactPageEst() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "contact-est"
+        canonical: `${brand.company.site}${pageLanguage}/contact`
     },
     title: LanguageKeys[pageLanguage].SEO.contact.title,
     description: LanguageKeys[pageLanguage].SEO.contact.desc,
     openGraph: {
         title: LanguageKeys[pageLanguage].SEO.contact.title,
         description: LanguageKeys[pageLanguage].SEO.contact.desc,
-        url: `${brand.company.site}/${pageLanguage}/contact`,
+        url: `${brand.company.site}${pageLanguage}/contact`,
         siteName: brand.company.name,
         images: [
             {

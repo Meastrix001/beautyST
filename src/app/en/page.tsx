@@ -13,14 +13,14 @@ export default function LandingPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "landing-en"
+        canonical: `${brand.company.site}en/`
     },
     title: LanguageKeys[pageLanguage].SEO.landing.title,
     description: LanguageKeys[pageLanguage].SEO.landing.desc,
     openGraph: {
         title: LanguageKeys[pageLanguage].SEO.landing.title,
         description: LanguageKeys[pageLanguage].SEO.landing.desc,
-        url: `${brand.company.site}/en/`,
+        url: `${brand.company.site}en/`,
         siteName: brand.company.name,
         images: [
             {

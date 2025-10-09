@@ -12,14 +12,14 @@ export default function ReviewPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "review-est"
+        canonical: `${brand.company.site}${pageLanguage}/review`
     },
     title: LanguageKeys[pageLanguage].SEO.review.title,
     description: LanguageKeys[pageLanguage].SEO.review.desc,
     openGraph: {
         title: LanguageKeys[pageLanguage].SEO.review.title,
         description: LanguageKeys[pageLanguage].SEO.review.desc,
-        url: `${brand.company.site}/${pageLanguage}/review`,
+        url: `${brand.company.site}${pageLanguage}/review`,
         siteName: brand.company.name,
         images: [
             {

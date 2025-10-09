@@ -11,14 +11,14 @@ export default function FaqPageEst() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: "faq-est"
+        canonical: `${brand.company.site}${pageLanguage}/faq`
     },
     title: LanguageKeys[pageLanguage].SEO.faq.title,
     description: LanguageKeys[pageLanguage].SEO.faq.desc,
     openGraph: {
         title: LanguageKeys[pageLanguage].SEO.faq.title,
         description: LanguageKeys[pageLanguage].SEO.faq.desc,
-        url: `${brand.company.site}/${pageLanguage}/faq`,
+        url: `${brand.company.site}${pageLanguage}/faq`,
         siteName: brand.company.name,
         images: [
             {
