@@ -4,20 +4,20 @@ import { initReactI18next } from "react-i18next";
 import { i18n_en } from "./English";
 import { i18n_est } from "./Estonian";
 
-export type Languages = "en" | "est"
+export type Languages = "en" | "et"
 
 const supportedLanguages = {
   en: "en",
-  est: "est",
+  et: "et",
 };
 
-const language = supportedLanguages["est"];
+const language = supportedLanguages["et"];
 
 const resources = {
   en: {
     translation: i18n_en,
   },
-  est: {
+  et: {
     translation: i18n_est,
   },
 };

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         canonical: `${brand.company.site}${pageLanguage}/review`,
         languages: {
             en: `${brand.company.site}en/review`,
-            et: `${brand.company.site}est/review`,
+            et: `${brand.company.site}et/review`,
         },
     },
     title: LanguageKeys[pageLanguage].SEO.review.title,

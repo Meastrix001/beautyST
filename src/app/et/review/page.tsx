@@ -3,7 +3,7 @@ import { brand } from "@/theme/brand.config";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
-const pageLanguage = "est"
+const pageLanguage = "et"
 
 
 export default function ReviewPageEn() {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         canonical: `${brand.company.site}${pageLanguage}/review`,
         languages: {
             en: `${brand.company.site}en/review`,
-            et: `${brand.company.site}est/review`,
+            et: `${brand.company.site}et/review`,
         },
     },
     title: LanguageKeys[pageLanguage].SEO.review.title,

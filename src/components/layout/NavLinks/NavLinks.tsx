@@ -22,7 +22,7 @@ const NavLinks: React.FC<NavLinksProps & PageLang> = ({ onClick, lang }) => {
     if (lang === "en") {
       setActiveSiteRoutes(siteRoutesEn)
     }
-    if (lang === "est") {
+    if (lang === "et") {
       setActiveSiteRoutes(siteRoutesEst)
     }
   }, [lang])
@@ -43,8 +43,8 @@ const NavLinks: React.FC<NavLinksProps & PageLang> = ({ onClick, lang }) => {
               style={{
                 color: "black",
                 borderBottom:
-                  pathname.replaceAll("/", "").replaceAll("/est/", "").replaceAll("/en/", "") ===
-                    route.path.replaceAll("/", "").replaceAll("/est/", "").replaceAll("/en/", "")
+                  pathname.replaceAll("/", "").replaceAll("/et/", "").replaceAll("/en/", "") ===
+                    route.path.replaceAll("/", "").replaceAll("/et/", "").replaceAll("/en/", "")
                     ? "2px solid #eedec5"
                     : "",
               }}

@@ -8,7 +8,7 @@ import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 
 const Footer: React.FC = () => {
   const router = useRouter();
-  const [lang, setLang] = useState<string>("est")
+  const [lang, setLang] = useState<string>("et")
 
   return (
     <Box className="footer" py="4">

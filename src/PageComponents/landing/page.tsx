@@ -12,7 +12,7 @@ import { PageLang } from "@/models/pageLang.model";
 import { brand } from "@/theme/brand.config";
 import { Box, Container, Flex, Section, Separator } from "@radix-ui/themes";
 
-export default function Home({ lang = "est" }: PageLang) {
+export default function Home({ lang = "et" }: PageLang) {
 
 
   return (

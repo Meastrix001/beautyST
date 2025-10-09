@@ -11,9 +11,9 @@ import { useParams } from "next/navigation";
 import { siteRoutesEst } from "@/routes/siteRoutes.est";
 
 const Navbar: React.FC = () => {
-  const [lang, setLang] = useState<string>("est")
+  const [lang, setLang] = useState<string>("et")
   const params = useParams(); // reactive
-  const i18nLang = params.lang || "est";
+  const i18nLang = params.lang || "et";
 
   return (
     <Box className="navigation">

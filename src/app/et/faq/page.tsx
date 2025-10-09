@@ -3,7 +3,7 @@ import { brand } from "@/theme/brand.config";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
-const pageLanguage = "est";
+const pageLanguage = "et";
 
 export default function FaqPageEst() {
     return <FaqPage lang={pageLanguage} />;
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         canonical: `${brand.company.site}${pageLanguage}/faq`,
         languages: {
             en: `${brand.company.site}en/faq`,
-            et: `${brand.company.site}est/faq`,
+            et: `${brand.company.site}et/faq`,
         },
     },
     openGraph: {

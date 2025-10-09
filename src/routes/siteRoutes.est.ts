@@ -6,23 +6,23 @@ export const siteRoutesEst = {
     label: "nav.keys.home",
   } as Route,
   "services-prices": {
-    path: "/est/services-prices",
+    path: "/et/services-prices",
     label: "nav.keys.ss",
   } as Route,
   about: {
-    path: "/est/about",
+    path: "/et/about",
     label: "nav.keys.about",
   } as Route,
   contact: {
-    path: "/est/contact",
+    path: "/et/contact",
     label: "nav.keys.contact",
   } as Route,
   faq: {
-    path: "/est/faq",
+    path: "/et/faq",
     label: "nav.keys.faq",
   } as Route,
   review: {
-    path: "/est/review",
+    path: "/et/review",
     label: "",
   } as Route,
   // Nav
@@ -32,19 +32,19 @@ export const siteRoutesEst = {
       label: "nav.keys.home",
     } as Route,
     "services-prices": {
-      path: "/est/services-prices",
+      path: "/et/services-prices",
       label: "nav.keys.ss",
     } as Route,
     about: {
-      path: "/est/about",
+      path: "/et/about",
       label: "nav.keys.about",
     } as Route,
     contact: {
-      path: "/est/contact",
+      path: "/et/contact",
       label: "nav.keys.contact",
     } as Route,
     faq: {
-      path: "/est/faq",
+      path: "/et/faq",
       label: "nav.keys.faq",
     } as Route,
   },

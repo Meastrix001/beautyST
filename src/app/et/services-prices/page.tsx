@@ -3,7 +3,7 @@ import { brand } from "@/theme/brand.config";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
-const pageLanguage = "est"
+const pageLanguage = "et"
 
 export default function ServicesPricesPageEst() {
     return <Prices lang={pageLanguage} />
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         canonical: `${brand.company.site}${pageLanguage}/services-prices`,
         languages: {
             en: `${brand.company.site}en/services-prices`,
-            et: `${brand.company.site}est/services-prices`,
+            et: `${brand.company.site}et/services-prices`,
         },
     },
     title: LanguageKeys[pageLanguage].SEO.ss.title,

@@ -15,7 +15,7 @@ export const ContactListItem = ({ item, idx, lang }: {
         icon: JSX.Element;
     },
     idx: number
-    lang: "est" | "en"
+    lang: "et" | "en"
 } & PageLang) => {
 
 

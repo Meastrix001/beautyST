@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         canonical: `${brand.company.site}${pageLanguage}/faq`,
         languages: {
             en: `${brand.company.site}en/faq`,
-            et: `${brand.company.site}est/faq`,
+            et: `${brand.company.site}et/faq`,
         },
     },
     openGraph: {

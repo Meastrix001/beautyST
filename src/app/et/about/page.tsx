@@ -3,7 +3,7 @@ import { brand } from "@/theme/brand.config";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
-const pageLanguage = "est"
+const pageLanguage = "et"
 
 
 export default function AboutPageEn() {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         canonical: `${brand.company.site}${pageLanguage}/about`,
         languages: {
             en: `${brand.company.site}en/about`,
-            et: `${brand.company.site}est/about`,
+            et: `${brand.company.site}et/about`,
         },
     },
     title: LanguageKeys[pageLanguage].SEO.about.title,

@@ -9,7 +9,7 @@ export default function LanguageSwitcher({ setLang }: { setLang?: React.Dispatch
   const router = useRouter();
   const [activeLanguage, setActiveLanguage] = useState<string>(i18n.language);
 
-  const handleLanguageChange = async (lang: 'en' | 'est') => {
+  const handleLanguageChange = async (lang: 'en' | 'et') => {
     await i18n.changeLanguage(lang);
     if (setLang) {
       setLang(lang)
@@ -17,7 +17,7 @@ export default function LanguageSwitcher({ setLang }: { setLang?: React.Dispatch
 
     let currentPath = window.location.pathname;
     setActiveLanguage(lang)
-    if (window.location.pathname === "/est") {
+    if (window.location.pathname === "/et") {
       router.push(`/${lang}/`);
     }
 
@@ -26,7 +26,7 @@ export default function LanguageSwitcher({ setLang }: { setLang?: React.Dispatch
     }
 
     else {
-      currentPath = currentPath.replace("/est/", ``);
+      currentPath = currentPath.replace("/et/", ``);
       currentPath = currentPath.replace("/en/", ``);
 
       currentPath = `/${lang}/${currentPath}/`;
@@ -50,9 +50,9 @@ export default function LanguageSwitcher({ setLang }: { setLang?: React.Dispatch
       <Badge
         className="hover"
         size="3"
-        variant={activeLanguage === "est" ? "solid" : "soft"}
-        color={activeLanguage === "est" ? "pink" : "gold"}
-        onClick={() => handleLanguageChange("est")}
+        variant={activeLanguage === "et" ? "solid" : "soft"}
+        color={activeLanguage === "et" ? "pink" : "gold"}
+        onClick={() => handleLanguageChange("et")}
       >
         Eesti
       </Badge>

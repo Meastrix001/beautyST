@@ -1,3 +1,3 @@
 export type PageLang = {
-    lang: "en" | "est"
+    lang: "en" | "et"
 }

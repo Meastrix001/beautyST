@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         canonical: `${brand.company.site}${pageLanguage}/services-prices`,
         languages: {
             en: `${brand.company.site}en/services-prices`,
-            et: `${brand.company.site}est/services-prices`,
+            et: `${brand.company.site}et/services-prices`,
         },
     },
     title: LanguageKeys[pageLanguage].SEO.ss.title,

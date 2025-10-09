@@ -4,7 +4,7 @@ import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
 
 
-const pageLanguage = "est"
+const pageLanguage = "et"
 
 
 export default function LandingPageEst() {

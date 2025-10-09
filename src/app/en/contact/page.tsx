@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         canonical: `${brand.company.site}${pageLanguage}/contact`,
         languages: {
             en: `${brand.company.site}en/contact`,
-            et: `${brand.company.site}est/contact`,
+            et: `${brand.company.site}et/contact`,
         },
     },
     title: LanguageKeys[pageLanguage].SEO.contact.title,
