@@ -12,7 +12,11 @@ export default function ReviewPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: `${brand.company.site}${pageLanguage}/review`
+        canonical: `${brand.company.site}${pageLanguage}/review`,
+        languages: {
+            en: `${brand.company.site}en/review`,
+            et: `${brand.company.site}est/review`,
+        },
     },
     title: LanguageKeys[pageLanguage].SEO.review.title,
     description: LanguageKeys[pageLanguage].SEO.review.desc,

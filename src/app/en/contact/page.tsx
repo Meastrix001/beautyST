@@ -10,7 +10,11 @@ export default function ContactPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: `${brand.company.site}${pageLanguage}/contact`
+        canonical: `${brand.company.site}${pageLanguage}/contact`,
+        languages: {
+            en: `${brand.company.site}en/contact`,
+            et: `${brand.company.site}est/contact`,
+        },
     },
     title: LanguageKeys[pageLanguage].SEO.contact.title,
     description: LanguageKeys[pageLanguage].SEO.contact.desc,

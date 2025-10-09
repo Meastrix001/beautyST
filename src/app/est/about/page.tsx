@@ -12,7 +12,11 @@ export default function AboutPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: `${brand.company.site}${pageLanguage}/about`
+        canonical: `${brand.company.site}${pageLanguage}/about`,
+        languages: {
+            en: `${brand.company.site}en/about`,
+            et: `${brand.company.site}est/about`,
+        },
     },
     title: LanguageKeys[pageLanguage].SEO.about.title,
     description: LanguageKeys[pageLanguage].SEO.about.desc,

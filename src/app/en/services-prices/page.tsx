@@ -11,7 +11,11 @@ export default function ServicesPricesPageEst() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: `${brand.company.site}${pageLanguage}/services-prices`
+        canonical: `${brand.company.site}${pageLanguage}/services-prices`,
+        languages: {
+            en: `${brand.company.site}en/services-prices`,
+            et: `${brand.company.site}est/services-prices`,
+        },
     },
     title: LanguageKeys[pageLanguage].SEO.ss.title,
     description: LanguageKeys[pageLanguage].SEO.ss.desc,

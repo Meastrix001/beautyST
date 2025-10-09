@@ -2,10 +2,11 @@ import FaqPage from "@/PageComponents/faq/faq.page";
 import { brand } from "@/theme/brand.config";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Metadata } from "next";
-const pageLanguage = "en"
+
+const pageLanguage = "en";
 
 export default function FaqPageEn() {
-    return <FaqPage lang={pageLanguage} />
+    return <FaqPage lang={pageLanguage} />;
 }
 
 export const metadata: Metadata = {
@@ -34,5 +35,3 @@ export const metadata: Metadata = {
         type: "website",
     },
 };
-
-

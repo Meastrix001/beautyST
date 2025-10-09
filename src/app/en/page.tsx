@@ -13,7 +13,11 @@ export default function LandingPageEn() {
 
 export const metadata: Metadata = {
     alternates: {
-        canonical: `${brand.company.site}en/`
+        canonical: `${brand.company.site}en/`,
+        languages: {
+            en: `${brand.company.site}en/`,
+            et: `${brand.company.site}`,
+        },
     },
     title: LanguageKeys[pageLanguage].SEO.landing.title,
     description: LanguageKeys[pageLanguage].SEO.landing.desc,
