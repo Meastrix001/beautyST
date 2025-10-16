@@ -11,6 +11,7 @@ import { AboutBio } from "./about.bio";
 import { AboutDetails } from "./about.details";
 import { brand } from "@/theme/brand.config";
 import { PageLang } from "@/models/pageLang.model";
+import { InViewWrapper } from "@/hooks/InViewWrapper";
 
 export default function About({ lang }: PageLang) {
   return (
@@ -31,26 +32,31 @@ export default function About({ lang }: PageLang) {
             gap="6"
             align="start"
           >
-            <Card className="about__card" size="3">
-              <Box className="about__image">
-                <Box className="image">
-                  <Box className="image__content">
-                    <Image
-                      width="1000"
-                      height="1000"
-                      alt="image me"
-                      src="/static/about/img_me.jpg"
-                    />
+            <InViewWrapper direction="left" className="about__card" >
+              <Card size="3">
+                <Box className="about__image">
+                  <Box className="image">
+                    <Box className="image__content">
+                      <Image
+                        width="1000"
+                        height="1000"
+                        alt="image me"
+                        src="/static/about/img_me.jpg"
+                      />
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
 
-              <AboutBio lang={lang} />
-            </Card>
+                <AboutBio lang={lang} />
+              </Card>
 
-            <Flex direction="column" gap="4" className="about__details">
-              <AboutDetails lang={lang} />
-            </Flex>
+            </InViewWrapper>
+            <InViewWrapper direction="right" className="about__details">
+              <Flex direction="column" gap="4" >
+                <AboutDetails lang={lang} />
+              </Flex>
+            </InViewWrapper>
+
           </Flex>
         </Flex>
       </Container>

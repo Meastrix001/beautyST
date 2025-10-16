@@ -1,5 +1,6 @@
 import USPItem from "@/components/ui/USPItem/USPItem";
 import { uniqueSellingPoints } from "@/constants/uniqueSellingPoints";
+import { InViewWrapper } from "@/hooks/InViewWrapper";
 import { PageLang } from "@/models/pageLang.model";
 import { getNestedValue } from "@/utils/getNestedValues";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
@@ -28,11 +29,13 @@ const USPSection: React.FC<PageLang> = ({ lang }) => {
         >
           {uniqueSellingPoints.map((usp, index) => (
             <Box key={index} width={{ initial: "100%", lg: "25%" }}>
-              <USPItem
-                heading={getNestedValue(LanguageKeys[lang], usp.heading)}
-                description={getNestedValue(LanguageKeys[lang], usp.description)}
-                icon={usp.icon}
-              />
+              <InViewWrapper delay={(0.25 * index)} direction="bottom">
+                <USPItem
+                  heading={getNestedValue(LanguageKeys[lang], usp.heading)}
+                  description={getNestedValue(LanguageKeys[lang], usp.description)}
+                  icon={usp.icon}
+                />
+              </InViewWrapper>
 
             </Box>
           ))}

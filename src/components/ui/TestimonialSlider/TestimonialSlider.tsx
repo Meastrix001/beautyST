@@ -42,7 +42,7 @@ const TestimonialSlider: React.FC = () => {
   return (
 
     <Box className="testimonial">
-      <Slider width="350px" duration={80} pauseOnHover={true} blurBorders={false}>
+      <Slider width="400px" duration={80} pauseOnHover={true} blurBorders={false}>
 
         {reviews.map((review, index) => (
           <Slider.Slide key={index}>

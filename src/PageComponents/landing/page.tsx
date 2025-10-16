@@ -8,6 +8,7 @@ import {
   USPSection,
 } from "@/components";
 import BackgroundSlider from "@/components/backgroundSlider/backgroundSlider";
+import { InViewWrapper } from "@/hooks/InViewWrapper";
 import { PageLang } from "@/models/pageLang.model";
 import { brand } from "@/theme/brand.config";
 import { Box, Container, Flex, Section, Separator } from "@radix-ui/themes";
@@ -37,25 +38,39 @@ export default function Home({ lang = "et" }: PageLang) {
             </Flex>
             <PartnerSection lang={lang} />
 
-            <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+            <InViewWrapper delay={0.25}>
+              <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+            </InViewWrapper>
 
             <Section>
-              <FeaturesSection lang={lang} />
+              <InViewWrapper delay={0.25}>
+                <FeaturesSection lang={lang} />
+              </InViewWrapper>
             </Section>
 
-            <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+            <InViewWrapper delay={0.25}>
+              <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+            </InViewWrapper>
 
             <Section>
-              <USPSection lang={lang} />
+              <InViewWrapper delay={0.25}>
+                <USPSection lang={lang} />
+              </InViewWrapper>
             </Section>
 
-            <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+            <InViewWrapper delay={0.25}>
+              <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+            </InViewWrapper>
 
             <Section>
-              <TestimonialsSection lang={lang} />
+              <InViewWrapper delay={0.25}>
+                <TestimonialsSection lang={lang} />
+              </InViewWrapper>
             </Section>
 
-            <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+            <InViewWrapper delay={0.25}>
+              <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
+            </InViewWrapper>
 
           </Box>
         </Flex>
@@ -63,7 +78,9 @@ export default function Home({ lang = "et" }: PageLang) {
       <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>
         <Flex direction="column" gap="9" mb="9">
           <Section>
-            <CTASection lang={lang} />
+            <InViewWrapper delay={0.25}>
+              <CTASection lang={lang} />
+            </InViewWrapper>
           </Section>
         </Flex>
       </Container>

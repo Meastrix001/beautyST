@@ -20,7 +20,7 @@ const TestimonialCard: React.FC<{ review: Review, index: number }> = ({
 }) => {
   return (
     <Box className={`testimonial-card ${(index + 1) % 2 === 0 ? "light" : "dark"}`} height={"15rem"} >
-      <Flex direction="column" gap="4" height={"15rem"} width={"100%"}>
+      <Flex direction="column" gap="4" height={"18rem"} width={"100%"}>
         <Flex>
           {Array.from({ length: 5 }, (_, index) => (
             <StarFilledIcon

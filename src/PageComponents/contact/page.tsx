@@ -11,6 +11,7 @@ import { ContactList } from "./contact.list";
 import { ContactHero } from "./contact.hero";
 import { brand } from "@/theme/brand.config";
 import { PageLang } from "@/models/pageLang.model";
+import { InViewWrapper } from "@/hooks/InViewWrapper";
 
 export default function Contact({ lang }: PageLang) {
 
@@ -40,15 +41,20 @@ export default function Contact({ lang }: PageLang) {
             mb="9"
           >
             <Box className="contact__info">
-              <Flex align="center" justify="center" height="100%">
-                <ContactList lang={lang} />
-              </Flex>
+              <InViewWrapper direction="left">
+                <Flex align="center" justify="center" height="100%">
+                  <ContactList lang={lang} />
+                </Flex>
+              </InViewWrapper>
             </Box>
 
+
             {/* Map */}
-            <Box className="contact__map">
+            <InViewWrapper direction="right" className="contact__map">
               <ContactMap />
-            </Box>
+            </InViewWrapper>
+
+
           </Flex>
 
           {/* Booking CTA */}

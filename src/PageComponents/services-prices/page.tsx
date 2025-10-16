@@ -10,6 +10,7 @@ import { brand } from "@/theme/brand.config";
 import { PageLang } from "@/models/pageLang.model";
 import { PricesHero } from "./prices.hero";
 import { PricesLists } from "./prices.lists";
+import { InViewWrapper } from "@/hooks/InViewWrapper";
 
 export default function Prices({ lang }: PageLang) {
 
@@ -27,17 +28,20 @@ export default function Prices({ lang }: PageLang) {
 
           <Separator style={{ background: brand.company.colorSecondary, height: "2px" }} size="4" />
 
-          <Flex
-            className="prices__list"
-            direction={{ initial: "column", md: "row" }}
-            justify="center"
-            gap="6"
-            mt="6"
-          >
+          <InViewWrapper direction="bottom" className="prices__list">
 
-            <PricesLists lang={lang} />
+            <Flex
+              className="prices__list"
+              direction={{ initial: "column", md: "row" }}
+              justify="center"
+              gap="6"
+              mt="6"
+            >
 
-          </Flex>
+              <PricesLists lang={lang} />
+
+            </Flex>
+          </InViewWrapper>
           <Box mt="9" mb="9">
             <BookingButton lang={lang} />
           </Box>

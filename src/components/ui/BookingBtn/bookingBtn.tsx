@@ -1,4 +1,5 @@
 "use client"
+import { InViewWrapper } from "@/hooks/InViewWrapper";
 import { PageLang } from "@/models/pageLang.model";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
 import { Button, Flex, Link, Text } from "@radix-ui/themes";
@@ -10,20 +11,23 @@ export const BookingButton = ({ onlyBtn, lang }: { onlyBtn?: boolean } & PageLan
   }
 
   return (
-    <Flex direction="column" className="bookingButton">
-      <Text size="6" mt="5" mb="5" align="center">
-        {LanguageKeys[lang].bookingbtn.reminder}
-      </Text>
-      <BTN lang={lang} />
-      <Flex direction={"column"} style={{ textAlign: "center" }} mt={"4"}>
-        <Text color="gray" size="3" align="center">
-          {LanguageKeys[lang].bookingbtn.bio}
+    <InViewWrapper direction="bottom">
+      <Flex direction="column" className="bookingButton">
+        <Text size="6" mt="5" mb="5" align="center">
+          {LanguageKeys[lang].bookingbtn.reminder}
         </Text>
-        <Text color="gray" size="3" align="center">
-          {LanguageKeys[lang].bookingbtn.langInfo}
-        </Text>
+        <BTN lang={lang} />
+        <Flex direction={"column"} style={{ textAlign: "center" }} mt={"4"}>
+          <Text color="gray" size="3" align="center">
+            {LanguageKeys[lang].bookingbtn.bio}
+          </Text>
+          <Text color="gray" size="3" align="center">
+            {LanguageKeys[lang].bookingbtn.langInfo}
+          </Text>
+        </Flex>
       </Flex>
-    </Flex>
+
+    </InViewWrapper>
   );
 };
 

@@ -2,6 +2,7 @@ import { Box, Card, Flex, Heading, Text } from "@radix-ui/themes"
 import { AboutPicturesList } from "./about.pictures.list"
 import { PageLang } from "@/models/pageLang.model"
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys"
+import { InViewWrapper } from "@/hooks/InViewWrapper"
 
 export const AboutDetails = ({ lang }: PageLang) => {
 
@@ -18,20 +19,25 @@ export const AboutDetails = ({ lang }: PageLang) => {
             </Flex>
         </Card>
 
-        <Card size="3">
-            <Heading size="4" mb="2" as="h2">
-                {LanguageKeys[lang].about.headerPhilo}
-            </Heading>
-            <Text size="3" weight="medium">
-                {LanguageKeys[lang].about.philo}
-            </Text>
-        </Card>
+        <InViewWrapper direction="bottom" delay={0.25}>
+            <Card size="3">
+                <Heading size="4" mb="2" as="h2">
+                    {LanguageKeys[lang].about.headerPhilo}
+                </Heading>
+                <Text size="3" weight="medium">
+                    {LanguageKeys[lang].about.philo}
+                </Text>
+            </Card>
+        </InViewWrapper>
 
-        <Card mb="9">
-            <Box px="3">
-                <Heading size="4">{LanguageKeys[lang].about.petsHeader}</Heading>
-            </Box>
-            <AboutPicturesList />
-        </Card>
+        <InViewWrapper direction="bottom" delay={0.35}>
+
+            <Card mb="9">
+                <Box px="3">
+                    <Heading size="4">{LanguageKeys[lang].about.petsHeader}</Heading>
+                </Box>
+                <AboutPicturesList />
+            </Card>
+        </InViewWrapper>
     </>
 }
