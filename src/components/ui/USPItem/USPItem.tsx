@@ -15,7 +15,7 @@ import { USPItemProps } from "./USPItem.types";
 
 const USPItem: React.FC<USPItemProps> = ({ heading, description, icon }) => {
   return (
-    <Flex direction="column" gap="3" align="center" className="usp-item">
+    <Flex direction="column" gap="3" align="center" className="usp-item" p={{ initial: "5", lg: "6" }}>
       <Box className="usp-item__icon">{icon}</Box>
 
       <Heading as="h3" m="0" align="center">
