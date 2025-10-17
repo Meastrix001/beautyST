@@ -38,7 +38,7 @@ export const FaqItem = ({ faq, index }: {
                 }`}
             mt="2"
         >
-            <Text size="5" color="gray">
+            <Text size={{ initial: "2", lg: "5" }} color="gray">
                 {faq.answer}
             </Text>
         </Box>

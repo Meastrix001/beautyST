@@ -12,7 +12,7 @@ const CTACard: React.FC<CTACardProps> = ({
   image,
 }) => {
   return (
-    <Box className="cta-card">
+    <Box className="cta-card" p={{ initial: "2", lg: "4" }}>
       <Grid columns={{ initial: "1", lg: "6" }} gap="8" align="center">
         {/* Heading */}
         <Flex
