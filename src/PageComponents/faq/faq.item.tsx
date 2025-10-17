@@ -23,7 +23,7 @@ export const FaqItem = ({ faq, index }: {
             onClick={() => toggle(index)}
             className="faq-question hover"
         >
-            <Text size="6" weight="medium">
+            <Text size={{ initial: "3", lg: "6" }} weight="medium">
                 {faq.question}
             </Text>
 
