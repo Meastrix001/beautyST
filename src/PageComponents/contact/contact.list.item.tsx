@@ -27,7 +27,7 @@ export const ContactListItem = ({ item, idx, lang }: {
         <DataList.Label minWidth="120px">
             <Flex align="center" gap="2">
                 {item.icon}
-                <Text size="5" weight="bold">
+                <Text size={{ initial: "3", lg: "5" }} weight="bold">
                     {getNestedValue(LanguageKeys[lang], item.key) || item.key}
 
                 </Text>
@@ -75,6 +75,6 @@ const SocialButtons: React.FC<SocialButtonsProps> = ({ item }) => {
         );
 
     } else {
-        return <Text size="5">{item.value}</Text>
+        return <Text size={{ initial: "3", lg: "5" }}>{item.value}</Text>
     }
 };

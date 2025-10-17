@@ -36,11 +36,11 @@ export const PricesLists = ({ lang }: PageLang) => {
                     {data.map((doc, idx) => (
                         <InViewWrapper delay={(0.075 * idx)} key={idx}>
                             <Flex key={idx} className="prices__item" align="center">
-                                <Text as="p" size="6">
+                                <Text as="p" size={{ initial: "3", lg: "6" }}>
                                     {getNestedValue(LanguageKeys[lang], doc.nameKey) || ""}
                                 </Text>
                                 <Box className="prices__dots" />
-                                <Text as="p" size="6">
+                                <Text as="p" size={{ initial: "3", lg: "6" }}>
                                     {doc.price} / {doc.duration}
                                 </Text>
                             </Flex>

@@ -23,6 +23,7 @@ export const AboutPicturesList = () => {
         justify="between"
         px="3"
         mb="2"
+        gap={"2"}
     >
         {picturesArr.map((obj, index) => {
             return (

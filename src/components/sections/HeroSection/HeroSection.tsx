@@ -18,7 +18,7 @@ const HeroSection: React.FC<PageLang> = ({ lang }) => {
           justify="center"
         >
           <Box gridColumn={{ initial: "1 / -1", lg: "1 / 5" }}>
-            <Flex direction="column" gap="6" justify="center">
+            <Flex direction="column" gap={{ initial: "2", lg: "6" }} justify="center">
               <Heading size={{ initial: "8", lg: "9" }} as="h1" m="0">
                 {LanguageKeys[lang].landing.heading}
               </Heading>
