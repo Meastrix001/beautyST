@@ -20,7 +20,7 @@ export default function About({ lang }: PageLang) {
         <Flex
           direction="column"
           align="center"
-          gap="6"
+          gap={{ initial: "2", lg: "6" }}
           className="about__container"
         >
           <AboutHero lang={lang} />

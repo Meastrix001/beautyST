@@ -21,7 +21,7 @@ export default function Contact({ lang }: PageLang) {
         <Flex
           direction="column"
           align="center"
-          gap="6"
+          gap={{ initial: "2", lg: "6" }}
           className="contact__container"
         >
           {/* Hero */}

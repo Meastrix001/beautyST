@@ -20,7 +20,7 @@ export default function FaqPage({ lang }: PageLang) {
         <Flex
           direction="column"
           align="center"
-          gap="6"
+          gap={{ initial: "2", lg: "6" }}
           className="contact__container"
         >
           <Box className="contact__hero" mb="6">
