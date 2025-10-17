@@ -10,7 +10,7 @@ const HeroSection: React.FC<PageLang> = ({ lang }) => {
 
   return (
     <Section size={{ initial: "2", lg: "3" }} className="hero">
-      <Box p={{ initial: "2", lg: "4" }}>
+      <Box p={{ initial: "4", lg: "6" }}>
         <Grid
           columns={{ initial: "1", lg: "6" }}
           gap={{ initial: "4", lg: "9" }}
