@@ -2,13 +2,13 @@ import {
   Box,
   Container,
   Flex,
-  Separator,
+  // Separator,
 } from "@radix-ui/themes";
 
 import { BookingButton } from "@/components/ui/BookingBtn/bookingBtn";
 import { FaqHero } from "./faq.hero";
 import { FaqList } from "./faq.list";
-import { brand } from "@/theme/brand.config";
+// import { brand } from "@/theme/brand.config";
 import { PageLang } from "@/models/pageLang.model";
 
 export default function FaqPage({ lang }: PageLang) {
@@ -27,7 +27,7 @@ export default function FaqPage({ lang }: PageLang) {
             <FaqHero lang={lang} />
           </Box>
 
-          <Separator style={{ background: brand.company.colorPrimary, height: "2px" }} size="4" />
+          {/* <Separator style={{ background: brand.company.colorPrimary, height: "2px" }} size="4" /> */}
 
           <Flex
             className="contact__content"
