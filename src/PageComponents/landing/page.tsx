@@ -20,7 +20,7 @@ export default function Home({ lang = "et" }: PageLang) {
     <Box className="landing">
       <Box className="div-one" />
       <BackgroundSlider />
-      <Container py={{ initial: "3", lg: "4" }} px={{ initial: "4", lg: "0" }}>
+      <Container py={{ initial: "3", lg: "4" }} px={{ initial: "2", lg: "0" }}>
         <Flex direction="column" gap="9">
           <Box className="index-top" p="0">
             <Flex
