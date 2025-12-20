@@ -8,6 +8,7 @@ import I18nProvider from "@/providers/I18nProvider";
 import { brand } from "@/theme/brand.config";
 import { BuildSiteMap } from "@/utils/sitemap/sitemap.builder";
 import { SiteHead } from "@/providers/headLinks";
+import { SnowFall } from "./snowfall"
 
 BuildSiteMap()
 export default function RootLayout({
@@ -27,6 +28,7 @@ export default function RootLayout({
               <Flex direction="column" minHeight="100vh">
                 <Navbar />
                 <Box flexGrow="1">{children}
+                  <SnowFall />
                   <SpeedInsights />
                   <Analytics />
                 </Box>
