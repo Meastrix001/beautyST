@@ -3,7 +3,7 @@ import "@/styles/main.scss";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import { Box, Flex, Theme } from "@radix-ui/themes";
-import { Footer, Navbar } from "@/components";
+import { ClosureNotice, Footer, Navbar } from "@/components";
 import I18nProvider from "@/providers/I18nProvider";
 import { brand } from "@/theme/brand.config";
 import { BuildSiteMap } from "@/utils/sitemap/sitemap.builder";
@@ -26,6 +26,7 @@ export default function RootLayout({
           <Theme>
             <Box>
               <Flex direction="column" minHeight="100vh">
+                <ClosureNotice />
                 <Navbar />
                 <Box flexGrow="1">{children}
                   {/* <SnowFall /> */}

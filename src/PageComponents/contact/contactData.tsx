@@ -9,7 +9,7 @@ export const contactData = [
   },
   {
     key: "contact.key.phone",
-    value: "+372 565 715 52",
+    value: "-",
     icon: <FaPhone />,
   },
   {

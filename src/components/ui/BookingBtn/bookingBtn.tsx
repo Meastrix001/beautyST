@@ -2,7 +2,7 @@
 import { InViewWrapper } from "@/hooks/InViewWrapper";
 import { PageLang } from "@/models/pageLang.model";
 import { LanguageKeys } from "@/utils/i18n/LanguageKeys";
-import { Button, Flex, Link, Text } from "@radix-ui/themes";
+import { Button, Flex, Text } from "@radix-ui/themes";
 
 export const BookingButton = ({ onlyBtn, lang }: { onlyBtn?: boolean } & PageLang) => {
 
@@ -32,29 +32,19 @@ export const BookingButton = ({ onlyBtn, lang }: { onlyBtn?: boolean } & PageLan
 };
 
 const BTN = ({ lang }: PageLang) => {
-
-  const BookingLink =
-    "https://broneerimine.timma.ee/ilustuudiomarielltallinnehitajatetee114";
-
+  // Waxing services have ended — booking is permanently disabled.
   return (
-    <Link
-      className="hover"
-      href={BookingLink}
-      target="_blank"
-      style={{ color: "black" }}
-    >
-      <Flex direction="column">
-        <Button
-          className="hover"
-          size="4"
-          color="pink"
-          variant="soft"
-          style={{ width: "100%", color: "black" }}
-          mb="0"
-        >
-          {LanguageKeys[lang].bookingbtn.btn}
-        </Button>{" "}
-      </Flex>
-    </Link>
+    <Flex direction="column">
+      <Button
+        size="4"
+        color="gray"
+        variant="soft"
+        disabled
+        style={{ width: "100%", cursor: "not-allowed" }}
+        mb="0"
+      >
+        {LanguageKeys[lang].bookingbtn.unavailable}
+      </Button>
+    </Flex>
   );
 };

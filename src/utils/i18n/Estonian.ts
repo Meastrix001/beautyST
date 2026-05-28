@@ -65,10 +65,19 @@ export const i18n_est = {
     petsHeader: "Meie loomad",
   },
 
+  closure: {
+    title: "Aitäh",
+    message:
+      "Pärast pikka kaalumist ei paku ma enam vahatamisteenuseid. Soovin südamest tänada iga klienti, kes mind usaldas ja toetas - see tähendas mulle väga palju. Soovin teile kõike kõige paremat. Armastusega, Stiina.",
+    close: "Sulge",
+    banner: "Vahatamisteenuseid enam ei pakuta. Aitäh kõikidele toredatele klientidele ♥",
+  },
+
   bookingbtn: {
     reminder:
       "Palun broneeri oma aeg ette, kohapeal kliente ilma broneeringuta ei teenindata.",
     btn: "Broneeri aeg",
+    unavailable: "Broneerimine pole saadaval",
     bio: "Broneerimine on kiire ja lihtne meie veebisüsteemi kaudu ning lisaküsimuste korral võid julgelt meiega otse ühendust võtta. Aitäh, et aitad meil muuta iga külastuse lõõgastavaks ja nauditavaks!",
     langInfo:
       "Tere tulemast! Abistame teid hea meelega nii eesti kui ka inglise keeles.",

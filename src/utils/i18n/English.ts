@@ -65,10 +65,19 @@ My name is Stiina Roofthooft, and I am 24 years old. I’m new to the beauty ind
     petsHeader: "Our pets",
   },
 
+  closure: {
+    title: "Thank you",
+    message:
+      "After much consideration, I am no longer offering waxing services. I want to sincerely thank every client who trusted me and supported me along the way - it truly meant the world. Wishing you all the very best. With love, Stiina.",
+    close: "Close",
+    banner: "Waxing services are no longer offered. Thank you to all my wonderful clients ♥",
+  },
+
   bookingbtn: {
     reminder:
       "Please book your appointment in advance, walk-ins are not accommodated.",
     btn: "Book a time",
+    unavailable: "Booking unavailable",
     bio: "Booking is quick and easy through our online system, or you can contact us directly to find a time that works for you. Thank you for helping us make every visit relaxing and enjoyable!",
     langInfo:
       "I warmly welcome all our clients and am happy to assist you in English or Estonian.",
